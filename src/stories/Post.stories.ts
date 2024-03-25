@@ -11,18 +11,26 @@ const meta = {
   },
 
   tags: ["autodocs"],
-  argTypes: {
-    // author: { control: "text" },
-  },
+  argTypes: {},
   args: {},
 } satisfies Meta<typeof Post>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
     author: "Ada Lovelace",
+    emojis: "🚀🕹💬👾️💬💬",
+    description:
+      "I made this small program that can calculate the Bernoulli numbers. It's uses a recursive algorithm that's very efficient. I'm very proud of it.",
+    date: new Date("1990-01-01 12:01 am"),
+    avatarUrl: "https://dummyimage.com/64",
+    imageUrls: [
+      "https://dummyimage.com/512",
+      "https://dummyimage.com/512",
+      "https://dummyimage.com/512",
+    ],
+    codeUrl: "#",
   },
 };
