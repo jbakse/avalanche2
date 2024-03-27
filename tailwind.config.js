@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sarala: ['"Sarala"', ...defaultTheme.fontFamily.sans],
+        sans: ['"Lato"', ...defaultTheme.fontFamily.sans],
       },
     },
   },

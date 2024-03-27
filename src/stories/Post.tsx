@@ -18,7 +18,7 @@ export const Post = ({
   imageUrls = [],
   ...props
 }: PostProps) => {
-  // format like December 31, 12:00 am
+  // format like December 31 at 12:00 am
   const formattedDate = date.toLocaleString("en-US", {
     month: "long",
     day: "numeric",
@@ -27,26 +27,64 @@ export const Post = ({
     hour12: true,
   });
 
+  const renderImages = () => {
+    if (imageUrls.length === 0) return null;
+    if (imageUrls.length === 1) {
+      return (
+        <img className="w-full aspect-square object-cover" src={imageUrls[0]} />
+      );
+    }
+    if (imageUrls.length === 2) {
+      return (
+        <>
+          <img
+            className="w-full aspect-square object-cover"
+            src={imageUrls[0]}
+          />
+          <img
+            className="w-full aspect-[2/1] object-cover"
+            src={imageUrls[1]}
+          />
+        </>
+      );
+    }
+    if (imageUrls.length >= 3) {
+      return (
+        <>
+          <img
+            className="w-full aspect-square object-cover"
+            src={imageUrls[0]}
+          />
+          <img
+            className="w-1/2 aspect-square object-cover"
+            src={imageUrls[1]}
+          />
+          <img
+            className="w-1/2 aspect-square object-cover"
+            src={imageUrls[2]}
+          />
+        </>
+      );
+    }
+  };
   return (
     <div className="w-96 border border-gray-300 shadow-md rounded">
-      <div>
-        {imageUrls[0] && <img className="w-full" src={imageUrls[0]} />}
-        <img className="w-1/2 inline-block" src={imageUrls[1]} />
-        <img className="w-1/2 inline-block" src={imageUrls[2]} />
-      </div>
-      <div className="p-4 font-sarala">
-        {/* todo: make font work */}
-        <div className="tracking-[.33em]">{emojis}</div>
-        {codeUrl ? (
+      <div className="flex  flex-wrap">{renderImages()}</div>
+      <div className="p-4 font-sans">
+        {/* emoji */}
+        {emojis && <div className="tracking-[.33em] mb-3">{emojis}</div>}
+
+        {/* code url */}
+        {codeUrl && (
           <a
-            className="block mt-3 text-xs text-purple-600 hover:underline visited:text-purple-900"
+            className="block mb-3 text-xs text-purple-600 hover:underline visited:text-purple-900"
             href={codeUrl}
           >
             View Code
           </a>
-        ) : null}
-        <div className="mt-2">{elide(description, 100)}</div>
-        <div className="mt-4 flex">
+        )}
+        {description && <div className="mb-4">{elide(description, 100)}</div>}
+        <div className="flex">
           <img className="rounded-full w-8 h-8 inline-block" src={avatarUrl} />
           <span className="text-xs uppercase flex items-center ml-3">
             {author}
@@ -61,5 +99,5 @@ export const Post = ({
 };
 
 function elide(str: string, max: number) {
-  return str.length > max ? str.slice(0, max) + "…" : str;
+  return str.length > max ? str.slice(0, max).trim() + "…" : str;
 }
