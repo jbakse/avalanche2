@@ -4,7 +4,7 @@ import { fn } from "@storybook/test";
 import { Header } from "./Header";
 
 const meta = {
-  title: "Example/Header",
+  title: "Avalanche/Header",
   component: Header,
   tags: ["autodocs"],
   parameters: {

@@ -1,4 +1,4 @@
-interface PostProps {
+export interface PostProps {
   author: string;
   emojis: string;
   description: string;
@@ -68,7 +68,7 @@ export const Post = ({
     }
   };
   return (
-    <div className="w-96 border border-gray-300 shadow-md rounded">
+    <div className="w-80 border border-gray-300 shadow-md rounded">
       <div className="flex  flex-wrap">{renderImages()}</div>
       <div className="p-4 font-sans">
         {/* emoji */}
