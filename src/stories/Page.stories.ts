@@ -6,7 +6,7 @@ import { data as weekBarData } from "./WeekBar.stories";
 import { data as userBarData } from "./UserBar.stories";
 
 const meta = {
-  title: "Example/Page",
+  title: "Avalanche/Page",
   component: Page,
   parameters: {
     layout: "fullscreen",
@@ -35,9 +35,12 @@ const post = {
 export const LoggedIn: Story = {
   args: {
     title: "Avalanche 2",
+    message: "Hello, world!!!",
+    postCount: 412,
+    topic: "math",
     user: userBarData.users[0],
     users: userBarData.users,
     weeks: weekBarData.weeks,
-    posts: [post],
+    posts: [post, post, post, post],
   },
 };
