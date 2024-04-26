@@ -1,7 +1,7 @@
 export interface PostProps {
-  author: string;
-  emojis: string;
-  description: string;
+  author?: string;
+  emojis?: string;
+  description?: string;
   date: Date;
   codeUrl?: string; // url of the attached code, if any
   imageUrls: string[]; // urls of the post's primary images
@@ -68,7 +68,7 @@ export const Post = ({
     }
   };
   return (
-    <div className="w-80 border border-gray-300 shadow-md rounded">
+    <div className="w-80 border border-gray-300 shadow-md rounded bg-white">
       <div className="flex  flex-wrap">{renderImages()}</div>
       <div className="p-4 font-sans">
         {/* emoji */}
