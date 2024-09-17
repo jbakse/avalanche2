@@ -6,10 +6,7 @@ import { Post, examplePostProps } from "./Post";
 const meta: Meta<typeof Post> = {
   title: "Avalanche/Post",
   component: Post,
-  // parameters: { layout: "centered", },
-  // tags: ["autodocs"],
-  // argTypes: {},
-  // args: {},
+  parameters: { layout: "centered" },
 };
 
 export default meta;

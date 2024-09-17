@@ -2,6 +2,7 @@ import { Header } from "./Header";
 import { UserBar, User } from "./UserBar";
 import { WeekBar, Week } from "./WeekBar";
 import { Post, PostProps } from "./Post";
+
 interface PageProps {
   title: string;
   user?: User;
@@ -34,7 +35,7 @@ export const Page = ({
       <div className="mt-4 text-lg text-center">{message}</div>
       <div className="mt-12 flex flex-wrap justify-center gap-4">
         {posts.map((post) => (
-          <Post key={post.codeUrl} {...post} />
+          <Post key={post._id} {...post} />
         ))}
       </div>
     </>
