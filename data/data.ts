@@ -92,14 +92,14 @@ function convertPost(post) {
       resource_type: media.resource_type ?? "",
     })),
     votes: post.votes.map((vote) => ({
-      category: vote.category,
-      voter_id: vote.voter_id,
-      created_at: vote.created_at.$date,
+      category: vote.category ?? "",
+      voter_id: vote.voter_id ?? "",
+      created_at: vote.created_at.$date ?? "",
     })),
     comments: post.comments.map((comment) => ({
-      comment: comment.comment,
-      commenter_id: comment.commenter_id,
-      created_at: comment.created_at.$date,
+      comment: comment.comment ?? "",
+      commenter_id: comment.commenter_id ?? "",
+      created_at: comment.created_at.$date ?? "",
     })),
   };
 }
