@@ -14,7 +14,7 @@ export interface PostProps {
   comments: Comment[];
 }
 
-interface CloudinaryMedia {
+export interface CloudinaryMedia {
   public_id: string;
   width: number;
   height: number;
@@ -22,13 +22,13 @@ interface CloudinaryMedia {
   resource_type: string;
 }
 
-interface Vote {
+export interface Vote {
   content: string;
   author: string;
   created_at: string;
 }
 
-interface Comment {
+export interface Comment {
   content: string;
   author: string;
   created_at: string;
@@ -87,11 +87,12 @@ export const Post = (data: PostProps) => {
   });
 
   const renderImgs = () => {
-    const imgSrcs =
-      data.cloudinary_media?.map(
+    const imgSrcs = data.cloudinary_media
+      .filter((o) => o.resource_type === "image")
+      .map(
         (o) =>
           `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/${o.public_id}`
-      ) || [];
+      );
 
     if (imgSrcs.length === 0) return null;
     if (imgSrcs.length === 1) {
@@ -124,7 +125,7 @@ export const Post = (data: PostProps) => {
 
       <div className="p-4 font-sans">
         {/* emoji */}
-        {data.votes.length && (
+        {data.votes.length > 0 && (
           <div className="tracking-[.33em] mb-3">
             {data.votes.map((vote) => vote.content).join(" ")}
           </div>

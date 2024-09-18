@@ -26,3 +26,6 @@ dist-ssr
 # Storybook
 
 .cache/*
+
+.aider.*
+.env

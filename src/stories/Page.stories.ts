@@ -7,6 +7,10 @@ import { data as userBarData } from "./UserBar.stories";
 
 import { examplePostProps } from "./Post";
 
+import { cleanPosts } from "../../data/data";
+
+console.log(cleanPosts[1]);
+
 const meta: Meta<typeof Page> = {
   title: "Avalanche/Page",
   component: Page,
@@ -26,6 +30,19 @@ export const LoggedIn: Story = {
     user: userBarData.users[0],
     users: userBarData.users,
     weeks: weekBarData.weeks,
-    posts: [examplePostProps, examplePostProps],
+    posts: [examplePostProps],
+  },
+};
+
+export const Clean: Story = {
+  args: {
+    title: "Avalanche 2",
+    message: "Hello, world!!!",
+    postCount: 412,
+    topic: "math",
+    user: userBarData.users[0],
+    users: userBarData.users,
+    weeks: weekBarData.weeks,
+    posts: cleanPosts.filter((p) => p.lesson === "Random"),
   },
 };

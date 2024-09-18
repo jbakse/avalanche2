@@ -1,0 +1,63 @@
+{
+  "_id": "2H4dv4GFFGCBmZdyJ",
+  "author_id": "DgrD5so94kzZH8ktA",
+  "author": "Rama Deshpande",
+  "lesson": "Params",
+  "created_at": { "$date": "2023-02-21T00:08:16.108Z" },
+  "posted": true,
+  "cloudinary_media": [
+    {
+      "asset_id": "a3bf4d2f40ffd4a108683efb74d0b653",
+      "public_id": "avalanche2023spring/ntbjybauklzeroilu5jm",
+      "version": 1676938115,
+      "version_id": "3d68359d245f82c79e1a29cdbe1f1e75",
+      "signature": "2e8beadecb5dee4edbde596e663aa1fb101ad13d",
+      "width": 1588,
+      "height": 1594,
+      "format": "mov",
+      "resource_type": "video",
+      "created_at": "2023-02-21T00:08:35Z",
+      "tags": [],
+      "pages": 0,
+      "bytes": 9677512,
+      "type": "upload",
+      "etag": "d734d99ef3ac2d49624c1e33cd78a404",
+      "placeholder": false,
+      "url": "http://res.cloudinary.com/compform2023spring/video/upload/v1676938115/avalanche2023spring/ntbjybauklzeroilu5jm.mov",
+      "secure_url": "https://res.cloudinary.com/compform2023spring/video/upload/v1676938115/avalanche2023spring/ntbjybauklzeroilu5jm.mov",
+      "playback_url": "https://res.cloudinary.com/compform2023spring/video/upload/sp_auto/v1676938115/avalanche2023spring/ntbjybauklzeroilu5jm.m3u8",
+      "folder": "avalanche2023spring",
+      "audio": {},
+      "video": {
+        "pix_format": "yuv420p",
+        "codec": "h264",
+        "level": 51,
+        "profile": "Main",
+        "bit_rate": "11711769",
+        "dar": "794:797",
+        "time_base": "1/6000"
+      },
+      "frame_rate": 60,
+      "bit_rate": 12491812,
+      "duration": 6.197667,
+      "rotation": 0,
+      "nb_frames": 386,
+      "api_key": "547729558371987"
+    }
+  ],
+  "votes": [
+    {
+      "voter_id": "me69bqQXDu4jtokwu",
+      "category": "pretty",
+      "created_at": { "$date": "2023-02-21T06:00:19.289Z" }
+    },
+    {
+      "voter_id": "5igS7Z3tRxbSg93TQ",
+      "category": "pretty",
+      "created_at": { "$date": "2023-02-22T04:46:16.765Z" }
+    }
+  ],
+  "title": "",
+  "description": "Inspired by a rather",
+  "comments": []
+}
