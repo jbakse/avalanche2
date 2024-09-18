@@ -3,8 +3,48 @@
 import posts from "./2023_spring/posts.json";
 import users from "./2023_spring/users.json";
 
-import { PostProps, CloudinaryMedia, Vote, Comment } from "../src/stories/Post";
+type CloudinaryID = string;
+export type User = {
+  _id: string;
+  firstName: string;
+  lastName: string;
+  headshot: CloudinaryID;
+  description: string;
+};
 
+export type UserSummary = Omit<User, "description">;
+
+export const cleanUsers = users.map(cleanUser);
+
+export function getFullName(user: UserSummary): string {
+  return `${user.firstName} ${user.lastName}`.trim();
+}
+
+export function getHeadshotURL(user: UserSummary): string {
+  const blackPixel =
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAABNJREFUCB1jZGBg+A/EDEwgAgQADigBA//q6GsAAAAASUVORK5CYII%3D";
+  return user.headshot
+    ? `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_64/v1/${user.headshot}`
+    : blackPixel;
+}
+function cleanUser(user: Record<string, any>): User {
+  return {
+    _id: user._id ?? "",
+    firstName: user.profile.first_name ?? "",
+    lastName: user.profile.last_name ?? "",
+    headshot: user.profile.headshot ?? "",
+    description: user.profile.description ?? "",
+  };
+}
+
+// write to out.json
+// import fs from "fs";
+// fs.writeFileSync(
+//   "./data/2023_spring/posts_clean.json",
+//   JSON.stringify(data, null, 2)
+// );
+
+import { PostProps, CloudinaryMedia, Vote, Comment } from "../src/stories/Post";
 export const cleanPosts = posts
   .sort((a, b) => {
     const dateA = new Date(a.created_at.$date);
@@ -13,14 +53,6 @@ export const cleanPosts = posts
     return dateB.getTime() - dateA.getTime();
   })
   .map(convertPost);
-
-console.log(JSON.stringify(cleanPosts[13], null, 2));
-// write to out.json
-// import fs from "fs";
-// fs.writeFileSync(
-//   "./data/2023_spring/posts_clean.json",
-//   JSON.stringify(data, null, 2)
-// );
 
 function convertPost(post: Record<string, any>): PostProps | null {
   const emojis: { [key: string]: string } = {
@@ -48,7 +80,7 @@ function convertPost(post: Record<string, any>): PostProps | null {
             height: media.height ?? 0,
             format: media.format ?? "",
             resource_type: media.resource_type ?? "",
-          }) as CloudinaryMedia
+          } as CloudinaryMedia)
       )
       .filter((media: Record<string, any>) => media.public_id),
 
