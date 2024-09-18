@@ -22,7 +22,7 @@ console.log(JSON.stringify(cleanPosts[13], null, 2));
 //   JSON.stringify(data, null, 2)
 // );
 
-function convertPost(post): PostProps {
+function convertPost(post: Record<string, any>): PostProps | null {
   const emojis: { [key: string]: string } = {
     funny: "😂",
     nerdy: "🤓",
@@ -41,7 +41,7 @@ function convertPost(post): PostProps {
     code: post.code ?? "",
     cloudinary_media: post.cloudinary_media
       .map(
-        (media) =>
+        (media: Record<string, any>) =>
           ({
             public_id: media.public_id ?? "",
             width: media.width ?? 0,
@@ -50,9 +50,11 @@ function convertPost(post): PostProps {
             resource_type: media.resource_type ?? "",
           }) as CloudinaryMedia
       )
-      .filter((media) => media.public_id),
+      .filter((media: Record<string, any>) => media.public_id),
 
-    votes: post.votes.map(function convertVote(vote): Vote {
+    votes: post.votes.map(function convertVote(
+      vote: Record<string, any>
+    ): Vote {
       const profile = users.find(
         (user) => user._id === vote.author_id
       )?.profile;
@@ -68,7 +70,9 @@ function convertPost(post): PostProps {
       };
     }),
 
-    comments: post.comments.map(function convertComment(vote): Comment {
+    comments: post.comments.map(function convertComment(
+      vote: Record<string, any>
+    ): Comment {
       const profile = users.find(
         (user) => user._id === vote.author_id
       )?.profile;

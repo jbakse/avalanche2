@@ -2,21 +2,9 @@
 // import './button.css';
 
 interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
   primary?: boolean;
-  /**
-   * Button contents
-   */
   label: string;
-  /**
-   * Optional classes
-   */
   className?: string;
-  /**
-   * Optional click handler
-   */
   onClick?: () => void;
 }
 
