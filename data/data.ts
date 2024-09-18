@@ -2,8 +2,11 @@
 
 import posts from "./2023_spring/posts.json";
 import users from "./2023_spring/users.json";
+import prefs from "./2023_spring/prefs.json";
 
 type CloudinaryID = string;
+
+/// USERS
 export type User = {
   _id: string;
   firstName: string;
@@ -37,14 +40,44 @@ function cleanUser(user: Record<string, any>): User {
   };
 }
 
-// write to out.json
-// import fs from "fs";
-// fs.writeFileSync(
-//   "./data/2023_spring/posts_clean.json",
-//   JSON.stringify(data, null, 2)
-// );
+/// POSTS
 
-import { PostProps, CloudinaryMedia, Vote, Comment } from "../src/stories/Post";
+export interface Post {
+  _id: string;
+  author: string;
+  author_headshot: string;
+  created_at: string;
+  isPosted: boolean;
+  lesson: string;
+
+  cloudinary_media: CloudinaryMedia[];
+  description: string;
+  code: string;
+
+  votes: Vote[];
+  comments: Comment[];
+}
+
+interface CloudinaryMedia {
+  public_id: string;
+  width: number;
+  height: number;
+  format: string;
+  resource_type: string;
+}
+
+interface Vote {
+  content: string;
+  author: string;
+  created_at: string;
+}
+
+interface Comment {
+  content: string;
+  author: string;
+  created_at: string;
+}
+
 export const cleanPosts = posts
   .sort((a, b) => {
     const dateA = new Date(a.created_at.$date);
@@ -54,7 +87,7 @@ export const cleanPosts = posts
   })
   .map(convertPost);
 
-function convertPost(post: Record<string, any>): PostProps | null {
+function convertPost(post: Record<string, any>): Post {
   const emojis: { [key: string]: string } = {
     funny: "😂",
     nerdy: "🤓",
@@ -121,67 +154,34 @@ function convertPost(post: Record<string, any>): PostProps | null {
   };
 }
 
-// function extractPostProps(input: unknown): PostProps {
-//   // initialize required properties
-//   const postProps: PostProps = {
-//     imageUrls: [],
-//     emojis: "",
-//     codeUrl: "",
-//     description: "",
-//     avatarUrl: "",
-//     author: "",
-//     date: new Date("2000-01-01 12:00 am"),
-//   };
+/// PREFS
+export interface Prefs {
+  site_title: string;
+  avalanche_message: string;
+  weeks: Week[];
+}
 
-//   if (!isPlainObject(input)) return postProps;
+export interface Week {
+  lesson: string;
+  sketchCount: number;
+  start: string;
+  end: string;
+}
 
-//   // imageUrls
-//   if (Array.isArray(input.cloudinary_media)) {
-//     postProps.imageUrls = input.cloudinary_media
-//       .map((o) => o.public_id)
-//       .filter(isString)
-//       .map(
-//         (public_id) =>
-//           `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/${public_id}`
-//       );
-//   }
+export const prefsClean: Prefs = {
+  site_title: prefs.site_title ?? "",
+  avalanche_message: prefs.avalanche_message ?? "",
+  weeks: prefs.weeks.map((week: Record<string, any>) => ({
+    lesson: week.topic ?? "",
+    sketchCount: cleanPosts.filter((post) => post.lesson === week.topic).length,
+    start: week.start.$date ?? "",
+    end: week.end.$date ?? "",
+  })),
+};
 
-//   // emojis
-//   if (Array.isArray(input.votes)) {
-//     postProps.emojis = input.votes
-//       ?.map((vote) => emojis[vote.category])
-//       .filter(isString)
-//       .join("");
-//   }
-
-//   // codeUrl
-//   if (isString(input.codeUrl)) postProps.codeUrl = input.codeUrl;
-
-//   // description
-//   if (isString(input.description)) postProps.description = input.description;
-
-//   // avatarUrl
-//   if (isString(input.author_id)) {
-//     const user = users.find((user) => user._id === input.author_id);
-//     if (user) {
-//       const headshot = user.profile?.headshot;
-//       postProps.avatarUrl = `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,g_face,h_100,q_100,w_100/v1/${headshot}`;
-//     }
-//   }
-
-//   // author
-//   if (isString(input.author)) postProps.author = input.author;
-
-//   // date
-//   if (isString(input.date)) postProps.date = new Date(input.date);
-
-//   return postProps;
-// }
-
-// function isString(value: unknown): value is string {
-//   return typeof value === "string";
-// }
-
-// function isPlainObject(value: unknown): value is Record<string, unknown> {
-//   return typeof value === "object" && value !== null && !Array.isArray(value);
-// }
+// write to out.json
+// import fs from "fs";
+// fs.writeFileSync(
+//   "./data/2023_spring/posts_clean.json",
+//   JSON.stringify(data, null, 2)
+// );

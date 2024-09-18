@@ -20,3 +20,10 @@ Proably User and Post types should live in /data and be imported
 by components that need them (rather than current viceversa)
 
 Probably should move cloudinary specific lookups to /data like User getHeadshot
+dates should probably not be strings?
+
+make .topic and .lesson consistent (two names for same idea now)
+
+timezones on posts don't match
+
+the names "prefsClean" etc are from the point of view of the dirty data, just name it prefs, let all the dirty be hidden.

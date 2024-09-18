@@ -2,43 +2,20 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { WeekBar } from "./WeekBar";
 
+import { prefsClean } from "../../data/data";
+
 const meta = {
   title: "Avalanche/WeekBar",
   component: WeekBar,
-  excludeStories: /data/,
-  tags: ["autodocs"],
-  parameters: {
-    layout: "fullscreen",
-  },
-  args: {},
+  parameters: { layout: "fullscreen" },
 } satisfies Meta<typeof WeekBar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const week = {
-  name: "Intro",
-  sketchCount: 15,
-  isActive: false,
-};
-
-const weeks = [
-  week,
-  week,
-  { ...week, isActive: true },
-  week,
-  week,
-  week,
-  week,
-  week,
-  week,
-  week,
-];
-
-export const data = { week, weeks };
-
-export const Default: Story = {
+export const Default = {
   args: {
-    weeks,
+    activeLesson: "Random",
+    weeks: prefsClean.weeks,
   },
-};
+} satisfies Story;

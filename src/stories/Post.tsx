@@ -1,38 +1,6 @@
-export interface PostProps {
-  _id: string;
-  author: string;
-  author_headshot: string;
-  created_at: string;
-  isPosted: boolean;
-  lesson: string;
+import { Post as PostData } from "../../data/data";
 
-  cloudinary_media: CloudinaryMedia[];
-  description: string;
-  code: string;
-
-  votes: Vote[];
-  comments: Comment[];
-}
-
-export interface CloudinaryMedia {
-  public_id: string;
-  width: number;
-  height: number;
-  format: string;
-  resource_type: string;
-}
-
-export interface Vote {
-  content: string;
-  author: string;
-  created_at: string;
-}
-
-export interface Comment {
-  content: string;
-  author: string;
-  created_at: string;
-}
+export type PostProps = PostData;
 
 export const examplePostProps: PostProps = {
   _id: "27vdvsA9c6FTbMgDa",
