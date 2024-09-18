@@ -1,9 +1,8 @@
-// import React from 'react';
-// import './button.css';
+import classNames from "classnames";
 
 interface ButtonProps {
   primary?: boolean;
-  label: string;
+  label?: string;
   className?: string;
   onClick?: () => void;
 }
@@ -20,13 +19,14 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={[
+      className={classNames(
         "px-3 py-2 leading-none rounded-full",
-        primary
-          ? "bg-indigo-400 hover:bg-indigo-500 text-white"
-          : "border border-gray-200 hover:bg-gray-100",
-        className,
-      ].join(" ")}
+        {
+          "bg-indigo-400 hover:bg-indigo-500 text-white": primary,
+          "border border-gray-200 hover:bg-gray-100": !primary,
+        },
+        className
+      )}
       {...props}
     >
       {label}

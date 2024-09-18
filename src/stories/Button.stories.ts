@@ -6,19 +6,14 @@ const meta = {
   component: Button,
   parameters: { layout: "centered" },
 } satisfies Meta<typeof Button>;
-
 export default meta;
+
 type Story = StoryObj<typeof meta>;
+
+export const Default = {} satisfies Story;
 
 export const Primary = {
   args: {
     primary: true,
-    label: "Button",
-  },
-} satisfies Story;
-
-export const Default = {
-  args: {
-    label: "Button",
   },
 } satisfies Story;
