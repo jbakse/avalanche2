@@ -1,4 +1,4 @@
-import { cleanPosts } from "../../data/data";
+import { posts } from "../../data/data";
 
 import classNames from "classnames";
 import "./tooltip.css";
@@ -12,8 +12,8 @@ interface UserBarProps {
 export const UserBar = ({ users = [] }: UserBarProps) => {
   // sort user by weekPosts
   users.sort((a, b) => {
-    const aWeekCount = getPosts(cleanPosts, a, "Random").length;
-    const bWeekCount = getPosts(cleanPosts, b, "Random").length;
+    const aWeekCount = getPosts(posts, a, "Random").length;
+    const bWeekCount = getPosts(posts, b, "Random").length;
     return bWeekCount - aWeekCount;
   });
 
@@ -27,8 +27,8 @@ export const UserBar = ({ users = [] }: UserBarProps) => {
 };
 
 const UserBarUser = ({ user }: { user: User }) => {
-  const fullCount = getPosts(cleanPosts, user).length;
-  const weekCount = getPosts(cleanPosts, user, "Random").length;
+  const fullCount = getPosts(posts, user).length;
+  const weekCount = getPosts(posts, user, "Random").length;
 
   return (
     <div key={user._id} className="relative">

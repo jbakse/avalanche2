@@ -1,26 +1,20 @@
 /// run with `npm tsx data/data.ts`
 
-import posts from "./2023_spring/posts.json";
-import users from "./2023_spring/users.json";
-import prefs from "./2023_spring/prefs.json";
-
 export * from "./users";
 export * from "./posts";
 export * from "./prefs";
 
-import { cleanUsers as _cleanUsers } from "./users";
-import { cleanPosts as _cleanPosts } from "./posts";
-import { cleanPrefs as _cleanPrefs } from "./prefs";
+import dirtyUsers from "./2023_spring/users.json";
+import dirtyPosts from "./2023_spring/posts.json";
+import dirtyPrefs from "./2023_spring/prefs.json";
 
-export const cleanUsers = _cleanUsers(users);
-export const cleanPosts = _cleanPosts(posts, cleanUsers);
-export const cleanPrefs = _cleanPrefs(prefs, cleanPosts);
+import { cleanUsers } from "./users";
+import { cleanPosts } from "./posts";
+import { cleanPrefs } from "./prefs";
 
-/// USERS
-
-/// POSTS
-
-/// PREFS
+export const users = cleanUsers(dirtyUsers);
+export const posts = cleanPosts(dirtyPosts, users);
+export const config = cleanPrefs(dirtyPrefs, posts);
 
 // write to out.json
 // import fs from "fs";

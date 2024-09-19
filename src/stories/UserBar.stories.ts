@@ -1,4 +1,4 @@
-import { cleanUsers } from "../../data/data";
+import { users } from "../../data/data";
 import type { Meta, StoryObj } from "@storybook/react";
 import { UserBar } from "./UserBar";
 
@@ -19,12 +19,12 @@ type Story = StoryObj<typeof meta>;
 
 export const FullClass = {
   args: {
-    users: cleanUsers,
+    users: users,
   },
 } satisfies Story;
 
 export const Single = {
   args: {
-    users: [cleanUsers[0]],
+    users: [users[0]],
   },
 } satisfies Story;
