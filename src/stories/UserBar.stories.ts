@@ -11,20 +11,20 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const users = cleanUsers.map((user) => ({
-  ...user,
-  weekSketches: 0,
-  totalSketches: 10,
-}));
+// const users = cleanUsers.map((user) => ({
+//   ...user,
+//   weekPosts: 0,
+//   totalPosts: 10,
+// }));
 
 export const FullClass = {
   args: {
-    users,
+    users: cleanUsers,
   },
 } satisfies Story;
 
 export const Single = {
   args: {
-    users: [users[0]],
+    users: [cleanUsers[0]],
   },
 } satisfies Story;

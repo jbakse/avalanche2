@@ -1,40 +1,33 @@
 import { Header } from "./Header";
-import { UserBar, User } from "./UserBar";
-import { WeekBar, Week } from "./WeekBar";
-import { Post, PostProps } from "./Post";
+import { UserBar } from "./UserBar";
+import { WeekBar } from "./WeekBar";
+import { Post } from "./Post";
 
-interface PageProps {
-  title: string;
-  user?: User;
+import { Prefs, Post as PostData, User } from "../../data/data";
+
+type PageProps = {
+  prefs: Prefs;
+  posts: PostData[];
   users: User[];
-  weeks: Week[];
-  posts: PostProps[];
-  message: string;
-  postCount: number;
-  topic: string;
-}
+  activeLesson: string;
+};
 
-export const Page = ({
-  title,
-  user,
-  postCount,
-  topic,
-  users = [],
-  weeks = [],
-  posts = [],
-  message,
-}: PageProps) => {
+export const Page = ({ prefs, posts, users, activeLesson }: PageProps) => {
+  const postCount = posts.length;
+  const activePosts = posts.filter((post) => post.lesson === activeLesson);
+
   return (
     <>
-      <Header title={title} user={user} />
+      <Header title={prefs.site_title} />
       <UserBar users={users} />
-      <WeekBar weeks={weeks} />
+      <WeekBar activeLesson={activeLesson} weeks={prefs.weeks} />
       <div className="mt-4 text-lg text-center">
-        {postCount} Sketches Total — {posts.length} {topic} sketches.
+        {postCount} Sketches Total — {activePosts.length}
+        {activeLesson} sketches.
       </div>
-      <div className="mt-4 text-lg text-center">{message}</div>
+      <div className="mt-4 text-lg text-center">{prefs.avalanche_message}</div>
       <div className="mt-12 flex flex-wrap justify-center gap-4">
-        {posts.map((post) => (
+        {activePosts.map((post) => (
           <Post key={post._id} {...post} />
         ))}
       </div>

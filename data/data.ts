@@ -13,22 +13,29 @@ export type User = {
   lastName: string;
   headshot: CloudinaryID;
   description: string;
+  isAdmin: boolean;
 };
 
-export type UserSummary = Omit<User, "description">;
+// export type UserSummary = Omit<User, "description">;
 
 export const cleanUsers = users.map(cleanUser);
 
-export function getFullName(user: UserSummary): string {
+export function getFullName(user: User): string {
   return `${user.firstName} ${user.lastName}`.trim();
 }
 
-export function getHeadshotURL(user: UserSummary): string {
+export function getHeadshotURL(user: User): string {
   const blackPixel =
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAABNJREFUCB1jZGBg+A/EDEwgAgQADigBA//q6GsAAAAASUVORK5CYII%3D";
   return user.headshot
     ? `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_64/v1/${user.headshot}`
     : blackPixel;
+}
+
+export function getPosts(user: User, lesson?: string): Post[] {
+  return cleanPosts.filter(
+    (post) => post.author_id === user._id && (!lesson || post.lesson === lesson)
+  );
 }
 function cleanUser(user: Record<string, any>): User {
   return {
@@ -37,13 +44,15 @@ function cleanUser(user: Record<string, any>): User {
     lastName: user.profile.last_name ?? "",
     headshot: user.profile.headshot ?? "",
     description: user.profile.description ?? "",
+    isAdmin: user.roles?.__global_roles__.includes("admin") ?? false,
   };
 }
 
 /// POSTS
 
-export interface Post {
+export type Post = {
   _id: string;
+  author_id: string;
   author: string;
   author_headshot: string;
   created_at: string;
@@ -56,27 +65,27 @@ export interface Post {
 
   votes: Vote[];
   comments: Comment[];
-}
+};
 
-interface CloudinaryMedia {
+type CloudinaryMedia = {
   public_id: string;
   width: number;
   height: number;
   format: string;
   resource_type: string;
-}
+};
 
-interface Vote {
+type Vote = {
   content: string;
   author: string;
   created_at: string;
-}
+};
 
-interface Comment {
+type Comment = {
   content: string;
   author: string;
   created_at: string;
-}
+};
 
 export const cleanPosts = posts
   .sort((a, b) => {
@@ -97,6 +106,7 @@ function convertPost(post: Record<string, any>): Post {
   return {
     _id: post._id ?? 0,
     author: post.author ?? "",
+    author_id: post.author_id ?? "",
     author_headshot:
       users.find((user) => user._id === post.author_id)?.profile.headshot ?? "",
     created_at: post.created_at.$date ?? "",
@@ -155,18 +165,18 @@ function convertPost(post: Record<string, any>): Post {
 }
 
 /// PREFS
-export interface Prefs {
+export type Prefs = {
   site_title: string;
   avalanche_message: string;
   weeks: Week[];
-}
+};
 
-export interface Week {
+export type Week = {
   lesson: string;
   sketchCount: number;
   start: string;
   end: string;
-}
+};
 
 export const prefsClean: Prefs = {
   site_title: prefs.site_title ?? "",

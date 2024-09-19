@@ -27,3 +27,7 @@ make .topic and .lesson consistent (two names for same idea now)
 timezones on posts don't match
 
 the names "prefsClean" etc are from the point of view of the dirty data, just name it prefs, let all the dirty be hidden.
+
+prefs is plural should be an array, rename? maybe configuration
+
+hardcoded "Random" in several components, fix that
