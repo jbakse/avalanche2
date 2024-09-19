@@ -1,3 +1,5 @@
+// todo: is importing immutable global data bad practice (probably)
+
 import { posts } from "../../data/data";
 
 import classNames from "classnames";

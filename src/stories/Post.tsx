@@ -2,48 +2,6 @@ import { Post as PostData } from "../../data/data";
 
 export type PostProps = PostData;
 
-export const examplePostProps: PostProps = {
-  _id: "27vdvsA9c6FTbMgDa",
-  author: "Ada Lovelace",
-  author_headshot: "avalanche2023spring/jtizlivdmwdrpfsoatbm",
-  created_at: "2000-01-01T12:01:00.000Z",
-  isPosted: true,
-  lesson: "API",
-
-  cloudinary_media: [
-    {
-      public_id: "avalanche2023spring/uibymrddapzlsxp2iekr",
-      width: 1266,
-      height: 1132,
-      format: "png",
-      resource_type: "image",
-    },
-  ],
-  description: "I made this.",
-  code: "const x = 1;",
-
-  votes: [
-    {
-      content: "😂",
-      author: "Charles Babbage",
-      created_at: "2000-01-01T12:01:00.000Z",
-    },
-  ],
-  comments: [
-    {
-      content: "Nice work!",
-      author: "Charles Babbage",
-      created_at: "2000-01-01T12:01:00.000Z",
-    },
-  ],
-};
-
-// const emojisLookup: { [key: string]: string } = {
-//   funny: "😂",
-//   nerdy: "🤓",
-//   pretty: "😍",
-// };
-
 export const Post = (data: PostProps) => {
   // format like December 31 at 12:00 am
   const created_at = new Date(data.created_at).toLocaleString("en-US", {

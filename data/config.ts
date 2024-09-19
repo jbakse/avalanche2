@@ -1,6 +1,6 @@
 import { Post, getPosts } from "./posts";
 
-export type Prefs = {
+export type Config = {
   site_title: string;
   avalanche_message: string;
   weeks: Week[];
@@ -13,7 +13,7 @@ export type Week = {
   end: string;
 };
 
-export function cleanPrefs(prefs: Record<string, any>, posts: Post[]): Prefs {
+export function cleanConfig(prefs: Record<string, any>, posts: Post[]): Config {
   return {
     site_title: prefs.site_title ?? "",
     avalanche_message: prefs.avalanche_message ?? "",

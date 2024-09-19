@@ -3,10 +3,10 @@ import { UserBar } from "./UserBar";
 import { WeekBar } from "./WeekBar";
 import { Post } from "./Post";
 
-import { Prefs, Post as PostData, User } from "../../data/data";
+import { Config, Post as PostData, User } from "../../data/data";
 
 type PageProps = {
-  prefs: Prefs;
+  prefs: Config;
   posts: PostData[];
   users: User[];
   activeLesson: string;
