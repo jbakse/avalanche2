@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { Page } from "./Page";
 
-import { prefsClean, cleanPosts, cleanUsers } from "../../data/data";
+import { cleanPrefs, cleanPosts, cleanUsers } from "../../data/data";
 
 const meta = {
   title: "Avalanche/Page",
@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>;
 
 export const LoggedIn = {
   args: {
-    prefs: prefsClean,
+    prefs: cleanPrefs,
     posts: cleanPosts,
     users: cleanUsers,
     activeLesson: "Random",

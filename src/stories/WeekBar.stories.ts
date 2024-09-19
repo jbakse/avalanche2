@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { WeekBar } from "./WeekBar";
 
-import { prefsClean } from "../../data/data";
+import { cleanPrefs } from "../../data/data";
 
 const meta = {
   title: "Avalanche/WeekBar",
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof meta>;
 export const Default = {
   args: {
     activeLesson: "Random",
-    weeks: prefsClean.weeks,
+    weeks: cleanPrefs.weeks,
   },
 } satisfies Story;
