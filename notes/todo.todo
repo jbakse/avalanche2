@@ -5,3 +5,4 @@ Todo:
 ✓ timezones on posts don't match @done(24-09-19 14:41)
 
 □ hardcoded "Random" in several components, fix that
+□ the activeWeek prop and useState in page.ts is a little wonky, probably should recieve a setActiveWeek from the app?

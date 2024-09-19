@@ -14,11 +14,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const LoggedIn = {
+export const Main = {
   args: {
     prefs: config,
     posts: posts,
     users: users,
-    initialActiveLesson: "Random",
+    _activeLesson: "Introduction",
   },
 } satisfies Story;

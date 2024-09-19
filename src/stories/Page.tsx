@@ -10,23 +10,23 @@ type PageProps = {
   prefs: Config;
   posts: PostData[];
   users: User[];
-  initialActiveLesson: string;
+  _activeLesson: string;
 };
 
-export const Page = ({ prefs, posts, users, initialActiveLesson }: PageProps) => {
-  const [activeLesson, setActiveLesson] = useState(initialActiveLesson);
+export const Page = ({ prefs, posts, users, _activeLesson }: PageProps) => {
+  const [activeLesson, setActiveLesson] = useState(_activeLesson);
   const postCount = posts.length;
   const activePosts = posts.filter((post) => post.lesson === activeLesson);
-
-  const handleLessonChange = (lesson: string) => {
-    setActiveLesson(lesson);
-  };
 
   return (
     <>
       <Header title={prefs.site_title} />
       <UserBar users={users} activeLesson={activeLesson} />
-      <WeekBar activeLesson={activeLesson} weeks={prefs.weeks} onLessonChange={handleLessonChange} />
+      <WeekBar
+        activeLesson={activeLesson}
+        weeks={prefs.weeks}
+        onLessonChange={setActiveLesson}
+      />
       <div className="mt-4 text-lg text-center">
         {postCount} total sketches — {activePosts.length} {activeLesson}{" "}
         sketches.
