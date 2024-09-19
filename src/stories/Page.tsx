@@ -19,11 +19,11 @@ export const Page = ({ prefs, posts, users, activeLesson }: PageProps) => {
   return (
     <>
       <Header title={prefs.site_title} />
-      <UserBar users={users} />
+      <UserBar users={users} activeLesson={activeLesson} />
       <WeekBar activeLesson={activeLesson} weeks={prefs.weeks} />
       <div className="mt-4 text-lg text-center">
-        {postCount} Sketches Total — {activePosts.length}
-        {activeLesson} sketches.
+        {postCount} total sketches — {activePosts.length} {activeLesson}{" "}
+        sketches.
       </div>
       <div className="mt-4 text-lg text-center">{prefs.avalanche_message}</div>
       <div className="mt-12 flex flex-wrap justify-center gap-4">

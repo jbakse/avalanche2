@@ -60,17 +60,9 @@ export function cleanPosts(
       // reverse chronological order
       return dateB.getTime() - dateA.getTime();
     })
+    .filter((post) => post.posted)
     .map((post) => convertPost(post, users));
 }
-
-// export const cleanPosts = posts
-//   .sort((a, b) => {
-//     const dateA = new Date(a.created_at.$date);
-//     const dateB = new Date(b.created_at.$date);
-//     // reverse chronological order
-//     return dateB.getTime() - dateA.getTime();
-//   })
-//   .map(convertPost);
 
 function convertPost(post: Record<string, any>, users: User[]): Post {
   const emojis: { [key: string]: string } = {

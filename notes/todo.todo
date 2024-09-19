@@ -2,6 +2,6 @@ Todo:
 
 □ Probably should move cloudinary specific url templates to /data like User getHeadshot
 
-□ timezones on posts don't match
+✓ timezones on posts don't match @done(24-09-19 14:41)
 
 □ hardcoded "Random" in several components, fix that

@@ -9,28 +9,37 @@ import { User, getFullName, getHeadshotURL, getPosts } from "../../data/data";
 
 interface UserBarProps {
   users: User[];
+  activeLesson: string;
 }
 
-export const UserBar = ({ users = [] }: UserBarProps) => {
+export const UserBar = ({ users = [], activeLesson = "" }: UserBarProps) => {
   // sort user by weekPosts
   users.sort((a, b) => {
-    const aWeekCount = getPosts(posts, a, "Random").length;
-    const bWeekCount = getPosts(posts, b, "Random").length;
+    const aWeekCount = getPosts(posts, a, activeLesson).length;
+    const bWeekCount = getPosts(posts, b, activeLesson).length;
     return bWeekCount - aWeekCount;
   });
 
   return (
     <div className="flex items-center justify-center space-x-3 font-sans border-b h-20 shadow-md">
       {users.map((user) => {
-        return <UserBarUser key={user._id} user={user} />;
+        return (
+          <UserBarUser key={user._id} user={user} activeLesson={activeLesson} />
+        );
       })}
     </div>
   );
 };
 
-const UserBarUser = ({ user }: { user: User }) => {
+const UserBarUser = ({
+  user,
+  activeLesson,
+}: {
+  user: User;
+  activeLesson: string;
+}) => {
   const fullCount = getPosts(posts, user).length;
-  const weekCount = getPosts(posts, user, "Random").length;
+  const weekCount = getPosts(posts, user, activeLesson).length;
 
   return (
     <div key={user._id} className="relative">
