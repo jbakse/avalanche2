@@ -19,6 +19,6 @@ export const LoggedIn = {
     prefs: config,
     posts: posts,
     users: users,
-    activeLesson: "Random",
+    initialActiveLesson: "Random",
   },
 } satisfies Story;
