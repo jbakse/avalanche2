@@ -1,6 +1,6 @@
 import { Header } from "./Header";
 import { UserBar } from "./UserBar";
-import { LessonBar } from "./WeekBar";
+import { LessonBar } from "./LessonBar";
 import { Post } from "./Post";
 
 import { Config, Post as PostData, User } from "../../data/data";

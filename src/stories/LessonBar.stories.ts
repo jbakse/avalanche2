@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { LessonBar } from "./WeekBar";
+import { LessonBar } from "./LessonBar";
 
 import { config } from "../../data/data";
 
@@ -16,6 +16,7 @@ type Story = StoryObj<typeof meta>;
 export const Default = {
   args: {
     activeLesson: "Random",
+    activeUser: null,
     lessons: config.lessons,
   },
 } satisfies Story;
