@@ -9,6 +9,12 @@ const meta = {
   title: "Avalanche/Page",
   component: Page,
   parameters: { layout: "fullscreen" },
+  argTypes: {
+    // hide prefs, posts, and users from the controls panel
+    prefs: { table: { disable: true } },
+    posts: { table: { disable: true } },
+    users: { table: { disable: true } },
+  },
 } satisfies Meta<typeof Page>;
 
 export default meta;
@@ -26,7 +32,7 @@ export const Main = {
   render: function Render(args) {
     const [{ activeLesson, activeUser }, updateArgs] = useArgs();
 
-    function handleLessonChange(newActiveLesson: string) {
+    function handleLessonChange(newActiveLesson: string | null) {
       updateArgs({ activeLesson: newActiveLesson });
     }
 
