@@ -2,6 +2,7 @@ import { Header } from "./Header";
 import { UserBar } from "./UserBar";
 import { LessonBar } from "./LessonBar";
 import { Post } from "./Post";
+import { UserProfile } from "./UserProfile";
 
 import { Config, Post as PostData, User } from "../../data/data";
 
@@ -40,6 +41,7 @@ export const Page = ({
         activeUser={activeUser}
         onUserChange={onUserChange}
       />
+      {activeUser && <UserProfile user={activeUser} />}
       <LessonBar
         activeLesson={activeLesson}
         activeUser={activeUser}
