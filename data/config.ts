@@ -1,5 +1,3 @@
-import { Post, filterPosts } from "./posts";
-
 export type Config = {
   site_title: string;
   avalanche_message: string;
@@ -8,18 +6,16 @@ export type Config = {
 
 export type Week = {
   lesson: string;
-  sketchCount: number;
   start: string;
   end: string;
 };
 
-export function cleanConfig(prefs: Record<string, any>, posts: Post[]): Config {
+export function cleanConfig(prefs: Record<string, any>): Config {
   return {
     site_title: prefs.site_title ?? "",
     avalanche_message: prefs.avalanche_message ?? "",
     weeks: prefs.weeks.map((week: Record<string, any>) => ({
       lesson: week.topic ?? "",
-      sketchCount: filterPosts(posts, undefined, week.topic).length,
       start: week.start.$date ?? "",
       end: week.end.$date ?? "",
     })),

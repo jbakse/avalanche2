@@ -14,4 +14,4 @@ import { cleanConfig } from "./config";
 
 export const users = cleanUsers(dirtyUsers);
 export const posts = cleanPosts(dirtyPosts, users);
-export const config = cleanConfig(dirtyPrefs, posts);
+export const config = cleanConfig(dirtyPrefs);

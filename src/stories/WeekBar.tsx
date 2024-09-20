@@ -30,7 +30,7 @@ export const WeekBar = ({
         <p className="text-lg font-regular">
           {activeUser
             ? filterPosts(posts, activeUser, week.lesson).length
-            : week.sketchCount}
+            : filterPosts(posts, null, week.lesson).length}
         </p>
         {week.lesson === activeLesson && (
           <div className="absolute top-full mt-2 w-0 h-0 left-1/2 -translate-x-1/2 border-8 border-transparent border-t-black"></div>
