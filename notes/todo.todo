@@ -1,8 +1,11 @@
 Todo:
+□ lazy load images?
 
+Refactor:
 □ Probably should move cloudinary specific url templates to /data like User getHeadshot
-
-✓ timezones on posts don't match @done(24-09-19 14:41)
-
-□ hardcoded "Random" in several components, fix that
-□ the activeWeek prop and useState in page.ts is a little wonky, probably should recieve a setActiveWeek from the app?
+✓ weekbar should handle selected user @done(24-09-20 14:26)
+✓ userbar should handle no week selected @done(24-09-20 14:30)
+□ lesson to specific (better than overloading "week"!), should be.. tag? topic?
+□ weekBar should be lessonBar, or even better, whats the new word for lesson?
+□ getPosts -> filterPosts
+□ maybe don't cache post count in weeks? filter that out using getPosts?

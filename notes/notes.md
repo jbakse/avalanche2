@@ -1,5 +1,1 @@
-Probably should move cloudinary specific url templates to /data like User getHeadshot
 
-timezones on posts don't match
-
-hardcoded "Random" in several components, fix that

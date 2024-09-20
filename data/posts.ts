@@ -37,7 +37,11 @@ type Comment = {
   created_at: string;
 };
 
-export function getPosts(posts: Post[], user?: User, lesson?: string): Post[] {
+export function getPosts(
+  posts: Post[],
+  user?: User | null,
+  lesson?: string | null
+): Post[] {
   // returns posts match user and lesson if provided
   return posts.filter(
     (post) =>

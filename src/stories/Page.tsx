@@ -9,9 +9,9 @@ type PageProps = {
   prefs: Config;
   posts: PostData[];
   users: User[];
-  activeLesson: string;
+  activeLesson: string | null;
   activeUser: User | null;
-  onLessonChange?: (newActiveLesson: string) => void;
+  onLessonChange?: (newActiveLesson: string | null) => void;
   onUserChange?: (newActiveUser: User | null) => void;
 };
 
@@ -31,7 +31,6 @@ export const Page = ({
       (!activeUser || post.author_id === activeUser._id)
     );
   });
-  /// I am working on the active lesson active user filtering. Needs to be a way to unselect user, unslect lessons, should review the "set active user' logic. i think i want to push the setter from UserBar to UserBarUserd
   return (
     <>
       <Header title={prefs.site_title} />
@@ -43,6 +42,7 @@ export const Page = ({
       />
       <WeekBar
         activeLesson={activeLesson}
+        activeUser={activeUser}
         weeks={prefs.weeks}
         onLessonChange={onLessonChange}
       />

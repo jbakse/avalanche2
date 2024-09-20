@@ -9,7 +9,7 @@ import { User, getFullName, getHeadshotURL, getPosts } from "../../data/data";
 
 interface UserBarProps {
   users: User[];
-  activeLesson: string;
+  activeLesson: string | null;
   activeUser: User | null;
   onUserChange?: (user: User | null) => void;
 }
@@ -37,6 +37,7 @@ export const UserBar = ({
             key={user._id}
             user={user}
             activeLesson={activeLesson}
+            activeUser={activeUser}
             isActive={activeUser?._id === user._id}
             onClick={() =>
               // if the user is inactive, activate them
@@ -53,16 +54,18 @@ export const UserBar = ({
 const UserBarUser = ({
   user,
   activeLesson,
+  activeUser,
   isActive,
   onClick,
 }: {
   user: User;
-  activeLesson: string;
+  activeLesson: string | null;
+  activeUser: User | null;
   isActive: boolean;
   onClick: () => void;
 }) => {
   const fullCount = getPosts(posts, user).length;
-  const weekCount = getPosts(posts, user, activeLesson).length;
+  const lessonCount = getPosts(posts, user, activeLesson).length;
 
   return (
     <div key={user._id} className="relative" onClick={onClick}>
@@ -70,10 +73,10 @@ const UserBarUser = ({
         className={classNames(
           "w-14 h-14 object-cover border-b-[6px] cursor-pointer",
           {
-            "border-red-600": weekCount <= 1,
-            "border-orange-300": weekCount === 2,
-            "border-yellow-300": weekCount === 3,
-            "border-green-500": weekCount >= 4,
+            "border-red-600": lessonCount <= 1,
+            "border-orange-300": lessonCount === 2,
+            "border-yellow-300": lessonCount === 3,
+            "border-green-500": lessonCount >= 4,
             "border-transparent": user.isAdmin,
           }
         )}
@@ -87,7 +90,7 @@ const UserBarUser = ({
       <div className="tooltip text-center ">
         <h2 className="font-bold uppercase pb-1">{getFullName(user)}</h2>
         <p>{fullCount} sketches</p>
-        <p>{weekCount} this week</p>
+        {activeLesson && <p>{lessonCount} this week</p>}
       </div>
     </div>
   );
