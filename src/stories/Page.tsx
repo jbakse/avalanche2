@@ -25,8 +25,13 @@ export const Page = ({
   onUserChange,
 }: PageProps) => {
   const postCount = posts.length;
-  const activePosts = posts.filter((post) => post.lesson === activeLesson);
-
+  const activePosts = posts.filter((post) => {
+    return (
+      (!activeLesson || post.lesson === activeLesson) &&
+      (!activeUser || post.author_id === activeUser._id)
+    );
+  });
+  /// I am working on the active lesson active user filtering. Needs to be a way to unselect user, unslect lessons, should review the "set active user' logic. i think i want to push the setter from UserBar to UserBarUserd
   return (
     <>
       <Header title={prefs.site_title} />
