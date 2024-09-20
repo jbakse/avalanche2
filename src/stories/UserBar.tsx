@@ -14,7 +14,12 @@ interface UserBarProps {
   onUserChange?: (user: User | null) => void;
 }
 
-export const UserBar = ({ users = [], activeLesson = "", activeUser, onUserChange }: UserBarProps) => {
+export const UserBar = ({
+  users = [],
+  activeLesson = "",
+  activeUser,
+  onUserChange,
+}: UserBarProps) => {
   // sort user by number of posts in active lesson, push admins to the end
   users.sort((a, b) => {
     const aWeekCount =
@@ -33,7 +38,11 @@ export const UserBar = ({ users = [], activeLesson = "", activeUser, onUserChang
             user={user}
             activeLesson={activeLesson}
             isActive={activeUser?._id === user._id}
-            onClick={() => onUserChange?.(activeUser?._id === user._id ? null : user)}
+            onClick={() =>
+              // if the user is inactive, activate them
+              // if the user is already active, deactivate them
+              onUserChange?.(activeUser?._id === user._id ? null : user)
+            }
           />
         );
       })}
@@ -58,17 +67,23 @@ const UserBarUser = ({
   return (
     <div key={user._id} className="relative" onClick={onClick}>
       <img
-        className={classNames("w-14 h-14 object-cover border-b-[6px] cursor-pointer", {
-          "border-red-600": weekCount <= 1,
-          "border-orange-300": weekCount === 2,
-          "border-yellow-300": weekCount === 3,
-          "border-green-500": weekCount >= 4,
-          "border-transparent": user.isAdmin,
-          "ring-2 ring-blue-500": isActive,
-        })}
+        className={classNames(
+          "w-14 h-14 object-cover border-b-[6px] cursor-pointer",
+          {
+            "border-red-600": weekCount <= 1,
+            "border-orange-300": weekCount === 2,
+            "border-yellow-300": weekCount === 3,
+            "border-green-500": weekCount >= 4,
+            "border-transparent": user.isAdmin,
+          }
+        )}
         src={getHeadshotURL(user)}
         alt={getFullName(user)}
       />
+      {isActive && (
+        <div className="absolute top-full mt-0 w-0 h-0 left-1/2 -translate-x-1/2 border-8 border-transparent border-t-black"></div>
+      )}
+
       <div className="tooltip text-center ">
         <h2 className="font-bold uppercase pb-1">{getFullName(user)}</h2>
         <p>{fullCount} sketches</p>
