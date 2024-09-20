@@ -10,7 +10,9 @@ type PageProps = {
   posts: PostData[];
   users: User[];
   activeLesson: string;
+  activeUser: User | null;
   onLessonChange?: (newActiveLesson: string) => void;
+  onUserChange?: (newActiveUser: User | null) => void;
 };
 
 export const Page = ({
@@ -18,7 +20,9 @@ export const Page = ({
   posts,
   users,
   activeLesson,
+  activeUser,
   onLessonChange,
+  onUserChange,
 }: PageProps) => {
   const postCount = posts.length;
   const activePosts = posts.filter((post) => post.lesson === activeLesson);
@@ -26,7 +30,12 @@ export const Page = ({
   return (
     <>
       <Header title={prefs.site_title} />
-      <UserBar users={users} activeLesson={activeLesson} />
+      <UserBar
+        users={users}
+        activeLesson={activeLesson}
+        activeUser={activeUser}
+        onUserChange={onUserChange}
+      />
       <WeekBar
         activeLesson={activeLesson}
         weeks={prefs.weeks}

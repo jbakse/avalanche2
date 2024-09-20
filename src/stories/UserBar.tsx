@@ -10,9 +10,11 @@ import { User, getFullName, getHeadshotURL, getPosts } from "../../data/data";
 interface UserBarProps {
   users: User[];
   activeLesson: string;
+  activeUser: User | null;
+  onUserChange?: (user: User | null) => void;
 }
 
-export const UserBar = ({ users = [], activeLesson = "" }: UserBarProps) => {
+export const UserBar = ({ users = [], activeLesson = "", activeUser, onUserChange }: UserBarProps) => {
   // sort user by number of posts in active lesson, push admins to the end
   users.sort((a, b) => {
     const aWeekCount =
@@ -26,7 +28,13 @@ export const UserBar = ({ users = [], activeLesson = "" }: UserBarProps) => {
     <div className="flex items-center justify-center space-x-3 font-sans border-b h-20 shadow-md">
       {users.map((user) => {
         return (
-          <UserBarUser key={user._id} user={user} activeLesson={activeLesson} />
+          <UserBarUser
+            key={user._id}
+            user={user}
+            activeLesson={activeLesson}
+            isActive={activeUser?._id === user._id}
+            onClick={() => onUserChange?.(activeUser?._id === user._id ? null : user)}
+          />
         );
       })}
     </div>
@@ -36,22 +44,27 @@ export const UserBar = ({ users = [], activeLesson = "" }: UserBarProps) => {
 const UserBarUser = ({
   user,
   activeLesson,
+  isActive,
+  onClick,
 }: {
   user: User;
   activeLesson: string;
+  isActive: boolean;
+  onClick: () => void;
 }) => {
   const fullCount = getPosts(posts, user).length;
   const weekCount = getPosts(posts, user, activeLesson).length;
 
   return (
-    <div key={user._id} className="relative">
+    <div key={user._id} className="relative" onClick={onClick}>
       <img
-        className={classNames("w-14 h-14 object-cover border-b-[6px]", {
+        className={classNames("w-14 h-14 object-cover border-b-[6px] cursor-pointer", {
           "border-red-600": weekCount <= 1,
           "border-orange-300": weekCount === 2,
           "border-yellow-300": weekCount === 3,
           "border-green-500": weekCount >= 4,
           "border-transparent": user.isAdmin,
+          "ring-2 ring-blue-500": isActive,
         })}
         src={getHeadshotURL(user)}
         alt={getFullName(user)}

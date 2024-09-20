@@ -3,7 +3,7 @@ import { useArgs } from "@storybook/preview-api";
 
 import { Page } from "./Page";
 
-import { config, posts, users } from "../../data/data";
+import { config, posts, users, User } from "../../data/data";
 
 const meta = {
   title: "Avalanche/Page",
@@ -21,19 +21,26 @@ export const Main = {
     posts: posts,
     users: users,
     activeLesson: "Introduction",
+    activeUser: null,
   },
   render: function Render(args) {
-    const [{ activeLesson }, updateArgs] = useArgs();
+    const [{ activeLesson, activeUser }, updateArgs] = useArgs();
 
     function handleLessonChange(newActiveLesson: string) {
       updateArgs({ activeLesson: newActiveLesson });
+    }
+
+    function handleUserChange(newActiveUser: User | null) {
+      updateArgs({ activeUser: newActiveUser });
     }
 
     return (
       <Page
         {...args}
         activeLesson={activeLesson}
+        activeUser={activeUser}
         onLessonChange={handleLessonChange}
+        onUserChange={handleUserChange}
       />
     );
   },
