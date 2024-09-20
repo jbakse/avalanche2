@@ -1,6 +1,6 @@
 import { Header } from "./Header";
 import { UserBar } from "./UserBar";
-import { WeekBar } from "./WeekBar";
+import { LessonBar } from "./WeekBar";
 import { Post } from "./Post";
 
 import { Config, Post as PostData, User } from "../../data/data";
@@ -40,10 +40,10 @@ export const Page = ({
         activeUser={activeUser}
         onUserChange={onUserChange}
       />
-      <WeekBar
+      <LessonBar
         activeLesson={activeLesson}
         activeUser={activeUser}
-        weeks={prefs.weeks}
+        lessons={prefs.lessons}
         onLessonChange={onLessonChange}
       />
       <div className="mt-4 text-lg text-center">

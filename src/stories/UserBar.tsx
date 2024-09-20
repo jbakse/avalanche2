@@ -27,11 +27,11 @@ export const UserBar = ({
 }: UserBarProps) => {
   // sort user by number of posts in active lesson, push admins to the end
   users.sort((a, b) => {
-    const aWeekCount =
+    const aLessonCount =
       filterPosts(posts, a, activeLesson).length - (a.isAdmin ? 1000 : 0);
-    const bWeekCount =
+    const bLessonCount =
       filterPosts(posts, b, activeLesson).length - (b.isAdmin ? 1000 : 0);
-    return bWeekCount - aWeekCount;
+    return bLessonCount - aLessonCount;
   });
 
   return (
@@ -95,7 +95,7 @@ const UserBarUser = ({
       <div className="tooltip text-center ">
         <h2 className="font-bold uppercase pb-1">{getFullName(user)}</h2>
         <p>{fullCount} sketches</p>
-        {activeLesson && <p>{lessonCount} this week</p>}
+        {activeLesson && <p>{lessonCount} this lesson</p>}
       </div>
     </div>
   );
