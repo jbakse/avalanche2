@@ -7,5 +7,5 @@ Refactor:
 ✓ userbar should handle no week selected @done(24-09-20 14:30)
 □ lesson to specific (better than overloading "week"!), should be.. tag? topic?
 □ weekBar should be lessonBar, or even better, whats the new word for lesson?
-□ getPosts -> filterPosts
+✓ getPosts -> filterPosts @done(24-09-20 14:38)
 □ maybe don't cache post count in weeks? filter that out using getPosts?

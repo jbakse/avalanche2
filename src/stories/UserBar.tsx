@@ -5,7 +5,12 @@ import { posts } from "../../data/data";
 import classNames from "classnames";
 import "./tooltip.css";
 
-import { User, getFullName, getHeadshotURL, getPosts } from "../../data/data";
+import {
+  User,
+  getFullName,
+  getHeadshotURL,
+  filterPosts,
+} from "../../data/data";
 
 interface UserBarProps {
   users: User[];
@@ -23,9 +28,9 @@ export const UserBar = ({
   // sort user by number of posts in active lesson, push admins to the end
   users.sort((a, b) => {
     const aWeekCount =
-      getPosts(posts, a, activeLesson).length - (a.isAdmin ? 1000 : 0);
+      filterPosts(posts, a, activeLesson).length - (a.isAdmin ? 1000 : 0);
     const bWeekCount =
-      getPosts(posts, b, activeLesson).length - (b.isAdmin ? 1000 : 0);
+      filterPosts(posts, b, activeLesson).length - (b.isAdmin ? 1000 : 0);
     return bWeekCount - aWeekCount;
   });
 
@@ -64,8 +69,8 @@ const UserBarUser = ({
   isActive: boolean;
   onClick: () => void;
 }) => {
-  const fullCount = getPosts(posts, user).length;
-  const lessonCount = getPosts(posts, user, activeLesson).length;
+  const fullCount = filterPosts(posts, user).length;
+  const lessonCount = filterPosts(posts, user, activeLesson).length;
 
   return (
     <div key={user._id} className="relative" onClick={onClick}>

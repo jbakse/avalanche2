@@ -1,4 +1,4 @@
-import { Post, getPosts } from "./posts";
+import { Post, filterPosts } from "./posts";
 
 export type Config = {
   site_title: string;
@@ -19,7 +19,7 @@ export function cleanConfig(prefs: Record<string, any>, posts: Post[]): Config {
     avalanche_message: prefs.avalanche_message ?? "",
     weeks: prefs.weeks.map((week: Record<string, any>) => ({
       lesson: week.topic ?? "",
-      sketchCount: getPosts(posts, undefined, week.topic).length,
+      sketchCount: filterPosts(posts, undefined, week.topic).length,
       start: week.start.$date ?? "",
       end: week.end.$date ?? "",
     })),

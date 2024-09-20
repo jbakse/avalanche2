@@ -37,7 +37,7 @@ type Comment = {
   created_at: string;
 };
 
-export function getPosts(
+export function filterPosts(
   posts: Post[],
   user?: User | null,
   lesson?: string | null

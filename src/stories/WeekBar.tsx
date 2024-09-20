@@ -1,6 +1,6 @@
 import "./tooltip.css";
 
-import { posts, getPosts } from "../../data/data";
+import { posts, filterPosts } from "../../data/data";
 import { User } from "../../data/data";
 import { Week } from "../../data/data";
 
@@ -29,7 +29,7 @@ export const WeekBar = ({
         <p className="text-[10px] uppercase mb-1 font-light">{week.lesson}</p>
         <p className="text-lg font-regular">
           {activeUser
-            ? getPosts(posts, activeUser, week.lesson).length
+            ? filterPosts(posts, activeUser, week.lesson).length
             : week.sketchCount}
         </p>
         {week.lesson === activeLesson && (
