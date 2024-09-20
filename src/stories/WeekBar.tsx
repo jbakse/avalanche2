@@ -5,16 +5,20 @@ import { Week } from "../../data/data";
 interface WeekBarProps {
   activeLesson: string;
   weeks: Week[];
-  onLessonChange: (lesson: string) => void;
+  onLessonChange?: (lesson: string) => void;
 }
 
-export const WeekBar = ({ weeks = [], activeLesson = "", onLessonChange }: WeekBarProps) => (
+export const WeekBar = ({
+  weeks = [],
+  activeLesson = "",
+  onLessonChange,
+}: WeekBarProps) => (
   <div className="flex items-center justify-center space-x-2 font-sans py-4 ">
     {weeks.map((week) => (
       <div
         key={week.lesson}
         className="flex flex-col justify-between h-16 w-20 text-center py-1 hover:bg-gray-200 rounded cursor-pointer relative"
-        onClick={() => onLessonChange(week.lesson)}
+        onClick={() => onLessonChange?.(week.lesson)}
       >
         <p className="text-[10px] uppercase mb-1 font-light">{week.lesson}</p>
         <p className="text-lg font-regular">{week.sketchCount}</p>

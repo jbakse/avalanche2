@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { useArgs } from "@storybook/preview-api";
 
 import { Page } from "./Page";
 
@@ -19,6 +20,21 @@ export const Main = {
     prefs: config,
     posts: posts,
     users: users,
-    _activeLesson: "Introduction",
+    activeLesson: "Introduction",
+  },
+  render: function Render(args) {
+    const [{ activeLesson }, updateArgs] = useArgs();
+
+    function handleLessonChange(newActiveLesson: string) {
+      updateArgs({ activeLesson: newActiveLesson });
+    }
+
+    return (
+      <Page
+        {...args}
+        activeLesson={activeLesson}
+        onLessonChange={handleLessonChange}
+      />
+    );
   },
 } satisfies Story;
