@@ -4,6 +4,7 @@ Todo:
 Refactor:
 □ Probably should move cloudinary specific url templates to /data like User getHeadshot
 
+□ markdown support
 
 ✓ weekbar should handle selected user @done(24-09-20 14:26)
 ✓ userbar should handle no week selected @done(24-09-20 14:30)

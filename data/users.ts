@@ -15,11 +15,16 @@ export function getFullName(user: User): string {
   return `${user.firstName} ${user.lastName}`.trim();
 }
 
-export function getHeadshotURL(user: User): string {
+export function getHeadshotURL(
+  user: User,
+  size: "small" | "large" = "small"
+): string {
   const blackPixel =
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAABNJREFUCB1jZGBg+A/EDEwgAgQADigBA//q6GsAAAAASUVORK5CYII%3D";
+  const width = size === "small" ? 64 : 200;
+
   return user.headshot
-    ? `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_64/v1/${user.headshot}`
+    ? `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_${width}/v1/${user.headshot}`
     : blackPixel;
 }
 
