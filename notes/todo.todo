@@ -4,7 +4,8 @@ Todo:
 Refactor:
 □ Probably should move cloudinary specific url templates to /data like User getHeadshot
 
-□ support videos
+✓ support videos in post summary @done(24-09-23 15:17)
+□ post detail
 □ support markdown
 □ masonry w js? https://codepen.io/singhkunal2050/pen/vYbPVNd
 ✓ weekbar should handle selected user @done(24-09-20 14:26)

@@ -12,7 +12,7 @@ export const Post = (data: PostProps) => {
     hour12: true,
   });
 
-  const renderImgs = () => {
+  const renderMedia = () => {
     // example video thumb url
     // https://res.cloudinary.com/compform2023spring/video/upload/w_350/avalanche2023spring/iezbyqnfdvl9rvaoyank.jpg
 
@@ -20,9 +20,9 @@ export const Post = (data: PostProps) => {
     //https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/avalanche2023spring/v2agzd39fbrclj7urnve
 
     const playButton = (
-      <div className="absolute inset-24 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-center justify-center border">
         <svg
-          className="drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)]"
+          className="h-20 drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)]"
           viewBox="0 0 5 6"
         >
           <path
@@ -35,47 +35,64 @@ export const Post = (data: PostProps) => {
         </svg>
       </div>
     );
-    const imgSrcs = data.cloudinary_media.map((o) => {
+
+    const mediaThumb = (
+      mediaInfo: { type: string; thumb: string },
+      widthClass = "w-full",
+      aspectClass = "aspect-square"
+    ) => (
+      <div className={`${widthClass} ${aspectClass} relative`}>
+        <img className="w-full h-full object-cover" src={mediaInfo.thumb} />
+        {mediaInfo.type === "video" && playButton}
+      </div>
+    );
+
+    const mediaInfos = data.cloudinary_media.map((o) => {
       if (o.resource_type === "video") {
-        return `https://res.cloudinary.com/compform2023spring/video/upload/w_350/${o.public_id}.jpg`;
-      }
-      if (o.resource_type === "image") {
-        return `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/${o.public_id}`;
+        // video
+        return {
+          type: "video",
+          thumb: `https://res.cloudinary.com/compform2023spring/video/upload/w_350/${o.public_id}.jpg`,
+        };
+      } else {
+        // image
+        return {
+          type: "image",
+          thumb: `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/${o.public_id}`,
+        };
       }
     });
 
-    if (imgSrcs.length === 0) return null;
-    if (imgSrcs.length === 1) {
-      return (
-        <>
-          <img className="w-full aspect-square object-cover" src={imgSrcs[0]} />
+    if (mediaInfos.length === 0) return null;
 
-          {playButton}
+    if (mediaInfos.length === 1) {
+      return <>{mediaThumb(mediaInfos[0], "w-full", "aspect-square")}</>;
+    }
+
+    if (mediaInfos.length === 2) {
+      return (
+        <>
+          {mediaThumb(mediaInfos[0])}
+          {mediaThumb(mediaInfos[1], "w-full", "aspect-[2/1]")}
         </>
       );
     }
-    if (imgSrcs.length === 2) {
+
+    if (mediaInfos.length >= 3) {
       return (
         <>
-          <img className="w-full aspect-square object-cover" src={imgSrcs[0]} />
-          <img className="w-full aspect-[2/1]  object-cover" src={imgSrcs[1]} />
-        </>
-      );
-    }
-    if (imgSrcs.length >= 3) {
-      return (
-        <>
-          <img className="w-full aspect-square object-cover" src={imgSrcs[0]} />
-          <img className="w-1/2  aspect-square object-cover" src={imgSrcs[1]} />
-          <img className="w-1/2  aspect-square object-cover" src={imgSrcs[2]} />
+          {mediaThumb(mediaInfos[0], "w-full", "aspect-square")}
+          {mediaThumb(mediaInfos[1], "w-1/2", "aspect-square")}
+          {mediaThumb(mediaInfos[2], "w-1/2", "aspect-square")}
         </>
       );
     }
   };
+
   return (
     <div className="w-80 border border-gray-300 shadow-md rounded bg-white">
-      {/* images */}
-      <div className="flex  flex-wrap relative">{renderImgs()}</div>
+      {/* media */}
+      <div className="flex flex-wrap relative">{renderMedia()}</div>
 
       <div className="p-4 font-sans">
         {/* emoji */}
