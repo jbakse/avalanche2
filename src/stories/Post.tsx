@@ -13,17 +13,45 @@ export const Post = (data: PostProps) => {
   });
 
   const renderImgs = () => {
-    const imgSrcs = data.cloudinary_media
-      .filter((o) => o.resource_type === "image")
-      .map(
-        (o) =>
-          `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/${o.public_id}`
-      );
+    // example video thumb url
+    // https://res.cloudinary.com/compform2023spring/video/upload/w_350/avalanche2023spring/iezbyqnfdvl9rvaoyank.jpg
+
+    // example image thumb url
+    //https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/avalanche2023spring/v2agzd39fbrclj7urnve
+
+    const playButton = (
+      <div className="absolute inset-24 flex items-center justify-center">
+        <svg
+          className="drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)]"
+          viewBox="0 0 5 6"
+        >
+          <path
+            strokeLinejoin="round"
+            strokeWidth={0.5}
+            stroke="white"
+            fill="white"
+            d="M1 1 l3 2 l-3 2 z"
+          />
+        </svg>
+      </div>
+    );
+    const imgSrcs = data.cloudinary_media.map((o) => {
+      if (o.resource_type === "video") {
+        return `https://res.cloudinary.com/compform2023spring/video/upload/w_350/${o.public_id}.jpg`;
+      }
+      if (o.resource_type === "image") {
+        return `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/${o.public_id}`;
+      }
+    });
 
     if (imgSrcs.length === 0) return null;
     if (imgSrcs.length === 1) {
       return (
-        <img className="w-full aspect-square object-cover" src={imgSrcs[0]} />
+        <>
+          <img className="w-full aspect-square object-cover" src={imgSrcs[0]} />
+
+          {playButton}
+        </>
       );
     }
     if (imgSrcs.length === 2) {
@@ -47,7 +75,7 @@ export const Post = (data: PostProps) => {
   return (
     <div className="w-80 border border-gray-300 shadow-md rounded bg-white">
       {/* images */}
-      <div className="flex  flex-wrap">{renderImgs()}</div>
+      <div className="flex  flex-wrap relative">{renderImgs()}</div>
 
       <div className="p-4 font-sans">
         {/* emoji */}

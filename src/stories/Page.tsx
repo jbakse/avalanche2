@@ -7,7 +7,7 @@ import { UserProfile } from "./UserProfile";
 import { Config, Post as PostData, User } from "../../data/data";
 
 type PageProps = {
-  prefs: Config;
+  config: Config;
   posts: PostData[];
   users: User[];
   activeLesson: string | null;
@@ -17,7 +17,7 @@ type PageProps = {
 };
 
 export const Page = ({
-  prefs,
+  config,
   posts,
   users,
   activeLesson,
@@ -34,7 +34,7 @@ export const Page = ({
   });
   return (
     <>
-      <Header title={prefs.site_title} />
+      <Header title={config.site_title} />
       <UserBar
         users={users}
         activeLesson={activeLesson}
@@ -45,14 +45,14 @@ export const Page = ({
       <LessonBar
         activeLesson={activeLesson}
         activeUser={activeUser}
-        lessons={prefs.lessons}
+        lessons={config.lessons}
         onLessonChange={onLessonChange}
       />
       <div className="mt-4 text-lg text-center">
         {postCount} total sketches — {activePosts.length} {activeLesson}{" "}
         sketches.
       </div>
-      <div className="mt-4 text-lg text-center">{prefs.avalanche_message}</div>
+      <div className="mt-4 text-lg text-center">{config.avalanche_message}</div>
       <div className="mt-12 flex flex-wrap justify-center gap-4">
         {activePosts.map((post) => (
           <Post key={post._id} {...post} />

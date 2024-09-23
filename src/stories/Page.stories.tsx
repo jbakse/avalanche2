@@ -11,7 +11,7 @@ const meta = {
   parameters: { layout: "fullscreen" },
   argTypes: {
     // hide prefs, posts, and users from the controls panel
-    prefs: { table: { disable: true } },
+    config: { table: { disable: true } },
     posts: { table: { disable: true } },
     users: { table: { disable: true } },
   },
@@ -23,7 +23,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Main = {
   args: {
-    prefs: config,
+    config: config,
     posts: posts,
     users: users,
     activeLesson: "Introduction",
