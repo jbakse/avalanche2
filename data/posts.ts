@@ -101,12 +101,12 @@ function convertPost(post: Record<string, any>, users: UserData[]): PostData {
     comments: post.comments.map(function convertComment(
       comment: Record<string, any>
     ): Comment {
-      const user = users.find((user) => user._id === comment.author_id);
+      const user = users.find((user) => user._id === comment.commenter_id);
       const authorName = user ? `${user.firstName} ${user.lastName}` : "";
 
       return {
-        content: emojis[comment.category] ?? "",
-        authorId: comment.author_id,
+        content: comment.comment,
+        authorId: comment.commenter_id,
         authorName: authorName,
         createdAt: comment.created_at.$date ?? "",
       };

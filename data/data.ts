@@ -61,3 +61,16 @@ export function getImageThumbnailURL(mediaId: string): string {
 
   return `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/${mediaId}.jpg`;
 }
+
+export function getImageURL(mediaId: string): string {
+  // example image url
+  // https://res.cloudinary.com/compform2023spring/image/upload/v1/avalanche2023spring/bucqa1cmudkjuped28sn
+
+  return `https://res.cloudinary.com/compform2023spring/image/upload/v1/${mediaId}`;
+}
+
+export function getVideoURL(mediaId: string): string {
+  // example video url
+  // https://res.cloudinary.com/compform2023spring/video/upload/vc_h264/avalanche2023spring/cxtjiemeovgo26vix9cj.mp4
+  return `https://res.cloudinary.com/compform2023spring/video/upload/vc_h264/${mediaId}.mp4`;
+}

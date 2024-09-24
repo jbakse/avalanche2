@@ -11,8 +11,15 @@ Refactor:
 
 
 □ post detail
+    □ start
+    □ main layout
+    □ close button
+    □ custom scrollbar
+
+
 □ support markdown
 □ masonry w js? https://codepen.io/singhkunal2050/pen/vYbPVNd
+□ factor formatDate, elide into utils, improve names?
 
 ✓ weekbar should handle selected user @done(24-09-20 14:26)
 ✓ userbar should handle no week selected @done(24-09-20 14:30)

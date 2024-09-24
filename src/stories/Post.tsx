@@ -11,16 +11,28 @@ interface PostProps extends PostData {
   onPostChange?: (newActivePost: PostData | null) => void;
 }
 
-export const Post = (data: PostProps) => {
-  // format like December 31 at 12:00 am
-  const created_at = new Date(data.createdAt).toLocaleString("en-US", {
-    month: "long",
-    day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
-    hour12: true,
-  });
+export function Dateline(props: { postData: PostData }) {
+  return (
+    <div className="flex">
+      <img
+        className="rounded-full w-8 h-8 inline-block cursor-pointer"
+        src={getHeadshotURL(props.postData.authorHeadshotId, "small")}
+      />
+      <span className="text-xs uppercase flex items-center ml-3">
+        {props.postData.authorName}
+      </span>
+      <span className="text-xs ml-auto flex items-center">
+        {formatDate(props.postData.createdAt)}
+      </span>
+    </div>
+  );
+}
 
+export const Post = ({
+  onUserChange,
+  onPostChange,
+  ...postData
+}: PostProps) => {
   const renderMedia = () => {
     const playButton = (
       <div className="absolute inset-0 flex items-center justify-center border">
@@ -50,7 +62,7 @@ export const Post = (data: PostProps) => {
       </div>
     );
 
-    const mediaInfos = data.cloudinaryMedia.map((o) => {
+    const mediaInfos = postData.cloudinaryMedia.map((o) => {
       if (o.resourceType === "video") {
         // video
         return {
@@ -95,21 +107,21 @@ export const Post = (data: PostProps) => {
   return (
     <div
       className="w-80 h-full bg-white border border-gray-300 rounded shadow-md"
-      onClick={() => data.onPostChange?.(data)}
+      onClick={() => onPostChange?.(postData)}
     >
       {/* media */}
       <div className="flex flex-wrap relative">{renderMedia()}</div>
 
       <div className="p-4 font-sans">
         {/* emoji */}
-        {data.votes.length > 0 && (
+        {postData.votes.length > 0 && (
           <div className="tracking-[.33em] mb-3">
-            {data.votes.map((vote) => vote.content).join(" ")}
+            {postData.votes.map((vote) => vote.content).join("")}
           </div>
         )}
 
         {/* code url */}
-        {data.code && (
+        {postData.code && (
           <a
             className="block mb-3 text-xs text-purple-600 hover:underline visited:text-purple-900"
             href="#"
@@ -119,25 +131,9 @@ export const Post = (data: PostProps) => {
         )}
 
         {/* description */}
-        <div className="mb-4">{elide(data.description, 100)}</div>
+        <div className="mb-4">{elide(postData.description, 100)}</div>
 
-        <div className="flex">
-          <img
-            className="rounded-full w-8 h-8 inline-block cursor-pointer"
-            src={getHeadshotURL(data.authorHeadshotId, "small")}
-            onClick={() =>
-              data.onUserChange?.(
-                users.find((u) => u._id === data.authorId) ?? null
-              )
-            }
-          />
-          <span className="text-xs uppercase flex items-center ml-3">
-            {data.authorName}
-          </span>
-          <span className="text-xs ml-auto flex items-center">
-            {created_at}
-          </span>
-        </div>
+        <Dateline postData={postData}></Dateline>
       </div>
     </div>
   );
@@ -145,4 +141,15 @@ export const Post = (data: PostProps) => {
 
 function elide(str: string, max: number) {
   return str.length > max ? str.slice(0, max).trim() + "…" : str;
+}
+
+export function formatDate(date: string) {
+  // format like December 31 at 12:00 am
+  return new Date(date).toLocaleString("en-US", {
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
 }
