@@ -5,7 +5,7 @@ Refactor:
 ✓ Probably should move cloudinary specific url templates to /data like User getHeadshot @done(24-09-24 12:51)
 
 ✓ support videos in post summary @done(24-09-23 15:17)
-□ don't pass users/posts/config down component chain, those should be imported directly (they are constant)
+✓ don't pass users/posts/config down component chain, those should be imported directly (they are constant) @done(24-09-24 13:38)
 ✓ graem was removed from the class, still has a post in intro. Hide post? At least fix heashot. @done(24-09-24 13:07)
 
 

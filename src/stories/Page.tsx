@@ -1,15 +1,14 @@
+import { config, posts, users } from "../../data/data";
+
 import { Header } from "./Header";
 import { UserBar } from "./UserBar";
 import { LessonBar } from "./LessonBar";
 import { Post } from "./Post";
 import { UserProfile } from "./UserProfile";
 
-import { Config, PostData, UserData } from "../../data/data";
+import { UserData } from "../../data/data";
 
 type PageProps = {
-  config: Config;
-  posts: PostData[];
-  users: UserData[];
   activeLesson: string | null;
   activeUser: UserData | null;
   onLessonChange?: (newActiveLesson: string | null) => void;
@@ -17,9 +16,6 @@ type PageProps = {
 };
 
 export const Page = ({
-  config,
-  posts,
-  users,
   activeLesson,
   activeUser,
   onLessonChange,
