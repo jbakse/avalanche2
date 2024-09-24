@@ -12,7 +12,7 @@ type Story = StoryObj<typeof PostDetail>;
 
 export const Default = {
   args: {
-    post: posts[0],
+    postData: posts[0],
     onClose: () => console.log("Close clicked"),
   },
 } satisfies Story;
