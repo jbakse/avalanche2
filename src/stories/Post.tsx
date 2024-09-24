@@ -1,18 +1,14 @@
-import { Post as PostData } from "../../data/data";
-import { User } from "../../data/data";
+import { PostData } from "../../data/data";
+import { UserData } from "../../data/data";
 import { users } from "../../data/data";
 
-// export type PostProps = PostData & {
-//   onUserChange?: (userId: string) => void;
-// };
-
 interface PostProps extends PostData {
-  onUserChange?: (newActiveUser: User | null) => void;
+  onUserChange?: (newActiveUser: UserData | null) => void;
 }
 
 export const Post = (data: PostProps) => {
   // format like December 31 at 12:00 am
-  const created_at = new Date(data.created_at).toLocaleString("en-US", {
+  const created_at = new Date(data.createdAt).toLocaleString("en-US", {
     month: "long",
     day: "numeric",
     hour: "numeric",
@@ -55,8 +51,8 @@ export const Post = (data: PostProps) => {
       </div>
     );
 
-    const mediaInfos = data.cloudinary_media.map((o) => {
-      if (o.resource_type === "video") {
+    const mediaInfos = data.cloudinaryMedia.map((o) => {
+      if (o.resourceType === "video") {
         // video
         return {
           type: "video",
@@ -129,7 +125,7 @@ export const Post = (data: PostProps) => {
             src={`https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_64/v1/${data.author_headshot}`}
             onClick={() =>
               data.onUserChange?.(
-                users.find((u) => u._id === data.author_id) ?? null
+                users.find((u) => u._id === data.authorId) ?? null
               )
             }
           />

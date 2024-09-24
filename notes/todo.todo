@@ -8,10 +8,7 @@ Refactor:
 □ post detail
 □ support markdown
 □ masonry w js? https://codepen.io/singhkunal2050/pen/vYbPVNd
-□ think about what functions should be in data.js vs posts.ts, etc.
-    maybe posts/users should define the types and do clean up
-    operations on clean data should be in data.js?
-    type should be rexported from data.js and components should only get them there?
+□ don't pass users/posts/config down component chain, those should be imported directly (they are constant)
 □ graem was removed from the class, still has a post in intro. Hide post? At least fix heashot. 
 ✓ weekbar should handle selected user @done(24-09-20 14:26)
 ✓ userbar should handle no week selected @done(24-09-20 14:30)

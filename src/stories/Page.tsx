@@ -4,16 +4,16 @@ import { LessonBar } from "./LessonBar";
 import { Post } from "./Post";
 import { UserProfile } from "./UserProfile";
 
-import { Config, Post as PostData, User } from "../../data/data";
+import { Config, PostData, UserData } from "../../data/data";
 
 type PageProps = {
   config: Config;
   posts: PostData[];
-  users: User[];
+  users: UserData[];
   activeLesson: string | null;
-  activeUser: User | null;
+  activeUser: UserData | null;
   onLessonChange?: (newActiveLesson: string | null) => void;
-  onUserChange?: (newActiveUser: User | null) => void;
+  onUserChange?: (newActiveUser: UserData | null) => void;
 };
 
 export const Page = ({
@@ -28,8 +28,8 @@ export const Page = ({
   const postCount = posts.length;
   const activePosts = posts.filter((post) => {
     return (
-      (!activeLesson || post.lesson === activeLesson) &&
-      (!activeUser || post.author_id === activeUser._id)
+      (!activeLesson || post.lessonName === activeLesson) &&
+      (!activeUser || post.authorId === activeUser._id)
     );
   });
   return (

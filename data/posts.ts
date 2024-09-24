@@ -1,18 +1,17 @@
-import { User } from "./users";
+import { UserData } from "./users";
 
-export type Post = {
+export type PostData = {
   _id: string;
-  author_id: string;
+  authorId: string;
   authorName: string;
   author_headshot: string;
-  created_at: string;
+  createdAt: string;
   isPosted: boolean;
-  lesson: string;
-
-  cloudinary_media: CloudinaryMedia[];
+  lessonName: string;
   description: string;
   code: string;
 
+  cloudinaryMedia: CloudinaryMedia[];
   votes: Vote[];
   comments: Comment[];
 };
@@ -22,41 +21,27 @@ type CloudinaryMedia = {
   width: number;
   height: number;
   format: string;
-  resource_type: string;
+  resourceType: string;
 };
 
 type Vote = {
+  authorId: string;
+  authorName: string;
+  createdAt: string;
   content: string;
-  author: string;
-  created_at: string;
 };
 
 type Comment = {
+  authorId: string;
+  authorName: string;
+  createdAt: string;
   content: string;
-  author: string;
-  created_at: string;
 };
-
-export function filterPosts(
-  posts: Post[],
-  user?: User | null,
-  lesson?: string | null
-): Post[] {
-  // returns posts match user and lesson if provided
-  return posts.filter(
-    (post) =>
-      (!user || post.author_id === user?._id) &&
-      (!lesson || post.lesson === lesson)
-  );
-  // return posts.filter(
-  //   (post) => post.author_id === user._id && (!lesson || post.lesson === lesson)
-  // );
-}
 
 export function cleanPosts(
   posts: Record<string, any>[],
-  users: User[]
-): Post[] {
+  users: UserData[]
+): PostData[] {
   return posts
     .sort((a, b) => {
       const dateA = new Date(a.created_at.$date);
@@ -68,7 +53,7 @@ export function cleanPosts(
     .map((post) => convertPost(post, users));
 }
 
-function convertPost(post: Record<string, any>, users: User[]): Post {
+function convertPost(post: Record<string, any>, users: UserData[]): PostData {
   const emojis: { [key: string]: string } = {
     funny: "😂",
     nerdy: "🤓",
@@ -78,15 +63,15 @@ function convertPost(post: Record<string, any>, users: User[]): Post {
   return {
     _id: post._id ?? 0,
     authorName: post.author ?? "",
-    author_id: post.author_id ?? "",
+    authorId: post.author_id ?? "",
     author_headshot:
-      users.find((user) => user._id === post.author_id)?.headshot ?? "",
-    created_at: post.created_at.$date ?? "",
+      users.find((user) => user._id === post.author_id)?.headshotId ?? "",
+    createdAt: post.created_at.$date ?? "",
     isPosted: post.posted ?? false,
-    lesson: post.lesson ?? "",
+    lessonName: post.lesson ?? "",
     description: post.description ?? "",
     code: post.code ?? "",
-    cloudinary_media: post.cloudinary_media
+    cloudinaryMedia: post.cloudinary_media
       .map(
         (media: Record<string, any>) =>
           ({
@@ -94,7 +79,7 @@ function convertPost(post: Record<string, any>, users: User[]): Post {
             width: media.width ?? 0,
             height: media.height ?? 0,
             format: media.format ?? "",
-            resource_type: media.resource_type ?? "",
+            resourceType: media.resource_type ?? "",
           } as CloudinaryMedia)
       )
       .filter((media: Record<string, any>) => media.public_id),
@@ -107,21 +92,23 @@ function convertPost(post: Record<string, any>, users: User[]): Post {
 
       return {
         content: emojis[vote.category] ?? "",
-        author: authorName,
-        created_at: vote.created_at.$date ?? "",
+        authorId: vote.author_id,
+        authorName: authorName,
+        createdAt: vote.created_at.$date ?? "",
       };
     }),
 
     comments: post.comments.map(function convertComment(
-      vote: Record<string, any>
+      comment: Record<string, any>
     ): Comment {
-      const user = users.find((user) => user._id === vote.author_id);
+      const user = users.find((user) => user._id === comment.author_id);
       const authorName = user ? `${user.firstName} ${user.lastName}` : "";
 
       return {
-        content: emojis[vote.category] ?? "",
-        author: authorName,
-        created_at: vote.created_at.$date ?? "",
+        content: emojis[comment.category] ?? "",
+        authorId: comment.author_id,
+        authorName: authorName,
+        createdAt: comment.created_at.$date ?? "",
       };
     }),
   };

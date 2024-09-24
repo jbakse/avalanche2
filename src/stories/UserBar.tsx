@@ -5,18 +5,13 @@ import { posts } from "../../data/data";
 import classNames from "classnames";
 import "./tooltip.css";
 
-import {
-  User,
-  getFullName,
-  getHeadshotURL,
-  filterPosts,
-} from "../../data/data";
+import { UserData, getHeadshotURL, filterPosts } from "../../data/data";
 
 interface UserBarProps {
-  users: User[];
+  users: UserData[];
   activeLesson: string | null;
-  activeUser: User | null;
-  onUserChange?: (user: User | null) => void;
+  activeUser: UserData | null;
+  onUserChange?: (user: UserData | null) => void;
 }
 
 export const UserBar = ({
@@ -63,9 +58,9 @@ const UserBarUser = ({
   isActive,
   onClick,
 }: {
-  user: User;
+  user: UserData;
   activeLesson: string | null;
-  activeUser: User | null;
+  activeUser: UserData | null;
   isActive: boolean;
   onClick: () => void;
 }) => {
@@ -86,14 +81,14 @@ const UserBarUser = ({
           }
         )}
         src={getHeadshotURL(user)}
-        alt={getFullName(user)}
+        alt={user.name}
       />
       {isActive && (
         <div className="absolute top-full mt-0 w-0 h-0 left-1/2 -translate-x-1/2 border-8 border-transparent border-t-black"></div>
       )}
 
       <div className="tooltip text-center ">
-        <h2 className="font-bold uppercase pb-1">{getFullName(user)}</h2>
+        <h2 className="font-bold uppercase pb-1">{user.name}</h2>
         <p>{fullCount} sketches</p>
         {activeLesson && <p>{lessonCount} this lesson</p>}
       </div>

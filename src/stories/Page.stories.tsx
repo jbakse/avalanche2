@@ -3,7 +3,7 @@ import { useArgs } from "@storybook/preview-api";
 
 import { Page } from "./Page";
 
-import { config, posts, users, User } from "../../data/data";
+import { config, posts, users, UserData } from "../../data/data";
 
 const meta = {
   title: "Avalanche/Page",
@@ -36,7 +36,7 @@ export const Main = {
       updateArgs({ activeLesson: newActiveLesson });
     }
 
-    function handleUserChange(newActiveUser: User | null) {
+    function handleUserChange(newActiveUser: UserData | null) {
       updateArgs({ activeUser: newActiveUser });
     }
 

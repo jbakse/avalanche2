@@ -5,7 +5,7 @@ export type Config = {
 };
 
 export type Lesson = {
-  lesson: string;
+  name: string;
   start: string;
   end: string;
 };
