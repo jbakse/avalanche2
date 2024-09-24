@@ -55,7 +55,7 @@ export const Page = ({
       <div className="mt-4 text-lg text-center">{config.avalanche_message}</div>
       <div className="mt-12 flex flex-wrap justify-center gap-4">
         {activePosts.map((post) => (
-          <Post key={post._id} {...post} />
+          <Post key={post._id} {...post} onUserChange={onUserChange} />
         ))}
       </div>
     </>

@@ -1,6 +1,14 @@
 import { Post as PostData } from "../../data/data";
+import { User } from "../../data/data";
+import { users } from "../../data/data";
 
-export type PostProps = PostData;
+// export type PostProps = PostData & {
+//   onUserChange?: (userId: string) => void;
+// };
+
+interface PostProps extends PostData {
+  onUserChange?: (newActiveUser: User | null) => void;
+}
 
 export const Post = (data: PostProps) => {
   // format like December 31 at 12:00 am
@@ -90,7 +98,7 @@ export const Post = (data: PostProps) => {
   };
 
   return (
-    <div className="w-80 border border-gray-300 shadow-md rounded bg-white">
+    <div className="w-80 h-full bg-white border border-gray-300 rounded shadow-md ">
       {/* media */}
       <div className="flex flex-wrap relative">{renderMedia()}</div>
 
@@ -117,11 +125,16 @@ export const Post = (data: PostProps) => {
 
         <div className="flex">
           <img
-            className="rounded-full w-8 h-8 inline-block"
+            className="rounded-full w-8 h-8 inline-block cursor-pointer"
             src={`https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_64/v1/${data.author_headshot}`}
+            onClick={() =>
+              data.onUserChange?.(
+                users.find((u) => u._id === data.author_id) ?? null
+              )
+            }
           />
           <span className="text-xs uppercase flex items-center ml-3">
-            {data.author}
+            {data.authorName}
           </span>
           <span className="text-xs ml-auto flex items-center">
             {created_at}

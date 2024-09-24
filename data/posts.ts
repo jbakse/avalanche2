@@ -3,7 +3,7 @@ import { User } from "./users";
 export type Post = {
   _id: string;
   author_id: string;
-  author: string;
+  authorName: string;
   author_headshot: string;
   created_at: string;
   isPosted: boolean;
@@ -77,7 +77,7 @@ function convertPost(post: Record<string, any>, users: User[]): Post {
 
   return {
     _id: post._id ?? 0,
-    author: post.author ?? "",
+    authorName: post.author ?? "",
     author_id: post.author_id ?? "",
     author_headshot:
       users.find((user) => user._id === post.author_id)?.headshot ?? "",
