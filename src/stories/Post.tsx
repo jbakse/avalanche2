@@ -8,6 +8,7 @@ import {
 
 interface PostProps extends PostData {
   onUserChange?: (newActiveUser: UserData | null) => void;
+  onPostChange?: (newActivePost: PostData | null) => void;
 }
 
 export const Post = (data: PostProps) => {
@@ -92,7 +93,10 @@ export const Post = (data: PostProps) => {
   };
 
   return (
-    <div className="w-80 h-full bg-white border border-gray-300 rounded shadow-md ">
+    <div
+      className="w-80 h-full bg-white border border-gray-300 rounded shadow-md"
+      onClick={() => data.onPostChange?.(data)}
+    >
       {/* media */}
       <div className="flex flex-wrap relative">{renderMedia()}</div>
 

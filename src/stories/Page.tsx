@@ -1,3 +1,6 @@
+import { useState } from "react";
+
+import { PostData } from "../../data/data";
 import { config, posts, users } from "../../data/data";
 
 import { Header } from "./Header";
@@ -28,6 +31,9 @@ export const Page = ({
       (!activeUser || post.authorId === activeUser._id)
     );
   });
+  // add useState for activePost
+  const [activePost, setActivePost] = useState<PostData | null>(null);
+
   return (
     <>
       <Header title={config.site_title} />
@@ -49,9 +55,15 @@ export const Page = ({
         sketches.
       </div>
       <div className="mt-4 text-lg text-center">{config.avalanche_message}</div>
+      {activePost?._id ?? "none"}
       <div className="mt-12 flex flex-wrap justify-center gap-4">
         {activePosts.map((post) => (
-          <Post key={post._id} {...post} onUserChange={onUserChange} />
+          <Post
+            key={post._id}
+            {...post}
+            onUserChange={onUserChange}
+            onPostChange={setActivePost}
+          />
         ))}
       </div>
     </>
