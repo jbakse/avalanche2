@@ -11,7 +11,15 @@ import { cleanPosts, PostData } from "./posts";
 import { cleanConfig } from "./config";
 
 export const users = cleanUsers(dirtyUsers);
-export const posts = cleanPosts(dirtyPosts, users);
+export const posts = cleanPosts(dirtyPosts, users).filter(
+  (post) =>
+    // keep only if post's AuthorId is in users
+    users.find((user) => user._id === post.authorId) &&
+    // keep only posted posts
+    post.isPosted
+);
+
+export const validPosts = ProcessingInstruction;
 
 export const config = cleanConfig(dirtyPrefs);
 
