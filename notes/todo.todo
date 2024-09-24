@@ -9,6 +9,7 @@ Refactor:
 ✓ graem was removed from the class, still has a post in intro. Hide post? At least fix heashot. @done(24-09-24 13:07)
 
 
+□ show message balloon for comments on post summary
 
 □ post detail
     x start @cancelled(24-09-24 15:01)
@@ -17,7 +18,7 @@ Refactor:
     □ custom scrollbar
 
 
-□ support markdown
+✓ support markdown @done(24-09-24 15:26)
 □ masonry w js? https://codepen.io/singhkunal2050/pen/vYbPVNd
 □ factor formatDate, elide into utils, improve names?
 

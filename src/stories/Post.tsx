@@ -1,6 +1,6 @@
+import { marked } from "marked";
 import { PostData, UserData } from "../../data/data";
 import {
-  users,
   getHeadshotURL,
   getVideoThumbnailURL,
   getImageThumbnailURL,
@@ -131,7 +131,16 @@ export const Post = ({
         )}
 
         {/* description */}
-        <div className="mb-4">{elide(postData.description, 100)}</div>
+
+        <p
+          className="mb-4 font-light text-lg user-content"
+          dangerouslySetInnerHTML={{
+            __html: elide(
+              marked.parse(postData.description, { async: false }),
+              100
+            ),
+          }}
+        ></p>
 
         <Dateline postData={postData}></Dateline>
       </div>

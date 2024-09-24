@@ -1,3 +1,4 @@
+import { marked } from "marked";
 import React from "react";
 import { Dateline, formatDate } from "./Post";
 
@@ -72,7 +73,12 @@ export const PostDetail: React.FC<PostDetailProps> = ({
           )}
 
           {/* description */}
-          <p className="mb-6">{postData.description}</p>
+          <p
+            className="mb-6 font-light text-lg user-content"
+            dangerouslySetInnerHTML={{
+              __html: marked.parse(postData.description, { async: false }),
+            }}
+          ></p>
 
           {/* comments */}
           <div className="space-y-4">
@@ -87,7 +93,14 @@ export const PostDetail: React.FC<PostDetailProps> = ({
                   </span>
                 </div>
 
-                <p className="mt-2">{comment.content}</p>
+                {/* <p className="mt-2">{comment.content}</p> */}
+
+                <p
+                  className="mt-2 font-light text-lg user-content"
+                  dangerouslySetInnerHTML={{
+                    __html: marked.parse(comment.content, { async: false }),
+                  }}
+                ></p>
               </div>
             ))}
           </div>

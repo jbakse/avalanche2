@@ -1,3 +1,5 @@
+import { marked } from "marked";
+
 import { UserData, getHeadshotURL } from "../../data/data";
 
 interface UserProfileProps {
@@ -13,7 +15,13 @@ export const UserProfile = ({ user }: UserProfileProps) => {
         className="w-64 h-64 rounded-full object-cover border-2 border-black "
       />
       <h2 className="text-4xl font-bold mt-4">{user.name}</h2>
-      <p className="text-center mt-2 max-w-md text-xl">{user.description}</p>
+
+      <p
+        className="text-center mt-2 max-w-md text-xl font-light user-content"
+        dangerouslySetInnerHTML={{
+          __html: marked.parse(user.description, { async: false }),
+        }}
+      ></p>
     </div>
   );
 };
