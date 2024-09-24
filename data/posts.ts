@@ -4,7 +4,7 @@ export type PostData = {
   _id: string;
   authorId: string;
   authorName: string;
-  author_headshot: string;
+  authorHeadshotId: string;
   createdAt: string;
   isPosted: boolean;
   lessonName: string;
@@ -17,7 +17,7 @@ export type PostData = {
 };
 
 type CloudinaryMedia = {
-  public_id: string;
+  publicId: string;
   width: number;
   height: number;
   format: string;
@@ -64,7 +64,7 @@ function convertPost(post: Record<string, any>, users: UserData[]): PostData {
     _id: post._id ?? 0,
     authorName: post.author ?? "",
     authorId: post.author_id ?? "",
-    author_headshot:
+    authorHeadshotId:
       users.find((user) => user._id === post.author_id)?.headshotId ?? "",
     createdAt: post.created_at.$date ?? "",
     isPosted: post.posted ?? false,
@@ -75,14 +75,14 @@ function convertPost(post: Record<string, any>, users: UserData[]): PostData {
       .map(
         (media: Record<string, any>) =>
           ({
-            public_id: media.public_id ?? "",
+            publicId: media.public_id ?? "",
             width: media.width ?? 0,
             height: media.height ?? 0,
             format: media.format ?? "",
             resourceType: media.resource_type ?? "",
           } as CloudinaryMedia)
       )
-      .filter((media: Record<string, any>) => media.public_id),
+      .filter((media: Record<string, any>) => media.publicId),
 
     votes: post.votes.map(function convertVote(
       vote: Record<string, any>

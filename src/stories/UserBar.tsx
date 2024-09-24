@@ -21,11 +21,13 @@ export const UserBar = ({
   onUserChange,
 }: UserBarProps) => {
   // sort user by number of posts in active lesson, push admins to the end
-  users.sort((a, b) => {
+  users.sort((userA, userB) => {
     const aLessonCount =
-      filterPosts(posts, a, activeLesson).length - (a.isAdmin ? 1000 : 0);
+      filterPosts(posts, userA, activeLesson).length -
+      (userA.isAdmin ? 1000 : 0);
     const bLessonCount =
-      filterPosts(posts, b, activeLesson).length - (b.isAdmin ? 1000 : 0);
+      filterPosts(posts, userB, activeLesson).length -
+      (userB.isAdmin ? 1000 : 0);
     return bLessonCount - aLessonCount;
   });
 
@@ -80,7 +82,7 @@ const UserBarUser = ({
             "border-transparent": user.isAdmin,
           }
         )}
-        src={getHeadshotURL(user)}
+        src={getHeadshotURL(user.headshotId, "small")}
         alt={user.name}
       />
       {isActive && (

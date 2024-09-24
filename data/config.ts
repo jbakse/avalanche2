@@ -15,7 +15,7 @@ export function cleanConfig(prefs: Record<string, any>): Config {
     site_title: prefs.site_title ?? "",
     avalanche_message: prefs.avalanche_message ?? "",
     lessons: prefs.weeks.map((week: Record<string, any>) => ({
-      lesson: week.topic ?? "",
+      name: week.topic ?? "",
       start: week.start.$date ?? "",
       end: week.end.$date ?? "",
     })),

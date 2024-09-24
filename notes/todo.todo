@@ -2,14 +2,18 @@ Todo:
 □ lazy load images?
 
 Refactor:
-□ Probably should move cloudinary specific url templates to /data like User getHeadshot
+✓ Probably should move cloudinary specific url templates to /data like User getHeadshot @done(24-09-24 12:51)
 
 ✓ support videos in post summary @done(24-09-23 15:17)
+□ don't pass users/posts/config down component chain, those should be imported directly (they are constant)
+□ graem was removed from the class, still has a post in intro. Hide post? At least fix heashot. 
+
+
+
 □ post detail
 □ support markdown
 □ masonry w js? https://codepen.io/singhkunal2050/pen/vYbPVNd
-□ don't pass users/posts/config down component chain, those should be imported directly (they are constant)
-□ graem was removed from the class, still has a post in intro. Hide post? At least fix heashot. 
+
 ✓ weekbar should handle selected user @done(24-09-20 14:26)
 ✓ userbar should handle no week selected @done(24-09-20 14:30)
 ✓ weekBar should be lessonBar, or even better, whats the new word for lesson? @done(24-09-20 14:53)

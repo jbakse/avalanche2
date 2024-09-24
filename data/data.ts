@@ -28,15 +28,28 @@ export function filterPosts(
   );
 }
 
+const blackPixel =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAABNJREFUCB1jZGBg+A/EDEwgAgQADigBA//q6GsAAAAASUVORK5CYII%3D";
+
 export function getHeadshotURL(
-  user: UserData,
+  mediaId?: string,
   size: "small" | "large" = "small"
 ): string {
-  const blackPixel =
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAABNJREFUCB1jZGBg+A/EDEwgAgQADigBA//q6GsAAAAASUVORK5CYII%3D";
   const width = size === "small" ? 64 : 500;
+  if (!mediaId) return blackPixel;
+  return `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_${width}/v1/${mediaId}`;
+}
 
-  return user.headshotId
-    ? `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_${width}/v1/${user.headshotId}`
-    : blackPixel;
+export function getVideoThumbnailURL(mediaId: string): string {
+  // example video thumb url
+  // https://res.cloudinary.com/compform2023spring/video/upload/w_350/avalanche2023spring/iezbyqnfdvl9rvaoyank.jpg
+
+  return `https://res.cloudinary.com/compform2023spring/video/upload/w_350/${mediaId}.jpg`;
+}
+
+export function getImageThumbnailURL(mediaId: string): string {
+  // example image thumb url
+  //https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/avalanche2023spring/v2agzd39fbrclj7urnve
+
+  return `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/${mediaId}.jpg`;
 }

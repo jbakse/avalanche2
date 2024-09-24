@@ -8,7 +8,7 @@ export const UserProfile = ({ user }: UserProfileProps) => {
   return (
     <div className="flex flex-col items-center my-8">
       <img
-        src={getHeadshotURL(user, "large")}
+        src={getHeadshotURL(user.headshotId, "large")}
         alt={user.name}
         className="w-64 h-64 rounded-full object-cover border-2 border-black "
       />

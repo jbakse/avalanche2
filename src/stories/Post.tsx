@@ -1,6 +1,10 @@
-import { PostData } from "../../data/data";
-import { UserData } from "../../data/data";
-import { users } from "../../data/data";
+import { PostData, UserData } from "../../data/data";
+import {
+  users,
+  getHeadshotURL,
+  getVideoThumbnailURL,
+  getImageThumbnailURL,
+} from "../../data/data";
 
 interface PostProps extends PostData {
   onUserChange?: (newActiveUser: UserData | null) => void;
@@ -17,12 +21,6 @@ export const Post = (data: PostProps) => {
   });
 
   const renderMedia = () => {
-    // example video thumb url
-    // https://res.cloudinary.com/compform2023spring/video/upload/w_350/avalanche2023spring/iezbyqnfdvl9rvaoyank.jpg
-
-    // example image thumb url
-    //https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/avalanche2023spring/v2agzd39fbrclj7urnve
-
     const playButton = (
       <div className="absolute inset-0 flex items-center justify-center border">
         <svg
@@ -56,13 +54,13 @@ export const Post = (data: PostProps) => {
         // video
         return {
           type: "video",
-          thumb: `https://res.cloudinary.com/compform2023spring/video/upload/w_350/${o.public_id}.jpg`,
+          thumb: getVideoThumbnailURL(o.publicId),
         };
       } else {
         // image
         return {
           type: "image",
-          thumb: `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/${o.public_id}`,
+          thumb: getImageThumbnailURL(o.publicId),
         };
       }
     });
@@ -122,7 +120,7 @@ export const Post = (data: PostProps) => {
         <div className="flex">
           <img
             className="rounded-full w-8 h-8 inline-block cursor-pointer"
-            src={`https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_64/v1/${data.author_headshot}`}
+            src={getHeadshotURL(data.authorHeadshotId, "small")}
             onClick={() =>
               data.onUserChange?.(
                 users.find((u) => u._id === data.authorId) ?? null
