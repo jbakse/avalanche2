@@ -8,6 +8,7 @@ import { UserBar } from "./UserBar";
 import { LessonBar } from "./LessonBar";
 import { Post } from "./Post";
 import { UserProfile } from "./UserProfile";
+import { PostDetail } from "./PostDetail";
 
 import { UserData } from "../../data/data";
 
@@ -31,7 +32,6 @@ export const Page = ({
       (!activeUser || post.authorId === activeUser._id)
     );
   });
-  // add useState for activePost
   const [activePost, setActivePost] = useState<PostData | null>(null);
 
   return (
@@ -55,7 +55,6 @@ export const Page = ({
         sketches.
       </div>
       <div className="mt-4 text-lg text-center">{config.avalanche_message}</div>
-      {activePost?._id ?? "none"}
       <div className="mt-12 flex flex-wrap justify-center gap-4">
         {activePosts.map((post) => (
           <Post
@@ -66,6 +65,12 @@ export const Page = ({
           />
         ))}
       </div>
+      {activePost && (
+        <PostDetail
+          post={activePost}
+          onClose={() => setActivePost(null)}
+        />
+      )}
     </>
   );
 };
