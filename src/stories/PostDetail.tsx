@@ -1,5 +1,5 @@
 import { marked } from "marked";
-import React from "react";
+
 import { Dateline, formatDate } from "./Post";
 
 import { PostData, getImageURL, getVideoURL } from "../../data/data";
@@ -35,7 +35,7 @@ export const PostDetail = ({
         onClick={onClose}
       ></div>
       <div className="fixed inset-10 flex rounded-lg bg-white shadow-md">
-        <div className="flex flex-1 flex-col items-center space-y-4 overflow-y-auto bg-black p-10">
+        <div className="custom-scroll flex flex-1 flex-col items-center space-y-10 overflow-y-auto bg-black p-10">
           {/* media */}
           {postData.cloudinaryMedia.map((media) => {
             if (media.resourceType === "image") {

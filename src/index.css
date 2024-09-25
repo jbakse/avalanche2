@@ -1,9 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Sarala:wght@400;700&display=swap");
 
+/* 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*/
 
 .user-content a {
   text-decoration: underline;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 26px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: black;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: white;
+  border: 8px solid black;
+  border-radius: 100px;
 }

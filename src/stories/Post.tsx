@@ -15,7 +15,7 @@ export function Dateline(props: { postData: PostData }) {
   return (
     <div className="flex">
       <img
-        className="inline-block h-8 w-8 cursor-pointer rounded-full"
+        className="inline-block h-8 w-8 rounded-full"
         src={getHeadshotURL(props.postData.authorHeadshotId, "small")}
       />
       <span className="ml-3 flex items-center text-xs uppercase">

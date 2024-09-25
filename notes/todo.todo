@@ -12,10 +12,10 @@ Refactor:
 □ show message balloon for comments on post summary
 
 □ post detail
-    x start @cancelled(24-09-24 15:01)
-    x main layout @cancelled(24-09-24 15:01)
-    x close button @cancelled(24-09-24 15:00)
-    □ custom scrollbar
+    ✓ start @done(24-09-24 20:31)
+    ✓ main layout @done(24-09-24 20:31)
+    ✓ close button @done(24-09-24 20:31)
+    ✓ custom scrollbar @done(24-09-24 20:31)
 
 □ should PostProps compose PostData instead of extend it
 
