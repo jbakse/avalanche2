@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { PostData } from "../../data/data";
 import { config, posts, users } from "../../data/data";
 
@@ -15,15 +13,19 @@ import { UserData } from "../../data/data";
 type PageProps = {
   activeLesson: string | null;
   activeUser: UserData | null;
+  activePost: PostData | null;
   onLessonChange?: (newActiveLesson: string | null) => void;
   onUserChange?: (newActiveUser: UserData | null) => void;
+  onPostChange?: (newActivePost: PostData | null) => void;
 };
 
 export const Page = ({
   activeLesson,
   activeUser,
+  activePost,
   onLessonChange,
   onUserChange,
+  onPostChange,
 }: PageProps) => {
   const postCount = posts.length;
   const activePosts = posts.filter((post) => {
@@ -32,7 +34,6 @@ export const Page = ({
       (!activeUser || post.authorId === activeUser._id)
     );
   });
-  const [activePost, setActivePost] = useState<PostData | null>(null);
 
   return (
     <>
@@ -61,12 +62,12 @@ export const Page = ({
             key={post._id}
             {...post}
             onUserChange={onUserChange}
-            onPostChange={setActivePost}
+            onPostChange={onPostChange}
           />
         ))}
       </div>
       {activePost && (
-        <PostDetail postData={activePost} onClose={() => setActivePost(null)} />
+        <PostDetail postData={activePost} onClose={() => onPostChange && onPostChange(null)} />
       )}
     </>
   );

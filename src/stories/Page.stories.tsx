@@ -3,7 +3,7 @@ import { useArgs } from "@storybook/preview-api";
 
 import { Page } from "./Page";
 
-import { UserData } from "../../data/data";
+import { UserData, PostData } from "../../data/data";
 
 const meta = {
   title: "Avalanche/Page",
@@ -19,9 +19,10 @@ export const Main = {
   args: {
     activeLesson: "Introduction",
     activeUser: null,
+    activePost: null,
   },
   render: function Render(args) {
-    const [{ activeLesson, activeUser }, updateArgs] = useArgs();
+    const [{ activeLesson, activeUser, activePost }, updateArgs] = useArgs();
 
     function handleLessonChange(newActiveLesson: string | null) {
       updateArgs({ activeLesson: newActiveLesson });
@@ -31,13 +32,19 @@ export const Main = {
       updateArgs({ activeUser: newActiveUser });
     }
 
+    function handlePostChange(newActivePost: PostData | null) {
+      updateArgs({ activePost: newActivePost });
+    }
+
     return (
       <Page
         {...args}
         activeLesson={activeLesson}
         activeUser={activeUser}
+        activePost={activePost}
         onLessonChange={handleLessonChange}
         onUserChange={handleUserChange}
+        onPostChange={handlePostChange}
       />
     );
   },
