@@ -14,20 +14,20 @@ export const Button = ({
   primary = false,
   label = "Button",
   className = "",
-  ...props
+  onClick,
 }: ButtonProps) => {
   return (
     <button
+      onClick={onClick}
       type="button"
       className={classNames(
-        "px-3 py-2 leading-none rounded-full",
+        "rounded-full px-3 py-2 leading-none",
         {
-          "bg-indigo-400 hover:bg-indigo-500 text-white": primary,
-          "border border-gray-200 hover:bg-gray-100": !primary,
+          "bg-indigo-400 text-white hover:bg-indigo-500": primary,
+          "border border-gray-400 bg-gray-200 hover:bg-gray-100": !primary,
         },
-        className
+        className,
       )}
-      {...props}
     >
       {label}
     </button>
