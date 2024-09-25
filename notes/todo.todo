@@ -26,8 +26,9 @@ Refactor:
 □ add safe html truncating to elide
 □ probably make a usercontent or usermarkdown component for markdown
 
-□ activeUser, activeLesson should probably be useStates not story args.
-    need to consider along side creating an actual top level app for this, need url/history support (react router)
+□ activeUser and activePost are full objects. activeLesson is just the name. should this be consistent?
+
+✓ add url/history support (react router) @done(24-09-25 11:21)
 
 ✓ weekbar should handle selected user @done(24-09-20 14:26)
 ✓ userbar should handle no week selected @done(24-09-20 14:30)

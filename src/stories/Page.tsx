@@ -67,7 +67,10 @@ export const Page = ({
         ))}
       </div>
       {activePost && (
-        <PostDetail postData={activePost} onClose={() => onPostChange && onPostChange(null)} />
+        <PostDetail
+          postData={activePost}
+          onClose={() => onPostChange?.(null)}
+        />
       )}
     </>
   );
