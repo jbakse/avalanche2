@@ -32,7 +32,7 @@ export const UserBar = ({
   });
 
   return (
-    <div className="flex items-center justify-center space-x-3 font-sans border-b h-20 shadow-md">
+    <div className="flex h-20 items-center justify-center space-x-3 border-b font-sans shadow-md">
       {users.map((user) => {
         return (
           <UserBarUser
@@ -73,24 +73,24 @@ const UserBarUser = ({
     <div key={user._id} className="relative" onClick={onClick}>
       <img
         className={classNames(
-          "w-14 h-14 object-cover border-b-[6px] cursor-pointer",
+          "h-14 w-14 cursor-pointer border-b-[6px] object-cover",
           {
             "border-red-600": lessonCount <= 1,
             "border-orange-300": lessonCount === 2,
             "border-yellow-300": lessonCount === 3,
             "border-green-500": lessonCount >= 4,
             "border-transparent": user.isAdmin,
-          }
+          },
         )}
         src={getHeadshotURL(user.headshotId, "small")}
         alt={user.name}
       />
       {isActive && (
-        <div className="absolute top-full mt-0 w-0 h-0 left-1/2 -translate-x-1/2 border-8 border-transparent border-t-black"></div>
+        <div className="absolute left-1/2 top-full mt-0 h-0 w-0 -translate-x-1/2 border-8 border-transparent border-t-black"></div>
       )}
 
-      <div className="tooltip text-center ">
-        <h2 className="font-bold uppercase pb-1">{user.name}</h2>
+      <div className="tooltip text-center">
+        <h2 className="pb-1 font-bold uppercase">{user.name}</h2>
         <p>{fullCount} sketches</p>
         {activeLesson && <p>{lessonCount} this lesson</p>}
       </div>

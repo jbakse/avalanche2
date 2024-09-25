@@ -17,23 +17,23 @@ export const LessonBar = ({
   activeUser,
   onLessonChange,
 }: LessonBarProps) => (
-  <div className="flex items-center justify-center space-x-2 font-sans py-4 ">
+  <div className="flex items-center justify-center space-x-2 py-4 font-sans">
     {lessons.map((lesson) => (
       <div
         key={lesson.name}
-        className="flex flex-col justify-between h-16 w-20 text-center py-1 hover:bg-gray-200 rounded cursor-pointer relative"
+        className="relative flex h-16 w-20 cursor-pointer flex-col justify-between rounded py-1 text-center hover:bg-gray-200"
         onClick={() =>
           onLessonChange?.(lesson.name === activeLesson ? null : lesson.name)
         }
       >
-        <p className="text-[10px] uppercase mb-1 font-light">{lesson.name}</p>
-        <p className="text-lg font-regular">
+        <p className="mb-1 text-[10px] font-light uppercase">{lesson.name}</p>
+        <p className="font-regular text-lg">
           {activeUser
             ? filterPosts(posts, activeUser, lesson.name).length
             : filterPosts(posts, null, lesson.name).length}
         </p>
         {lesson.name === activeLesson && (
-          <div className="absolute top-full mt-2 w-0 h-0 left-1/2 -translate-x-1/2 border-8 border-transparent border-t-black"></div>
+          <div className="absolute left-1/2 top-full mt-2 h-0 w-0 -translate-x-1/2 border-8 border-transparent border-t-black"></div>
         )}
       </div>
     ))}

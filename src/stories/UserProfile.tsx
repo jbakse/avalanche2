@@ -8,16 +8,16 @@ interface UserProfileProps {
 
 export const UserProfile = ({ user }: UserProfileProps) => {
   return (
-    <div className="flex flex-col items-center my-8">
+    <div className="my-8 flex flex-col items-center">
       <img
         src={getHeadshotURL(user.headshotId, "large")}
         alt={user.name}
-        className="w-64 h-64 rounded-full object-cover border-2 border-black "
+        className="h-64 w-64 rounded-full object-cover"
       />
-      <h2 className="text-4xl font-bold mt-4">{user.name}</h2>
+      <h2 className="mt-4 text-4xl font-bold">{user.name}</h2>
 
       <p
-        className="text-center mt-2 max-w-md text-xl font-light user-content"
+        className="user-content mt-2 max-w-md text-center text-xl font-light"
         dangerouslySetInnerHTML={{
           __html: marked.parse(user.description, { async: false }),
         }}

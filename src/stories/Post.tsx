@@ -15,13 +15,13 @@ export function Dateline(props: { postData: PostData }) {
   return (
     <div className="flex">
       <img
-        className="rounded-full w-8 h-8 inline-block cursor-pointer"
+        className="inline-block h-8 w-8 cursor-pointer rounded-full"
         src={getHeadshotURL(props.postData.authorHeadshotId, "small")}
       />
-      <span className="text-xs uppercase flex items-center ml-3">
+      <span className="ml-3 flex items-center text-xs uppercase">
         {props.postData.authorName}
       </span>
-      <span className="text-xs ml-auto flex items-center">
+      <span className="ml-auto flex items-center text-xs">
         {formatDate(props.postData.createdAt)}
       </span>
     </div>
@@ -54,10 +54,10 @@ export const Post = ({
     const mediaThumb = (
       mediaInfo: { type: string; thumb: string },
       widthClass = "w-full",
-      aspectClass = "aspect-square"
+      aspectClass = "aspect-square",
     ) => (
       <div className={`${widthClass} ${aspectClass} relative`}>
-        <img className="w-full h-full object-cover" src={mediaInfo.thumb} />
+        <img className="h-full w-full object-cover" src={mediaInfo.thumb} />
         {mediaInfo.type === "video" && playButton}
       </div>
     );
@@ -106,16 +106,16 @@ export const Post = ({
 
   return (
     <div
-      className="w-80 h-full bg-white border border-gray-300 rounded shadow-md"
+      className="h-full w-80 rounded border border-gray-300 bg-white shadow-md"
       onClick={() => onPostChange?.(postData)}
     >
       {/* media */}
-      <div className="flex flex-wrap relative">{renderMedia()}</div>
+      <div className="relative flex flex-wrap">{renderMedia()}</div>
 
       <div className="p-4 font-sans">
         {/* emoji */}
         {postData.votes.length > 0 && (
-          <div className="tracking-[.33em] mb-3">
+          <div className="mb-3 tracking-[.33em]">
             {postData.votes.map((vote) => vote.content).join("")}
           </div>
         )}
@@ -123,7 +123,7 @@ export const Post = ({
         {/* code url */}
         {postData.code && (
           <a
-            className="block mb-3 text-xs text-purple-600 hover:underline visited:text-purple-900"
+            className="mb-3 block text-xs text-purple-600 visited:text-purple-900 hover:underline"
             href="#"
           >
             View Code
@@ -133,11 +133,11 @@ export const Post = ({
         {/* description */}
 
         <p
-          className="mb-4 font-light text-lg user-content"
+          className="user-content mb-4 text-lg font-light"
           dangerouslySetInnerHTML={{
             __html: elide(
               marked.parse(postData.description, { async: false }),
-              100
+              100,
             ),
           }}
         ></p>

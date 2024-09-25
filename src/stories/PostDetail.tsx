@@ -11,7 +11,7 @@ interface PostDetailProps {
 
 const xButton = (
   <svg
-    className="w-full h-full"
+    className="h-full w-full"
     viewBox="0 0 10 10"
     fill="none"
     stroke="black"
@@ -24,31 +24,31 @@ const xButton = (
   </svg>
 );
 
-export const PostDetail: React.FC<PostDetailProps> = ({
+export const PostDetail = ({
   postData: postData,
   onClose,
-}) => {
+}: PostDetailProps) => {
   return (
     <>
       <div
-        className="fixed inset-0 bg-black bg-opacity-50 cursor-pointer"
+        className="fixed inset-0 cursor-pointer bg-black bg-opacity-50"
         onClick={onClose}
       ></div>
-      <div className="fixed inset-10 bg-white shadow-md rounded-lg flex">
-        <div className="flex-1 bg-black p-10 flex flex-col items-center space-y-4 overflow-y-auto">
+      <div className="fixed inset-10 flex rounded-lg bg-white shadow-md">
+        <div className="flex flex-1 flex-col items-center space-y-4 overflow-y-auto bg-black p-10">
           {/* media */}
           {postData.cloudinaryMedia.map((media) => {
             if (media.resourceType === "image") {
               return (
                 <img
-                  className="max-w-full h-auto"
+                  className="h-auto max-w-full"
                   src={getImageURL(media.publicId)}
                 />
               );
             }
             if (media.resourceType === "video") {
               return (
-                <video className="max-w-full h-auto" controls>
+                <video className="h-auto max-w-full" controls>
                   <source src={getVideoURL(media.publicId)} type="video/mp4" />
                 </video>
               );
@@ -56,9 +56,9 @@ export const PostDetail: React.FC<PostDetailProps> = ({
             return <></>;
           })}
         </div>
-        <div className="w-[400px] bg-white py-16 px-4">
+        <div className="w-[400px] bg-white px-4 py-16">
           {/* close */}
-          <button className="absolute top-0 right-0 w-8 h-8" onClick={onClose}>
+          <button className="absolute right-0 top-0 h-8 w-8" onClick={onClose}>
             {xButton}
           </button>
 
@@ -67,14 +67,14 @@ export const PostDetail: React.FC<PostDetailProps> = ({
 
           {/* emoji */}
           {postData.votes.length > 0 && (
-            <div className="tracking-[.33em] mb-3 py-4">
+            <div className="mb-3 py-4 tracking-[.33em]">
               {postData.votes.map((vote) => vote.content).join("")}
             </div>
           )}
 
           {/* description */}
           <p
-            className="mb-6 font-light text-lg user-content"
+            className="user-content mb-6 text-lg font-light"
             dangerouslySetInnerHTML={{
               __html: marked.parse(postData.description, { async: false }),
             }}
@@ -88,7 +88,7 @@ export const PostDetail: React.FC<PostDetailProps> = ({
                   <span className="text-xs uppercase">
                     {comment.authorName}
                   </span>
-                  <span className="text-xs ml-auto">
+                  <span className="ml-auto text-xs">
                     {formatDate(comment.createdAt)}
                   </span>
                 </div>
@@ -96,7 +96,7 @@ export const PostDetail: React.FC<PostDetailProps> = ({
                 {/* <p className="mt-2">{comment.content}</p> */}
 
                 <p
-                  className="mt-2 font-light text-lg user-content"
+                  className="user-content mt-2 text-lg font-light"
                   dangerouslySetInnerHTML={{
                     __html: marked.parse(comment.content, { async: false }),
                   }}

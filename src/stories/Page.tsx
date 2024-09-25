@@ -50,11 +50,11 @@ export const Page = ({
         lessons={config.lessons}
         onLessonChange={onLessonChange}
       />
-      <div className="mt-4 text-lg text-center">
+      <div className="mt-4 text-center text-lg">
         {postCount} total sketches — {activePosts.length} {activeLesson}{" "}
         sketches.
       </div>
-      <div className="mt-4 text-lg text-center">{config.avalanche_message}</div>
+      <div className="mt-4 text-center text-lg">{config.avalanche_message}</div>
       <div className="mt-12 flex flex-wrap justify-center gap-4">
         {activePosts.map((post) => (
           <Post

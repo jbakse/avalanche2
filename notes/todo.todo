@@ -17,10 +17,14 @@ Refactor:
     x close button @cancelled(24-09-24 15:00)
     □ custom scrollbar
 
+□ should PostProps compose PostData instead of extend it
+
 
 ✓ support markdown @done(24-09-24 15:26)
 □ masonry w js? https://codepen.io/singhkunal2050/pen/vYbPVNd
 □ factor formatDate, elide into utils, improve names?
+□ add safe html truncating to elide
+□ probably make a usercontent or usermarkdown component for markdown
 
 □ activeUser, activeLesson should probably be useStates not story args.
     need to consider along side creating an actual top level app for this, need url/history support (react router)
