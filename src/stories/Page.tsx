@@ -37,25 +37,38 @@ export const Page = ({
 
   return (
     <>
+      {/* page header */}
       <Header title={config.site_title} />
+
+      {/* user bar */}
       <UserBar
         users={users}
         activeLesson={activeLesson}
         activeUser={activeUser}
         onUserChange={onUserChange}
       />
+
+      {/* user profile */}
       {activeUser && <UserProfile user={activeUser} />}
+
+      {/* lesson bar */}
       <LessonBar
         activeLesson={activeLesson}
         activeUser={activeUser}
         lessons={config.lessons}
         onLessonChange={onLessonChange}
       />
+
+      {/* sketch counts */}
       <div className="mt-4 text-center text-lg">
         {postCount} total sketches — {activePosts.length} {activeLesson}{" "}
         sketches.
       </div>
+
+      {/* avalanche message */}
       <div className="mt-4 text-center text-lg">{config.avalanche_message}</div>
+
+      {/* posts */}
       <div className="mt-12 flex flex-wrap justify-center gap-4">
         {activePosts.map((post) => (
           <Post
@@ -66,6 +79,8 @@ export const Page = ({
           />
         ))}
       </div>
+
+      {/* post detail modal */}
       {activePost && (
         <PostDetail
           postData={activePost}

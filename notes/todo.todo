@@ -9,8 +9,10 @@ UX/UI:
     □ should clicking a lesson clear user, and vice versa?
 
 Refactor:
-    □ should PostProps compose PostData instead of extend it
-    
+    □ posts
+        □ should PostProps compose PostData instead of extend it
+    □ factor out dateline (used in two components)
+    □ factor out play icon, x icon
     □ factor formatDate, elide into utils, improve names?
     □ add safe html truncating to elide
     □ probably make a usercontent or usermarkdown component for markdown
@@ -18,3 +20,6 @@ Refactor:
     □ pull subcomponents into their own files or to closures inside the main component
 
     □ activeUser and activePost are full objects. activeLesson is just the name. should this be consistent?
+
+    □ getVideoURL might return adaptive video format, so hardcoded mp4 type in post detail might be wrong depening on browser?
+

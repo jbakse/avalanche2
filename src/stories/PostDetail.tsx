@@ -28,6 +28,8 @@ export const PostDetail = ({
   postData: postData,
   onClose,
 }: PostDetailProps) => {
+  //todo: this is a thing
+
   return (
     <>
       <div
@@ -35,6 +37,7 @@ export const PostDetail = ({
         onClick={onClose}
       ></div>
       <div className="fixed inset-10 flex rounded-lg bg-white shadow-md">
+        {/* left column */}
         <div className="custom-scroll flex flex-1 flex-col items-center space-y-10 overflow-y-auto bg-black p-10">
           {/* media */}
           {postData.cloudinaryMedia.map((media) => {
@@ -56,13 +59,15 @@ export const PostDetail = ({
             return <></>;
           })}
         </div>
+
+        {/* right column */}
         <div className="w-[400px] bg-white px-4 py-16">
           {/* close */}
           <button className="absolute right-0 top-0 h-8 w-8" onClick={onClose}>
             {xButton}
           </button>
 
-          {/* emoji */}
+          {/* dateline */}
           <Dateline postData={postData} />
 
           {/* emoji */}
@@ -84,6 +89,7 @@ export const PostDetail = ({
           <div className="space-y-4">
             {postData.comments.map((comment) => (
               <div key={comment.content} className="">
+                {/* comment dateline */}
                 <div className="flex">
                   <span className="text-xs uppercase">
                     {comment.authorName}
@@ -93,8 +99,7 @@ export const PostDetail = ({
                   </span>
                 </div>
 
-                {/* <p className="mt-2">{comment.content}</p> */}
-
+                {/* comment content */}
                 <p
                   className="user-content mt-2 text-lg font-light"
                   dangerouslySetInnerHTML={{

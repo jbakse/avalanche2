@@ -13,12 +13,16 @@ type Story = StoryObj<typeof meta>;
 
 export const FullClass = {
   args: {
+    activeUser: null,
+    activeLesson: null,
     users: users,
   },
 } satisfies Story;
 
 export const Single = {
   args: {
+    activeUser: null,
+    activeLesson: null,
     users: [users[0]],
   },
 } satisfies Story;

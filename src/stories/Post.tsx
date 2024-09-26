@@ -112,10 +112,10 @@ export const Post = ({
       {/* media */}
       <div className="relative flex flex-wrap">{renderMedia()}</div>
 
-      <div className="p-4 font-sans">
+      <div className="p-4">
         {/* emoji */}
         {postData.votes.length > 0 && (
-          <div className="mb-3 tracking-[.33em]">
+          <div className="tracking-[.33em]">
             {postData.votes.map((vote) => vote.content).join("")}
           </div>
         )}
@@ -123,7 +123,7 @@ export const Post = ({
         {/* code url */}
         {postData.code && (
           <a
-            className="mb-3 block text-xs text-purple-600 visited:text-purple-900 hover:underline"
+            className="mt-2 block text-sm text-purple-600 visited:text-purple-900 hover:underline"
             href="#"
           >
             View Code
@@ -133,7 +133,7 @@ export const Post = ({
         {/* description */}
 
         <p
-          className="user-content mb-4 text-lg font-light"
+          className="user-content mb-3 mt-2 text-lg font-light"
           dangerouslySetInnerHTML={{
             __html: elide(
               marked.parse(postData.description, { async: false }),

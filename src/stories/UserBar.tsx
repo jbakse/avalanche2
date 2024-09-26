@@ -42,8 +42,7 @@ export const UserBar = ({
             activeUser={activeUser}
             isActive={activeUser?._id === user._id}
             onClick={() =>
-              // if the user is inactive, activate them
-              // if the user is already active, deactivate them
+              // activate/toggle the user
               onUserChange?.(activeUser?._id === user._id ? null : user)
             }
           />
@@ -71,6 +70,7 @@ const UserBarUser = ({
 
   return (
     <div key={user._id} className="relative" onClick={onClick}>
+      {/* headshot */}
       <img
         className={classNames(
           "h-14 w-14 cursor-pointer border-b-[6px] object-cover",
@@ -85,10 +85,13 @@ const UserBarUser = ({
         src={getHeadshotURL(user.headshotId, "small")}
         alt={user.name}
       />
+
+      {/* indicator */}
       {isActive && (
         <div className="absolute left-1/2 top-full mt-0 h-0 w-0 -translate-x-1/2 border-8 border-transparent border-t-black"></div>
       )}
 
+      {/* tooltip */}
       <div className="tooltip text-center">
         <h2 className="pb-1 font-bold uppercase">{user.name}</h2>
         <p>{fullCount} sketches</p>
