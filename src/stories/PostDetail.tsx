@@ -2,7 +2,12 @@ import { marked } from "marked";
 
 import { Dateline, formatDate } from "./Post";
 
-import { PostData, getImageURL, getVideoURL } from "../../data/data";
+import {
+  PostData,
+  getImageURL,
+  getVideoURL,
+  getAudioURL,
+} from "../../data/data";
 
 interface PostDetailProps {
   postData: PostData;
@@ -41,6 +46,14 @@ export const PostDetail = ({
         <div className="custom-scroll flex flex-1 flex-col items-center space-y-10 overflow-y-auto bg-black p-10">
           {/* media */}
           {postData.cloudinaryMedia.map((media) => {
+            if (media.resourceType === "audio") {
+              return (
+                // getAudioURL(media.publicId)
+                <audio controls>
+                  <source src={getAudioURL(media.publicId)} type="audio/mp3" />
+                </audio>
+              );
+            }
             if (media.resourceType === "image") {
               return (
                 <img
