@@ -1,10 +1,14 @@
+const dataDir = "compform2018_export";
+
 export type { UserData } from "./users";
 export type { PostData } from "./posts";
 export type { Config, Lesson } from "./config";
 
-import dirtyUsers from "./2023_spring/users.json";
-import dirtyPosts from "./2023_spring/posts.json";
-import dirtyPrefs from "./2023_spring/prefs.json";
+const { cloudName } = await import(`./${dataDir}/settings.json`);
+
+const { default: dirtyUsers } = await import(`./${dataDir}/users.json`);
+const { default: dirtyPosts } = await import(`./${dataDir}/posts.json`);
+const { default: dirtyPrefs } = await import(`./${dataDir}/prefs.json`);
 
 import { cleanUsers, UserData } from "./users";
 import { cleanPosts, PostData } from "./posts";
@@ -45,28 +49,28 @@ export function getHeadshotURL(
 ): string {
   const width = size === "small" ? 64 : 500;
   if (!mediaId) return blackPixel;
-  return `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_${width}/v1/${mediaId}`;
+  return `https://res.cloudinary.com/${cloudName}/image/upload/c_fill,f_auto,q_auto:best,w_${width}/v1/${mediaId}`;
 }
 
 export function getVideoThumbnailURL(mediaId: string): string {
   // example video thumb url
   // https://res.cloudinary.com/compform2023spring/video/upload/w_350/avalanche2023spring/iezbyqnfdvl9rvaoyank.jpg
 
-  return `https://res.cloudinary.com/compform2023spring/video/upload/w_350/${mediaId}.jpg`;
+  return `https://res.cloudinary.com/${cloudName}/video/upload/w_350/${mediaId}.jpg`;
 }
 
 export function getImageThumbnailURL(mediaId: string): string {
   // example image thumb url
   //https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/avalanche2023spring/v2agzd39fbrclj7urnve
 
-  return `https://res.cloudinary.com/compform2023spring/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/${mediaId}.jpg`;
+  return `https://res.cloudinary.com/${cloudName}/image/upload/c_fill,f_auto,q_auto:best,w_350/v1/${mediaId}.jpg`;
 }
 
 export function getImageURL(mediaId: string): string {
   // example image url
   // https://res.cloudinary.com/compform2023spring/image/upload/v1/avalanche2023spring/bucqa1cmudkjuped28sn
 
-  return `https://res.cloudinary.com/compform2023spring/image/upload/v1/${mediaId}`;
+  return `https://res.cloudinary.com/${cloudName}/image/upload/v1/${mediaId}`;
 }
 
 export function getVideoURL(mediaId: string): string {

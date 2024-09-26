@@ -1,0 +1,272 @@
+[
+  {
+    "_id": "63K9ZxzBsBgxcaEqG",
+    "createdAt": { "$date": "2024-01-25T14:17:45.262Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "zhaom458@newschool.edu", "verified": false }],
+    "profile": { "first_name": "modi", "last_name": "zhao" }
+  },
+  {
+    "_id": "DBMQuLgjYkxE7nW8e",
+    "createdAt": { "$date": "2024-02-04T19:35:44.592Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "juwonlee@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "juwon",
+      "last_name": "lee",
+      "headshot": "avalanche2024spring/ysclzhhxk3amlniv287u",
+      "description": "*"
+    }
+  },
+  {
+    "_id": "Qewo25vFACCLvwDxb",
+    "createdAt": { "$date": "2024-01-16T21:49:13.75Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "celis543@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Sara",
+      "last_name": "Celidonio",
+      "headshot": "avalanche2024spring/xjisiheprlryaadqpnny",
+      "description": "25 year old former engineer. Ask me about my collection of little green men\nSaracelidonio.com"
+    }
+  },
+  {
+    "_id": "ZCJtkswJzwbAPEFfQ",
+    "createdAt": { "$date": "2024-01-25T02:32:37.596Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "wuy529@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Yu Ming",
+      "last_name": "Wu",
+      "headshot": "avalanche2024spring/yrjpeyyvdzndhqvrsbyx",
+      "description": ""
+    }
+  },
+  {
+    "_id": "aaYh4SqucAkGawvkj",
+    "createdAt": { "$date": "2024-01-25T14:17:15.168Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "suzan@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Suzan",
+      "last_name": "Sadek",
+      "headshot": "avalanche2024spring/k11mmi480lijnuhtqa1m",
+      "description": ""
+    }
+  },
+  {
+    "_id": "bHzoFZBQFfw9CDDBZ",
+    "createdAt": { "$date": "2024-01-25T14:16:19.567Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "mumtm273@newschool.edu", "verified": false }],
+    "profile": { "first_name": "Maheen", "last_name": "M", "description": "" }
+  },
+  {
+    "_id": "ej8tyg8gpMwnsgT2Z",
+    "createdAt": { "$date": "2024-01-25T14:17:13.533Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "itthp358@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Fern",
+      "last_name": "Itthisang",
+      "headshot": "avalanche2024spring/rrlhn1egn1mpfkuvrdrd",
+      "description": ""
+    }
+  },
+  {
+    "_id": "eoa99P8DZCq4f5nxn",
+    "createdAt": { "$date": "2024-02-01T00:13:40.146Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "debol014@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Leo",
+      "last_name": "de Bokay",
+      "description": "*",
+      "headshot": "avalanche2024spring/pnrpsffuuea8oblhkeel"
+    }
+  },
+  {
+    "_id": "iLszazJjsKWyWjkHw",
+    "createdAt": { "$date": "2024-01-17T10:58:11.598Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "munjm416@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Mayank",
+      "last_name": "Munjal",
+      "headshot": "avalanche2024spring/qxwepr39m4ocyxgrcjxw",
+      "description": ""
+    }
+  },
+  {
+    "_id": "j6prNWcn2uKx2Rdi4",
+    "createdAt": { "$date": "2024-01-25T14:14:46.445Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "hungh754@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "HaoChe",
+      "last_name": "Hung",
+      "headshot": "avalanche2024spring/g5nnf265ked1p2t1osh3",
+      "description": ""
+    }
+  },
+  {
+    "_id": "mycLY28tB69zf9ETH",
+    "createdAt": { "$date": "2024-08-25T23:21:29.803Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": {
+        "loginTokens": [
+          {
+            "when": { "$date": "2024-08-25T23:21:30.077Z" },
+            "hashedToken": "f+HualAdE/UZy7oG9CCumrbQ67ntS9Lbh4NZflN42nQ="
+          }
+        ]
+      }
+    },
+    "emails": [{ "address": "chuik633@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Katherine",
+      "last_name": "Chui",
+      "headshot": "avalanche2024spring/bsizpomqffd5qidvarjs",
+      "description": "I'm a Data Viz masters student from SF, California! "
+    }
+  },
+  {
+    "_id": "nnosxqj9tf8nZxEbz",
+    "createdAt": { "$date": "2024-01-18T20:38:32.62Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "hallg620@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Gigie",
+      "last_name": "Hall",
+      "headshot": "avalanche2024spring/jytpnamplsj3u9gbk3xn",
+      "description": "Data Viz major scared of code but excited by its potential. Let creative coding + data viz = :)"
+    }
+  },
+  {
+    "_id": "o8NP2LRtcFkHuWBxi",
+    "createdAt": { "$date": "2024-02-03T05:22:20.192Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "wilkj487@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Jonathen",
+      "last_name": "Wilks",
+      "headshot": "avalanche2024spring/zilhlmh97oxrklvocy6i",
+      "description": "wilkj487@newschool.edu"
+    }
+  },
+  {
+    "_id": "sz2yTE264cavo5kwo",
+    "createdAt": { "$date": "2024-01-10T18:13:28.529Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "baksej@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Justin",
+      "last_name": "Bakse",
+      "headshot": "avalanche2024spring/gg8yp4rourdgy56ovn0r",
+      "description": "I teach this class! My website is [justinbakse.com](justinbakse.com)"
+    },
+    "roles": { "__global_roles__": ["may_admin", "admin"] }
+  },
+  {
+    "_id": "vrFHGGJpTBgGPt5AT",
+    "createdAt": { "$date": "2024-01-20T23:01:53.799Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "matea398@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Ani",
+      "last_name": "Matevosian",
+      "headshot": "avalanche2024spring/oajrx7lhqnpavatwnefw",
+      "description": ""
+    }
+  },
+  {
+    "_id": "zmg4J9mecNsBjsDNt",
+    "createdAt": { "$date": "2024-01-17T11:40:30.452Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "bomba227@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Ana",
+      "last_name": "Bombin Ordas",
+      "headshot": "avalanche2024spring/v5pi5hbyas873puh36fz",
+      "description": "Senior in the Strategic Design and Management program, fascinated by interaction design."
+    }
+  }
+]

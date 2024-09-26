@@ -40,7 +40,7 @@ type Comment = {
 
 export function cleanPosts(
   posts: Record<string, any>[],
-  users: UserData[]
+  users: UserData[],
 ): PostData[] {
   return posts
     .sort((a, b) => {
@@ -80,12 +80,12 @@ function convertPost(post: Record<string, any>, users: UserData[]): PostData {
             height: media.height ?? 0,
             format: media.format ?? "",
             resourceType: media.resource_type ?? "",
-          } as CloudinaryMedia)
+          }) as CloudinaryMedia,
       )
       .filter((media: Record<string, any>) => media.publicId),
 
     votes: post.votes.map(function convertVote(
-      vote: Record<string, any>
+      vote: Record<string, any>,
     ): Vote {
       const user = users.find((user) => user._id === vote.author_id);
       const authorName = user ? `${user.firstName} ${user.lastName}` : "";
@@ -98,18 +98,19 @@ function convertPost(post: Record<string, any>, users: UserData[]): PostData {
       };
     }),
 
-    comments: post.comments.map(function convertComment(
-      comment: Record<string, any>
-    ): Comment {
-      const user = users.find((user) => user._id === comment.commenter_id);
-      const authorName = user ? `${user.firstName} ${user.lastName}` : "";
+    comments:
+      post.comments?.map(function convertComment(
+        comment: Record<string, any>,
+      ): Comment {
+        const user = users.find((user) => user._id === comment.commenter_id);
+        const authorName = user ? `${user.firstName} ${user.lastName}` : "";
 
-      return {
-        content: comment.comment,
-        authorId: comment.commenter_id,
-        authorName: authorName,
-        createdAt: comment.created_at.$date ?? "",
-      };
-    }),
+        return {
+          content: comment.comment,
+          authorId: comment.commenter_id,
+          authorName: authorName,
+          createdAt: comment.created_at.$date ?? "",
+        };
+      }) ?? [],
   };
 }
