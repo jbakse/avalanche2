@@ -79,7 +79,9 @@ function convertPost(post: Record<string, any>, users: UserData[]): PostData {
             width: media.width ?? 0,
             height: media.height ?? 0,
             format: media.format ?? "",
-            resourceType: media.resource_type ?? "",
+            resourceType: media.is_audio
+              ? "audio"
+              : (media.resource_type ?? ""),
           }) as CloudinaryMedia,
       )
       .filter((media: Record<string, any>) => media.publicId),

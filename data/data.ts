@@ -52,6 +52,12 @@ export function getHeadshotURL(
   return `https://res.cloudinary.com/${cloudName}/image/upload/c_fill,f_auto,q_auto:best,w_${width}/v1/${mediaId}`;
 }
 
+export function getAudioThumbnailURL(mediaId: string): string {
+  // example audio thumb url
+
+  return `https://res.cloudinary.com/${cloudName}/video/upload/w_350/fl_waveform/${mediaId}.jpg`;
+}
+
 export function getVideoThumbnailURL(mediaId: string): string {
   // example video thumb url
   // https://res.cloudinary.com/compform2023spring/video/upload/w_350/avalanche2023spring/iezbyqnfdvl9rvaoyank.jpg

@@ -4,6 +4,7 @@ import {
   getHeadshotURL,
   getVideoThumbnailURL,
   getImageThumbnailURL,
+  getAudioThumbnailURL,
 } from "../../data/data";
 
 interface PostProps extends PostData {
@@ -63,7 +64,14 @@ export const Post = ({
     );
 
     const mediaInfos = postData.cloudinaryMedia.map((o) => {
-      if (o.resourceType === "video") {
+      if (o.resourceType === "audio") {
+        console.log("audio", o);
+        // audio
+        return {
+          type: "audio",
+          thumb: getAudioThumbnailURL(o.publicId),
+        };
+      } else if (o.resourceType === "video") {
         // video
         return {
           type: "video",
