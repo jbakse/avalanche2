@@ -31,3 +31,5 @@ out
 
 .env
 .aider*
+
+bcrypt_values.txt
