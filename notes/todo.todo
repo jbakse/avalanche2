@@ -25,9 +25,11 @@ Refactor:
 
 
 Deploy:
-    □ exclude data from build
+    x exclude data from build
+    □ fetch() data from public?
     □ have it choose data based on subdomain
     □ netlify?
+        build with `vite build` serve from dist 
 
 Test Database Exports:
     ✓ 2024spring
