@@ -65,7 +65,6 @@ export const Post = ({
 
     const mediaInfos = postData.cloudinaryMedia.map((o) => {
       if (o.resourceType === "audio") {
-        console.log("audio", o);
         // audio
         return {
           type: "audio",

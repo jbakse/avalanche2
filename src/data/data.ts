@@ -1,18 +1,42 @@
-const dataDir = "../../public/data/compform2023spring_export";
+/// load archive data
 
-export type { UserData } from "./users";
-export type { PostData } from "./posts";
-export type { Config, Lesson } from "./config";
+// greet the console (style black on white background)
+console.log("%ccomp form", "color: black; background: white;");
 
-const { cloudName } = await import(`${dataDir}/settings.json`);
+// get the subdomain from the URL
+const subdomain = window.location.hostname.split(".")[0];
+console.log("subdomain:", subdomain);
 
-const { default: dirtyUsers } = await import(`${dataDir}/users.json`);
-const { default: dirtyPosts } = await import(`${dataDir}/posts.json`);
-const { default: dirtyPrefs } = await import(`${dataDir}/prefs.json`);
+// archive folder from subdomain
+const archiveFolder = {
+  sketches: "compform2017spring_export",
+  sketches2018: "compform2018spring_export",
+  sketches2019: "compform2019spring_export",
+  sketches2020: "compform2020spring_export",
+  sketches2020fall: "compform2020fall_export",
+  sketches2021spring: "compform2021spring_export",
+  sketches2022spring: "compform2022spring_export",
+  sketches2022fall: "compform2022fall_export",
+  sketches2023spring: "compform2023spring_export",
+}[subdomain];
+
+// const dataDir = "/public/data/compform2024spring_export";
+const dataDir = `/public/data/${archiveFolder}`;
+
+const cloudName = await loadJson<{ cloudName: string }>(
+  `${dataDir}/settings.json`,
+).then((data) => data.cloudName);
+const dirtyUsers = await loadJson<UserData[]>(`${dataDir}/users.json`);
+const dirtyPosts = await loadJson<PostData[]>(`${dataDir}/posts.json`);
+const dirtyPrefs = await loadJson<Record<string, any>>(`${dataDir}/prefs.json`);
 
 import { cleanUsers, UserData } from "./users";
 import { cleanPosts, PostData } from "./posts";
 import { cleanConfig } from "./config";
+
+export type { UserData } from "./users";
+export type { PostData } from "./posts";
+export type { Config, Lesson } from "./config";
 
 export const users = cleanUsers(dirtyUsers);
 export const posts = cleanPosts(dirtyPosts, users).filter(
@@ -119,4 +143,19 @@ export function slugForUser(user?: UserData | null): string {
 export function slugForLesson(lesson?: string | null): string {
   if (!lesson) return "all";
   return lesson.replace(/ /g, "-");
+}
+
+// const dataDir = "../../public/data/compform2023spring_export";
+// const { cloudName } = await import(`${dataDir}/settings.json`);
+// const { default: dirtyUsers } = await import(`${dataDir}/users.json`);
+// const { default: dirtyPosts } = await import(`${dataDir}/posts.json`);
+// const { default: dirtyPrefs } = await import(`${dataDir}/prefs.json`);
+
+async function loadJson<T>(url: string): Promise<T> {
+  console.log("fetching:", url);
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch ${url}: ${response.statusText}`);
+  }
+  return response.json();
 }

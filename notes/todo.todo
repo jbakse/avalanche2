@@ -26,8 +26,8 @@ Refactor:
 
 Deploy:
     x exclude data from build
-    □ fetch() data from public?
-    □ have it choose data based on subdomain
+    ✓ fetch() data from public
+    ✓ have it choose data based on subdomain
     □ netlify?
         build with `vite build` serve from dist 
 
