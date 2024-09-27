@@ -1,1 +1,79 @@
-[{"_id":"87QN4thWFZqKpBN24","weeks":[{"topic":"Tile Graphics","start":{"$date":"2018-01-26T00:00:00Z"},"end":{"$date":"2018-02-02T00:00:00Z"}},{"topic":"Random Values","start":{"$date":"2018-02-02T00:00:00Z"},"end":{"$date":"2018-02-09T00:00:00Z"}},{"topic":"Parameters","start":{"$date":"2018-02-09T00:00:00Z"},"end":{"$date":"2018-02-17T00:00:00Z"}},{"topic":"Using Noise","start":{"$date":"2018-02-17T00:00:00Z"},"end":{"$date":"2018-02-24T00:00:00Z"}},{"topic":"CF Strategies","start":{"$date":"2018-02-24T00:00:00Z"},"end":{"$date":"2018-03-03T00:00:00Z"}},{"topic":"Pixel Data","start":{"$date":"2018-03-03T00:00:00Z"},"end":{"$date":"2018-03-10T00:00:00Z"}},{"topic":"Turtle Graphics","start":{"$date":"2018-03-10T00:00:00Z"},"end":{"$date":"2018-03-17T00:00:00Z"}},{"topic":"Vector Data","start":{"$date":"2018-03-17T00:00:00Z"},"end":{"$date":"2018-03-30T00:00:00Z"}},{"topic":"Animation","start":{"$date":"2018-03-30T00:00:00Z"},"end":{"$date":"2018-04-07T00:00:00Z"}},{"topic":"Generating Text","start":{"$date":"2018-04-07T00:00:00Z"},"end":{"$date":"2018-04-13T00:00:00Z"}},{"topic":"Generating Sound","start":{"$date":"2018-04-14T00:00:00Z"},"end":{"$date":"2018-04-20T00:00:00Z"}},{"topic":"Music","start":{"$date":"2018-04-20T00:00:00Z"},"end":{"$date":"2018-04-28T00:00:00Z"}},{"topic":"3D Forms","start":{"$date":"2018-04-28T00:00:00Z"},"end":{"$date":"2018-05-05T00:00:00Z"}},{"topic":"Microgames","start":{"$date":"2018-05-05T00:00:00Z"},"end":{"$date":"2018-05-15T00:00:00Z"}}],"site_title":"Comp Form Sketches 2018","voting_enabled":true}]
+[
+  {
+    "_id": "87QN4thWFZqKpBN24",
+    "weeks": [
+      {
+        "topic": "Tile Graphics",
+        "start": { "$date": "2018-01-26T00:00:00Z" },
+        "end": { "$date": "2018-02-02T00:00:00Z" }
+      },
+      {
+        "topic": "Random Values",
+        "start": { "$date": "2018-02-02T00:00:00Z" },
+        "end": { "$date": "2018-02-09T00:00:00Z" }
+      },
+      {
+        "topic": "Parameters",
+        "start": { "$date": "2018-02-09T00:00:00Z" },
+        "end": { "$date": "2018-02-17T00:00:00Z" }
+      },
+      {
+        "topic": "Using Noise",
+        "start": { "$date": "2018-02-17T00:00:00Z" },
+        "end": { "$date": "2018-02-24T00:00:00Z" }
+      },
+      {
+        "topic": "CF Strategies",
+        "start": { "$date": "2018-02-24T00:00:00Z" },
+        "end": { "$date": "2018-03-03T00:00:00Z" }
+      },
+      {
+        "topic": "Pixel Data",
+        "start": { "$date": "2018-03-03T00:00:00Z" },
+        "end": { "$date": "2018-03-10T00:00:00Z" }
+      },
+      {
+        "topic": "Turtle Graphics",
+        "start": { "$date": "2018-03-10T00:00:00Z" },
+        "end": { "$date": "2018-03-17T00:00:00Z" }
+      },
+      {
+        "topic": "Vector Data",
+        "start": { "$date": "2018-03-17T00:00:00Z" },
+        "end": { "$date": "2018-03-30T00:00:00Z" }
+      },
+      {
+        "topic": "Animation",
+        "start": { "$date": "2018-03-30T00:00:00Z" },
+        "end": { "$date": "2018-04-07T00:00:00Z" }
+      },
+      {
+        "topic": "Generating Text",
+        "start": { "$date": "2018-04-07T00:00:00Z" },
+        "end": { "$date": "2018-04-13T00:00:00Z" }
+      },
+      {
+        "topic": "Generating Sound",
+        "start": { "$date": "2018-04-14T00:00:00Z" },
+        "end": { "$date": "2018-04-20T00:00:00Z" }
+      },
+      {
+        "topic": "Music",
+        "start": { "$date": "2018-04-20T00:00:00Z" },
+        "end": { "$date": "2018-04-28T00:00:00Z" }
+      },
+      {
+        "topic": "3D Forms",
+        "start": { "$date": "2018-04-28T00:00:00Z" },
+        "end": { "$date": "2018-05-05T00:00:00Z" }
+      },
+      {
+        "topic": "Microgames",
+        "start": { "$date": "2018-05-05T00:00:00Z" },
+        "end": { "$date": "2018-05-15T00:00:00Z" }
+      }
+    ],
+    "site_title": "Comp Form Sketches 2018",
+    "voting_enabled": true
+  }
+]

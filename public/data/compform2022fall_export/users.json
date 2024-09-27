@@ -1,1 +1,375 @@
-[{"_id":"3dcLuBuNtgbk7S66B","createdAt":{"$date":"2022-08-17T03:12:58.991Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"liux958@newschool.edu","verified":false}],"profile":{"first_name":"Simone","last_name":"Liu","headshot":"avalanche2022fall/mzboyq5a3nucaqihsqss","description":"a UX designer and creative technologist ጿኈ ቼ ዽ https://thesimoneliu.com "}},{"_id":"4QqFX5zGr82qi87Dm","createdAt":{"$date":"2022-07-29T17:03:52.052Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"baksej@newschool.edu","verified":false}],"profile":{"first_name":"Justin","last_name":"Bakse","description":"[justinbakse.com](http://justinbakse.com)","headshot":"avalanche2022fall/tumebrq67hp0iogi1wjv"},"roles":{"__global_roles__":["may_admin","admin"]}},{"_id":"5RvaXewDX8zgJk4Ps","createdAt":{"$date":"2022-09-18T20:20:28.944Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"huy577@newschool.edu","verified":false}],"profile":{"first_name":"Yalin (Tara)","last_name":"Hu","description":"","headshot":"avalanche2022fall/npdvch27ox50jrggocsn"}},{"_id":"8vAzCk2PCkrZQCu9R","createdAt":{"$date":"2022-08-17T13:59:16.347Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"chenf345@newschool.edu","verified":false}],"profile":{"first_name":"Franco","last_name":"Chen","headshot":"avalanche2022fall/wag2irnooahcpuqwt3aj","description":"I cook. You cook. Tim cooks. We all cook.\n\n-\n\nhellofranco.us"}},{"_id":"CNfqxYKuqtCtFtNWA","createdAt":{"$date":"2024-01-24T18:19:22.864Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"mumtm273@newschool.edu","verified":false}],"profile":{"first_name":"Maheen","last_name":"M","description":"hi :) "}},{"_id":"EJyuS5am2zJHHgh8L","createdAt":{"$date":"2022-08-29T14:38:53.722Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"wangz318@newschool.edu","verified":false}],"profile":{"first_name":"Skylar","last_name":"Wang","headshot":"avalanche2022fall/myrtwzdebbtfeadwnwfd","description":"Under Construction - https://www.ziyijpg.me"}},{"_id":"FAzt4MGpYaFKBhRPr","createdAt":{"$date":"2022-09-12T06:07:49.66Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"xiaos656@newschool.edu","verified":false}],"profile":{"first_name":"Shuyao","last_name":"X","description":"Data kid | Visual journalist","headshot":"avalanche2022fall/tpvllc7adtqpthzkzmjx"}},{"_id":"G8hNTRBH4G3ZK9imL","createdAt":{"$date":"2022-08-18T13:51:08.394Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"smitharaoaluri@newschool.edu","verified":false}],"profile":{"first_name":"Smitha","last_name":"Aluri","headshot":"avalanche2022fall/zmk1qbzi29r8oylwzyvl","description":"Lover of plants, pigs and puzzles <3 Check out my portfolio at www.smitha-aluri.com"}},{"_id":"GZEAp4QE4ietWnBcs","createdAt":{"$date":"2022-08-24T16:14:39.597Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"hoy372@newschool.edu","verified":false}],"profile":{"first_name":"Kevin","last_name":"Ho","headshot":"avalanche2022fall/hkdu4ppl5az5ukymuu3k","description":"www.khocreative.com"}},{"_id":"H6Xsy5w2PhSFjpQwy","createdAt":{"$date":"2022-08-17T16:34:32.836Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"shuku233@newschool.edu","verified":false}],"profile":{"first_name":"Unnati","last_name":"Shukla","headshot":"avalanche2022fall/twxb60vbsle32c4pss9n","description":"designer (???) based in bk. interested in well-being, art, and tech.\n\nwww.unnatishukla.com"}},{"_id":"LQwT58oJwB3zhCbmX","createdAt":{"$date":"2022-09-08T23:45:38.478Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"avcalver@gmail.com","verified":true}],"profile":{"first_name":"Ariel","last_name":"Calver","headshot":"avalanche2022fall/gs5h6y6pgrwzgcfhwcec","description":""}},{"_id":"MQvygEgN8cYkSXXwc","createdAt":{"$date":"2022-08-29T16:35:36.65Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"fuy644@newschool.edu","verified":false}],"profile":{"first_name":"Yibo","last_name":"Fu"}},{"_id":"PYS9KHLXogvMigPwT","createdAt":{"$date":"2022-08-28T23:12:00.801Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"palma061@newschool.edu","verified":false}],"profile":{"first_name":"Aamina","last_name":"Palmer","headshot":"avalanche2022fall/tl4ytleq041ui6jfwstt","description":"I look and see; I show you too -- amipalm.com"}},{"_id":"SzTw9eT2tnAR3dXZF","createdAt":{"$date":"2022-08-29T16:36:19.479Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"jorgg867@newschool.edu","verified":false}],"profile":{"first_name":"Gonçalo","last_name":"Monte","headshot":"avalanche2022fall/ctfkceplinffskfbnzp2","description":""}},{"_id":"ZM3xrfNdgxHytYMuQ","createdAt":{"$date":"2022-09-11T18:16:17.522Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"liul131@newschool.edu","verified":false}],"profile":{"first_name":"Carmen","last_name":"Liu","headshot":"avalanche2022fall/tuaxuthowcoswjfjkeyc","description":""}},{"_id":"kLWg8ePsChfYszLHE","createdAt":{"$date":"2024-08-29T12:23:20.274Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[{"when":{"$date":"2024-08-29T12:23:20.501Z"},"hashedToken":"IZ63Z6NTxhCI9dwL1jnCkIGt+aUw62J8UET0otFtBlM="}]}},"emails":[{"address":"kasmo216@newschool.edu","verified":false}],"profile":{"first_name":"Olivia","last_name":"Kasmin"}},{"_id":"pXyDLaHXks8AitjHw","createdAt":{"$date":"2022-08-29T16:21:22.999Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"surel019@newschool.edu","verified":true}],"profile":{"first_name":"Lavannya","last_name":"Suressh","headshot":"avalanche2022fall/jweonnxdga3jilteobrm","description":""}},{"_id":"pmZfTZfpMehS6YvoN","createdAt":{"$date":"2022-09-10T02:31:12.613Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"shar205@newschool.edu","verified":false}],"profile":{"first_name":"Runzhe","last_name":"Sha","headshot":"avalanche2022fall/oaeotkmc8ih5t4dmsnyz","description":""}},{"_id":"tgsqG7atu6TSwkc8e","createdAt":{"$date":"2022-08-29T16:21:31.102Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"zhuc169@newschool.edu","verified":false}],"profile":{"first_name":"Angela ","last_name":"Zhu","headshot":"avalanche2022fall/opgzh9oephx7hwdtkstg","description":""}},{"_id":"uEsRHyyqDmcYPRypr","createdAt":{"$date":"2022-08-28T23:51:19.483Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"duanx722@newschool.edu","verified":true}],"profile":{"first_name":"Lawrence","last_name":"Duan","headshot":"avalanche2022fall/rxskzragats67bvhcudz","description":""}},{"_id":"vYHGoAD78egNThdYP","createdAt":{"$date":"2022-08-16T22:10:37.77Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"gargp909@newschool.edu","verified":false}],"profile":{"first_name":"Paridhi","last_name":"Garg","headshot":"avalanche2022fall/yz9ekwyp9t3miodugila","description":"Interested in coding, cognitive thinking, sci-fi and design :) "}},{"_id":"xjFP7R7oB9YekiEB7","createdAt":{"$date":"2022-09-09T17:26:18.188Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"sunj734@newschool.edu","verified":false}],"profile":{"first_name":"Jingjing","last_name":"Sun","description":"","headshot":"avalanche2022fall/e0lnq8mcfp0rlhgv2pff"}}]
+[
+  {
+    "_id": "3dcLuBuNtgbk7S66B",
+    "createdAt": { "$date": "2022-08-17T03:12:58.991Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "liux958@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Simone",
+      "last_name": "Liu",
+      "headshot": "avalanche2022fall/mzboyq5a3nucaqihsqss",
+      "description": "a UX designer and creative technologist ጿኈ ቼ ዽ https://thesimoneliu.com "
+    }
+  },
+  {
+    "_id": "4QqFX5zGr82qi87Dm",
+    "createdAt": { "$date": "2022-07-29T17:03:52.052Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "baksej@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Justin",
+      "last_name": "Bakse",
+      "description": "[justinbakse.com](http://justinbakse.com)",
+      "headshot": "avalanche2022fall/tumebrq67hp0iogi1wjv"
+    },
+    "roles": { "__global_roles__": ["may_admin", "admin"] }
+  },
+  {
+    "_id": "5RvaXewDX8zgJk4Ps",
+    "createdAt": { "$date": "2022-09-18T20:20:28.944Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "huy577@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Yalin (Tara)",
+      "last_name": "Hu",
+      "description": "",
+      "headshot": "avalanche2022fall/npdvch27ox50jrggocsn"
+    }
+  },
+  {
+    "_id": "8vAzCk2PCkrZQCu9R",
+    "createdAt": { "$date": "2022-08-17T13:59:16.347Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "chenf345@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Franco",
+      "last_name": "Chen",
+      "headshot": "avalanche2022fall/wag2irnooahcpuqwt3aj",
+      "description": "I cook. You cook. Tim cooks. We all cook.\n\n-\n\nhellofranco.us"
+    }
+  },
+  {
+    "_id": "CNfqxYKuqtCtFtNWA",
+    "createdAt": { "$date": "2024-01-24T18:19:22.864Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "mumtm273@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Maheen",
+      "last_name": "M",
+      "description": "hi :) "
+    }
+  },
+  {
+    "_id": "EJyuS5am2zJHHgh8L",
+    "createdAt": { "$date": "2022-08-29T14:38:53.722Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "wangz318@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Skylar",
+      "last_name": "Wang",
+      "headshot": "avalanche2022fall/myrtwzdebbtfeadwnwfd",
+      "description": "Under Construction - https://www.ziyijpg.me"
+    }
+  },
+  {
+    "_id": "FAzt4MGpYaFKBhRPr",
+    "createdAt": { "$date": "2022-09-12T06:07:49.66Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "xiaos656@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Shuyao",
+      "last_name": "X",
+      "description": "Data kid | Visual journalist",
+      "headshot": "avalanche2022fall/tpvllc7adtqpthzkzmjx"
+    }
+  },
+  {
+    "_id": "G8hNTRBH4G3ZK9imL",
+    "createdAt": { "$date": "2022-08-18T13:51:08.394Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [
+      { "address": "smitharaoaluri@newschool.edu", "verified": false }
+    ],
+    "profile": {
+      "first_name": "Smitha",
+      "last_name": "Aluri",
+      "headshot": "avalanche2022fall/zmk1qbzi29r8oylwzyvl",
+      "description": "Lover of plants, pigs and puzzles <3 Check out my portfolio at www.smitha-aluri.com"
+    }
+  },
+  {
+    "_id": "GZEAp4QE4ietWnBcs",
+    "createdAt": { "$date": "2022-08-24T16:14:39.597Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "hoy372@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Kevin",
+      "last_name": "Ho",
+      "headshot": "avalanche2022fall/hkdu4ppl5az5ukymuu3k",
+      "description": "www.khocreative.com"
+    }
+  },
+  {
+    "_id": "H6Xsy5w2PhSFjpQwy",
+    "createdAt": { "$date": "2022-08-17T16:34:32.836Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "shuku233@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Unnati",
+      "last_name": "Shukla",
+      "headshot": "avalanche2022fall/twxb60vbsle32c4pss9n",
+      "description": "designer (???) based in bk. interested in well-being, art, and tech.\n\nwww.unnatishukla.com"
+    }
+  },
+  {
+    "_id": "LQwT58oJwB3zhCbmX",
+    "createdAt": { "$date": "2022-09-08T23:45:38.478Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "avcalver@gmail.com", "verified": true }],
+    "profile": {
+      "first_name": "Ariel",
+      "last_name": "Calver",
+      "headshot": "avalanche2022fall/gs5h6y6pgrwzgcfhwcec",
+      "description": ""
+    }
+  },
+  {
+    "_id": "MQvygEgN8cYkSXXwc",
+    "createdAt": { "$date": "2022-08-29T16:35:36.65Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "fuy644@newschool.edu", "verified": false }],
+    "profile": { "first_name": "Yibo", "last_name": "Fu" }
+  },
+  {
+    "_id": "PYS9KHLXogvMigPwT",
+    "createdAt": { "$date": "2022-08-28T23:12:00.801Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "palma061@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Aamina",
+      "last_name": "Palmer",
+      "headshot": "avalanche2022fall/tl4ytleq041ui6jfwstt",
+      "description": "I look and see; I show you too -- amipalm.com"
+    }
+  },
+  {
+    "_id": "SzTw9eT2tnAR3dXZF",
+    "createdAt": { "$date": "2022-08-29T16:36:19.479Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "jorgg867@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Gonçalo",
+      "last_name": "Monte",
+      "headshot": "avalanche2022fall/ctfkceplinffskfbnzp2",
+      "description": ""
+    }
+  },
+  {
+    "_id": "ZM3xrfNdgxHytYMuQ",
+    "createdAt": { "$date": "2022-09-11T18:16:17.522Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "liul131@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Carmen",
+      "last_name": "Liu",
+      "headshot": "avalanche2022fall/tuaxuthowcoswjfjkeyc",
+      "description": ""
+    }
+  },
+  {
+    "_id": "kLWg8ePsChfYszLHE",
+    "createdAt": { "$date": "2024-08-29T12:23:20.274Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": {
+        "loginTokens": [
+          {
+            "when": { "$date": "2024-08-29T12:23:20.501Z" },
+            "hashedToken": "IZ63Z6NTxhCI9dwL1jnCkIGt+aUw62J8UET0otFtBlM="
+          }
+        ]
+      }
+    },
+    "emails": [{ "address": "kasmo216@newschool.edu", "verified": false }],
+    "profile": { "first_name": "Olivia", "last_name": "Kasmin" }
+  },
+  {
+    "_id": "pXyDLaHXks8AitjHw",
+    "createdAt": { "$date": "2022-08-29T16:21:22.999Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "surel019@newschool.edu", "verified": true }],
+    "profile": {
+      "first_name": "Lavannya",
+      "last_name": "Suressh",
+      "headshot": "avalanche2022fall/jweonnxdga3jilteobrm",
+      "description": ""
+    }
+  },
+  {
+    "_id": "pmZfTZfpMehS6YvoN",
+    "createdAt": { "$date": "2022-09-10T02:31:12.613Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "shar205@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Runzhe",
+      "last_name": "Sha",
+      "headshot": "avalanche2022fall/oaeotkmc8ih5t4dmsnyz",
+      "description": ""
+    }
+  },
+  {
+    "_id": "tgsqG7atu6TSwkc8e",
+    "createdAt": { "$date": "2022-08-29T16:21:31.102Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "zhuc169@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Angela ",
+      "last_name": "Zhu",
+      "headshot": "avalanche2022fall/opgzh9oephx7hwdtkstg",
+      "description": ""
+    }
+  },
+  {
+    "_id": "uEsRHyyqDmcYPRypr",
+    "createdAt": { "$date": "2022-08-28T23:51:19.483Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "duanx722@newschool.edu", "verified": true }],
+    "profile": {
+      "first_name": "Lawrence",
+      "last_name": "Duan",
+      "headshot": "avalanche2022fall/rxskzragats67bvhcudz",
+      "description": ""
+    }
+  },
+  {
+    "_id": "vYHGoAD78egNThdYP",
+    "createdAt": { "$date": "2022-08-16T22:10:37.77Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "gargp909@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Paridhi",
+      "last_name": "Garg",
+      "headshot": "avalanche2022fall/yz9ekwyp9t3miodugila",
+      "description": "Interested in coding, cognitive thinking, sci-fi and design :) "
+    }
+  },
+  {
+    "_id": "xjFP7R7oB9YekiEB7",
+    "createdAt": { "$date": "2022-09-09T17:26:18.188Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "sunj734@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Jingjing",
+      "last_name": "Sun",
+      "description": "",
+      "headshot": "avalanche2022fall/e0lnq8mcfp0rlhgv2pff"
+    }
+  }
+]

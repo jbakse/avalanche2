@@ -1,1 +1,74 @@
-[{"_id":"Mmx9GgCy2z7N8PXik","voting_enabled":true,"site_title":"Comp Form Fall 2022","weeks":[{"topic":"Introduction","start":{"$date":"2022-07-01T00:00:00Z"},"end":{"$date":"2022-09-12T00:00:00Z"}},{"topic":"Random","start":{"$date":"2022-09-12T00:00:00Z"},"end":{"$date":"2022-09-20T00:00:00Z"}},{"topic":"Noise","start":{"$date":"2022-09-20T00:00:00Z"},"end":{"$date":"2022-09-27T00:00:00Z"}},{"topic":"Parameters","start":{"$date":"2022-09-27T00:00:00Z"},"end":{"$date":"2022-10-04T00:00:00Z"}},{"topic":"Strategies","start":{"$date":"2022-10-04T00:00:00Z"},"end":{"$date":"2022-10-11T00:00:00Z"}},{"topic":"Pixels","start":{"$date":"2022-10-11T00:00:00Z"},"end":{"$date":"2022-10-18T00:00:00Z"}},{"topic":"Vectors","start":{"$date":"2022-10-18T00:00:00Z"},"end":{"$date":"2022-10-25T00:00:00Z"}},{"topic":"Turtles","start":{"$date":"2022-10-25T00:00:00Z"},"end":{"$date":"2022-11-01T00:00:00Z"}},{"topic":"Animation","start":{"$date":"2022-11-01T00:00:00Z"},"end":{"$date":"2022-11-08T00:00:00Z"}},{"topic":"Text","start":{"$date":"2022-11-08T00:00:00Z"},"end":{"$date":"2022-11-15T00:00:00Z"}},{"topic":"Sound","start":{"$date":"2022-11-15T00:00:00Z"},"end":{"$date":"2022-11-22T00:00:00Z"}},{"topic":"Music","start":{"$date":"2022-11-22T00:00:00Z"},"end":{"$date":"2022-11-28T00:00:00Z"}},{"topic":"3D","start":{"$date":"2022-11-28T00:00:00Z"},"end":{"$date":"2022-12-05T00:00:00Z"}}]}]
+[
+  {
+    "_id": "Mmx9GgCy2z7N8PXik",
+    "voting_enabled": true,
+    "site_title": "Comp Form Fall 2022",
+    "weeks": [
+      {
+        "topic": "Introduction",
+        "start": { "$date": "2022-07-01T00:00:00Z" },
+        "end": { "$date": "2022-09-12T00:00:00Z" }
+      },
+      {
+        "topic": "Random",
+        "start": { "$date": "2022-09-12T00:00:00Z" },
+        "end": { "$date": "2022-09-20T00:00:00Z" }
+      },
+      {
+        "topic": "Noise",
+        "start": { "$date": "2022-09-20T00:00:00Z" },
+        "end": { "$date": "2022-09-27T00:00:00Z" }
+      },
+      {
+        "topic": "Parameters",
+        "start": { "$date": "2022-09-27T00:00:00Z" },
+        "end": { "$date": "2022-10-04T00:00:00Z" }
+      },
+      {
+        "topic": "Strategies",
+        "start": { "$date": "2022-10-04T00:00:00Z" },
+        "end": { "$date": "2022-10-11T00:00:00Z" }
+      },
+      {
+        "topic": "Pixels",
+        "start": { "$date": "2022-10-11T00:00:00Z" },
+        "end": { "$date": "2022-10-18T00:00:00Z" }
+      },
+      {
+        "topic": "Vectors",
+        "start": { "$date": "2022-10-18T00:00:00Z" },
+        "end": { "$date": "2022-10-25T00:00:00Z" }
+      },
+      {
+        "topic": "Turtles",
+        "start": { "$date": "2022-10-25T00:00:00Z" },
+        "end": { "$date": "2022-11-01T00:00:00Z" }
+      },
+      {
+        "topic": "Animation",
+        "start": { "$date": "2022-11-01T00:00:00Z" },
+        "end": { "$date": "2022-11-08T00:00:00Z" }
+      },
+      {
+        "topic": "Text",
+        "start": { "$date": "2022-11-08T00:00:00Z" },
+        "end": { "$date": "2022-11-15T00:00:00Z" }
+      },
+      {
+        "topic": "Sound",
+        "start": { "$date": "2022-11-15T00:00:00Z" },
+        "end": { "$date": "2022-11-22T00:00:00Z" }
+      },
+      {
+        "topic": "Music",
+        "start": { "$date": "2022-11-22T00:00:00Z" },
+        "end": { "$date": "2022-11-28T00:00:00Z" }
+      },
+      {
+        "topic": "3D",
+        "start": { "$date": "2022-11-28T00:00:00Z" },
+        "end": { "$date": "2022-12-05T00:00:00Z" }
+      }
+    ]
+  }
+]

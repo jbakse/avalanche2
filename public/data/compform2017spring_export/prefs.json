@@ -1,1 +1,79 @@
-[{"_id":"87QN4thWFZqKpBN24","weeks":[{"topic":"Tile Graphics","start":{"$date":"2017-01-27T00:00:00Z"},"end":{"$date":"2017-02-04T00:00:00Z"}},{"topic":"Random Values","start":{"$date":"2017-02-04T00:00:00Z"},"end":{"$date":"2017-02-11T00:00:00Z"}},{"topic":"Config Parameters","start":{"$date":"2017-02-11T00:00:00Z"},"end":{"$date":"2017-02-18T00:00:00Z"}},{"topic":"Using Noise","start":{"$date":"2017-02-18T00:00:00Z"},"end":{"$date":"2017-02-25T00:00:00Z"}},{"topic":"CF Strategies","start":{"$date":"2017-02-25T00:00:00Z"},"end":{"$date":"2017-03-04T00:00:00Z"}},{"topic":"Generating Animation","start":{"$date":"2017-03-04T00:00:00Z"},"end":{"$date":"2017-03-11T00:00:00Z"}},{"topic":"Processing Pixels","start":{"$date":"2017-03-11T00:00:00Z"},"end":{"$date":"2017-03-18T00:00:00Z"}},{"topic":"Turtle Graphics","start":{"$date":"2017-03-18T00:00:00Z"},"end":{"$date":"2017-04-01T00:00:00Z"}},{"topic":"Node Programming","start":{"$date":"2017-04-01T00:00:00Z"},"end":{"$date":"2017-04-08T00:00:00Z"}},{"topic":"Vector Data","start":{"$date":"2017-04-08T00:00:00Z"},"end":{"$date":"2017-04-15T00:00:00Z"}},{"topic":"Generating Text","start":{"$date":"2017-04-15T00:00:00Z"},"end":{"$date":"2017-04-22T00:00:00Z"}},{"topic":"Comp Sound","start":{"$date":"2017-04-22T00:00:00Z"},"end":{"$date":"2017-04-30T00:00:00Z"}},{"topic":"3D Forms","start":{"$date":"2017-04-30T00:00:00Z"},"end":{"$date":"2017-05-07T00:00:00Z"}},{"topic":"Micro Games","start":{"$date":"2017-05-07T00:00:00Z"},"end":{"$date":"2017-06-01T00:00:00Z"}}],"site_title":"Comp Form Sketches 2017","voting_enabled":true}]
+[
+  {
+    "_id": "87QN4thWFZqKpBN24",
+    "weeks": [
+      {
+        "topic": "Tile Graphics",
+        "start": { "$date": "2017-01-27T00:00:00Z" },
+        "end": { "$date": "2017-02-04T00:00:00Z" }
+      },
+      {
+        "topic": "Random Values",
+        "start": { "$date": "2017-02-04T00:00:00Z" },
+        "end": { "$date": "2017-02-11T00:00:00Z" }
+      },
+      {
+        "topic": "Config Parameters",
+        "start": { "$date": "2017-02-11T00:00:00Z" },
+        "end": { "$date": "2017-02-18T00:00:00Z" }
+      },
+      {
+        "topic": "Using Noise",
+        "start": { "$date": "2017-02-18T00:00:00Z" },
+        "end": { "$date": "2017-02-25T00:00:00Z" }
+      },
+      {
+        "topic": "CF Strategies",
+        "start": { "$date": "2017-02-25T00:00:00Z" },
+        "end": { "$date": "2017-03-04T00:00:00Z" }
+      },
+      {
+        "topic": "Generating Animation",
+        "start": { "$date": "2017-03-04T00:00:00Z" },
+        "end": { "$date": "2017-03-11T00:00:00Z" }
+      },
+      {
+        "topic": "Processing Pixels",
+        "start": { "$date": "2017-03-11T00:00:00Z" },
+        "end": { "$date": "2017-03-18T00:00:00Z" }
+      },
+      {
+        "topic": "Turtle Graphics",
+        "start": { "$date": "2017-03-18T00:00:00Z" },
+        "end": { "$date": "2017-04-01T00:00:00Z" }
+      },
+      {
+        "topic": "Node Programming",
+        "start": { "$date": "2017-04-01T00:00:00Z" },
+        "end": { "$date": "2017-04-08T00:00:00Z" }
+      },
+      {
+        "topic": "Vector Data",
+        "start": { "$date": "2017-04-08T00:00:00Z" },
+        "end": { "$date": "2017-04-15T00:00:00Z" }
+      },
+      {
+        "topic": "Generating Text",
+        "start": { "$date": "2017-04-15T00:00:00Z" },
+        "end": { "$date": "2017-04-22T00:00:00Z" }
+      },
+      {
+        "topic": "Comp Sound",
+        "start": { "$date": "2017-04-22T00:00:00Z" },
+        "end": { "$date": "2017-04-30T00:00:00Z" }
+      },
+      {
+        "topic": "3D Forms",
+        "start": { "$date": "2017-04-30T00:00:00Z" },
+        "end": { "$date": "2017-05-07T00:00:00Z" }
+      },
+      {
+        "topic": "Micro Games",
+        "start": { "$date": "2017-05-07T00:00:00Z" },
+        "end": { "$date": "2017-06-01T00:00:00Z" }
+      }
+    ],
+    "site_title": "Comp Form Sketches 2017",
+    "voting_enabled": true
+  }
+]

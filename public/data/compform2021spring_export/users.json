@@ -1,1 +1,390 @@
-[{"_id":"6rjLjb6gWwcWFC2Nt","createdAt":{"$date":"2021-06-27T10:37:21.949Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"cain832@newschool.edu","verified":false}],"profile":{"first_name":"Nanwei","last_name":"Cai"}},{"_id":"Bt2KRemBmjZW8LwQN","createdAt":{"$date":"2021-01-13T23:15:55.703Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"greur482@newschool.edu","verified":false}],"profile":{"first_name":"Rebecca","last_name":"Greubel","description":"3rd semester AAS Communication Design :) https://beckyg.design","headshot":"avalanche2021spring/kcdxtcsahxquwpoh8ztp"}},{"_id":"GfLWRy7k7QcgHYmAe","createdAt":{"$date":"2021-01-20T19:49:49.58Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"hurwa134@newschool.edu","verified":false}],"profile":{"first_name":"Amber","last_name":"Hurwitz","headshot":"avalanche2021spring/mnfftbs6n18vp24m74iv","description":"Alternative nerd. Peace, love, and art :)\nMFA Design & Technology."}},{"_id":"HpE7FS729vKLpi2JT","createdAt":{"$date":"2021-01-20T23:31:40.291Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"chanc862@newschool.edu","verified":false}],"profile":{"first_name":"Cherie","last_name":"Chan","headshot":"avalanche2021spring/hygldlk4c5hwibuc16cv","description":""}},{"_id":"KCknZ73oujwYNs4Wq","createdAt":{"$date":"2021-01-20T19:22:06.21Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"jotat860@newschool.edu","verified":false}],"profile":{"first_name":"Tarjni","last_name":"Jotaniya","description":"2nd Year MS Strategic Design and Management XD ","headshot":"avalanche2021spring/jizpt0vzayylpcl9wyyd"}},{"_id":"KYsmwzDZZXusHwhQc","createdAt":{"$date":"2021-01-15T16:39:35.878Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"golds687@newschool.edu","verified":true}],"profile":{"first_name":"Sydney","last_name":"Goldberger","headshot":"avalanche2021spring/cf065z66gjzggrgsthb5","description":"2nd semester AAS Communication Design"}},{"_id":"LQgAkWtpRqY2eZkqR","createdAt":{"$date":"2021-01-21T08:01:08.593Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"oneofyuan@gmail.com","verified":false}],"profile":{"first_name":"Zane","last_name":" ","description":"zhany199@newschool.edu","headshot":"avalanche2021spring/nfzvuthaa5twtw8ynzbv"}},{"_id":"QCNqScag8EbQ9vANL","createdAt":{"$date":"2021-01-21T03:39:06.495Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"albed349@newschool.edu","verified":false}],"profile":{"first_name":"Dallas","last_name":"Alberti","headshot":"avalanche2021spring/xmcodcxy0fqxfjkq8wgo","description":"Parsons Data Visualization MS second semester. "}},{"_id":"SxqkftjCJpXqrGxMD","createdAt":{"$date":"2021-01-21T18:01:49.908Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"jinw544@newschool.com","verified":false}],"profile":{"first_name":"Fiona","last_name":"Jin","description":"","headshot":"avalanche2021spring/ttsi1zwlwe8exkyvtio3"}},{"_id":"TXDPuyAjpaj9WnTJK","createdAt":{"$date":"2021-01-16T22:14:21.294Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"makan854@newschool.edu","verified":false}],"profile":{"first_name":"Nikki","last_name":"Makagiansar","headshot":"avalanche2021spring/p62uxw9vvyarjuyrnnwa","description":"niktari.com"}},{"_id":"WdRfsBdeoPCw7ct2u","createdAt":{"$date":"2021-01-21T14:26:14.934Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"verms810@newschool.edu","verified":false}],"profile":{"first_name":"Shivanjali","last_name":"Verma","headshot":"avalanche2021spring/fxkthimx4z6gyjtpqjsa","description":"MFA DT, First year student :)\n\nI have a background in Fashion and Textile design. I'm new to coding, but am enjoying it so far! I am also interested in animation and  motion graphics."}},{"_id":"WtkrHK3kNrJ3KRXNM","createdAt":{"$date":"2021-02-19T20:51:42.035Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"jiz125@newschool.edu","verified":false}],"profile":{"first_name":"ziwei","last_name":"ji"}},{"_id":"Y24PT8c8pPBKn9gA4","createdAt":{"$date":"2021-01-22T01:54:08.656Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"torrv430@newschool.edu","verified":false}],"profile":{"first_name":"Victor","last_name":"Torres Rodriguez","headshot":"avalanche2021spring/x0tyivmlw0diz8ccr8hh","description":""}},{"_id":"bYrk2n9X3ugcbT7vS","createdAt":{"$date":"2021-01-15T00:27:36.48Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"troxj994@newschool.edu","verified":false}],"profile":{"first_name":"James","last_name":"Troxel","headshot":"avalanche2021spring/oal5us7fhf9fragy9osz","description":""}},{"_id":"buFwn3SudyQQrozf5","createdAt":{"$date":"2021-01-14T08:28:15.607Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"bawea371@newschool.edu","verified":false}],"profile":{"first_name":"Akshay","last_name":"Baweja","headshot":"avalanche2021spring/a6xsf4vtbb52tttmc3bq","description":"Hey there, I am a 2nd Year MFA DT student. I love exploring new technologies and integrate them into the products I create. 👨‍💻 https://akshaybaweja.com"}},{"_id":"dR2JywxdgfgDWizY9","createdAt":{"$date":"2021-02-06T12:23:32.861Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"chuj453@newschoool.edu","verified":false}],"profile":{"first_name":"Jiarui(Claire)","last_name":"Chu","description":""}},{"_id":"hwqyBfcqFsxknxrBg","createdAt":{"$date":"2021-01-20T20:02:43.585Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"leeh779@newschool.edu","verified":false}],"profile":{"first_name":"Maddie Hyunseung","last_name":"Lee","headshot":"avalanche2021spring/v7yvv7dtbu9xaygk1kmv","description":"Designer passionate about codes. Senior year in BFA Communication Design. Here are two links to my previous code works: https://bit.ly/3nZWvZn, https://bit.ly/2KBVvx4"}},{"_id":"ibNDBguYzXiEc3hxi","createdAt":{"$date":"2021-01-07T18:42:27.859Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"steig635@newschool.edu","verified":false}],"profile":{"first_name":"gretchen","last_name":"steinbrunner","headshot":"avalanche2021spring/r5wko0odrfsvjltojffh","description":""}},{"_id":"jBhwiDcz7CGEopgc3","createdAt":{"$date":"2021-02-03T06:24:53.155Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"parkh820@newschool.edu","verified":false}],"profile":{"first_name":"hanul","last_name":"park","description":"","headshot":"avalanche2021spring/swsoa98vhtvaubovlea7"}},{"_id":"kRArBRbMwNPbRTayk","createdAt":{"$date":"2021-01-24T03:51:43.79Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"hank678@newschool.edu","verified":false}],"profile":{"first_name":"Kebing","last_name":"Han","headshot":"avalanche2021spring/ljzmcb0hhzhiqgvvhwmh","description":""}},{"_id":"oaZCXY5szqZffwTYE","createdAt":{"$date":"2021-01-06T19:26:28.136Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"baksej@newschool.edu","verified":false}],"profile":{"first_name":"Justin","last_name":"Bakse","description":"I'm Justin. I'm teaching this class.","headshot":"avalanche2021spring/hihvlxh3i6qjwc7jvezb"},"roles":{"__global_roles__":["may_admin","admin"]}},{"_id":"rgD5NzYo53oxaZ6w3","createdAt":{"$date":"2021-01-14T02:48:52.693Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"konga581@newschool.edu","verified":false}],"profile":{"first_name":"An","last_name":"Kong","headshot":"avalanche2021spring/ehnd4ilwcpjoacvsht8i","description":"You can call me An. I'm a MFA DT first-year student who hopes to have a cat after graduation. I fight for money, women's rights, and cats."}},{"_id":"tT74mJPKcd9eFRgXG","createdAt":{"$date":"2022-01-25T14:22:33.823Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"zhaoy021@newschool.edu","verified":false}],"profile":{"first_name":"Yang","last_name":"Zhao"}},{"_id":"tiJNc4GQre4Fhv9bs","createdAt":{"$date":"2021-01-22T17:39:46.882Z"},"services":{"password":{"bcrypt":"***REMOVED***"},"resume":{"loginTokens":[]}},"emails":[{"address":"liz540@newschool.edu","verified":false}],"profile":{"first_name":"Jackson","last_name":"Li"}}]
+[
+  {
+    "_id": "6rjLjb6gWwcWFC2Nt",
+    "createdAt": { "$date": "2021-06-27T10:37:21.949Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "cain832@newschool.edu", "verified": false }],
+    "profile": { "first_name": "Nanwei", "last_name": "Cai" }
+  },
+  {
+    "_id": "Bt2KRemBmjZW8LwQN",
+    "createdAt": { "$date": "2021-01-13T23:15:55.703Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "greur482@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Rebecca",
+      "last_name": "Greubel",
+      "description": "3rd semester AAS Communication Design :) https://beckyg.design",
+      "headshot": "avalanche2021spring/kcdxtcsahxquwpoh8ztp"
+    }
+  },
+  {
+    "_id": "GfLWRy7k7QcgHYmAe",
+    "createdAt": { "$date": "2021-01-20T19:49:49.58Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "hurwa134@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Amber",
+      "last_name": "Hurwitz",
+      "headshot": "avalanche2021spring/mnfftbs6n18vp24m74iv",
+      "description": "Alternative nerd. Peace, love, and art :)\nMFA Design & Technology."
+    }
+  },
+  {
+    "_id": "HpE7FS729vKLpi2JT",
+    "createdAt": { "$date": "2021-01-20T23:31:40.291Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "chanc862@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Cherie",
+      "last_name": "Chan",
+      "headshot": "avalanche2021spring/hygldlk4c5hwibuc16cv",
+      "description": ""
+    }
+  },
+  {
+    "_id": "KCknZ73oujwYNs4Wq",
+    "createdAt": { "$date": "2021-01-20T19:22:06.21Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "jotat860@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Tarjni",
+      "last_name": "Jotaniya",
+      "description": "2nd Year MS Strategic Design and Management XD ",
+      "headshot": "avalanche2021spring/jizpt0vzayylpcl9wyyd"
+    }
+  },
+  {
+    "_id": "KYsmwzDZZXusHwhQc",
+    "createdAt": { "$date": "2021-01-15T16:39:35.878Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "golds687@newschool.edu", "verified": true }],
+    "profile": {
+      "first_name": "Sydney",
+      "last_name": "Goldberger",
+      "headshot": "avalanche2021spring/cf065z66gjzggrgsthb5",
+      "description": "2nd semester AAS Communication Design"
+    }
+  },
+  {
+    "_id": "LQgAkWtpRqY2eZkqR",
+    "createdAt": { "$date": "2021-01-21T08:01:08.593Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "oneofyuan@gmail.com", "verified": false }],
+    "profile": {
+      "first_name": "Zane",
+      "last_name": " ",
+      "description": "zhany199@newschool.edu",
+      "headshot": "avalanche2021spring/nfzvuthaa5twtw8ynzbv"
+    }
+  },
+  {
+    "_id": "QCNqScag8EbQ9vANL",
+    "createdAt": { "$date": "2021-01-21T03:39:06.495Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "albed349@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Dallas",
+      "last_name": "Alberti",
+      "headshot": "avalanche2021spring/xmcodcxy0fqxfjkq8wgo",
+      "description": "Parsons Data Visualization MS second semester. "
+    }
+  },
+  {
+    "_id": "SxqkftjCJpXqrGxMD",
+    "createdAt": { "$date": "2021-01-21T18:01:49.908Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "jinw544@newschool.com", "verified": false }],
+    "profile": {
+      "first_name": "Fiona",
+      "last_name": "Jin",
+      "description": "",
+      "headshot": "avalanche2021spring/ttsi1zwlwe8exkyvtio3"
+    }
+  },
+  {
+    "_id": "TXDPuyAjpaj9WnTJK",
+    "createdAt": { "$date": "2021-01-16T22:14:21.294Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "makan854@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Nikki",
+      "last_name": "Makagiansar",
+      "headshot": "avalanche2021spring/p62uxw9vvyarjuyrnnwa",
+      "description": "niktari.com"
+    }
+  },
+  {
+    "_id": "WdRfsBdeoPCw7ct2u",
+    "createdAt": { "$date": "2021-01-21T14:26:14.934Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "verms810@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Shivanjali",
+      "last_name": "Verma",
+      "headshot": "avalanche2021spring/fxkthimx4z6gyjtpqjsa",
+      "description": "MFA DT, First year student :)\n\nI have a background in Fashion and Textile design. I'm new to coding, but am enjoying it so far! I am also interested in animation and  motion graphics."
+    }
+  },
+  {
+    "_id": "WtkrHK3kNrJ3KRXNM",
+    "createdAt": { "$date": "2021-02-19T20:51:42.035Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "jiz125@newschool.edu", "verified": false }],
+    "profile": { "first_name": "ziwei", "last_name": "ji" }
+  },
+  {
+    "_id": "Y24PT8c8pPBKn9gA4",
+    "createdAt": { "$date": "2021-01-22T01:54:08.656Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "torrv430@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Victor",
+      "last_name": "Torres Rodriguez",
+      "headshot": "avalanche2021spring/x0tyivmlw0diz8ccr8hh",
+      "description": ""
+    }
+  },
+  {
+    "_id": "bYrk2n9X3ugcbT7vS",
+    "createdAt": { "$date": "2021-01-15T00:27:36.48Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "troxj994@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "James",
+      "last_name": "Troxel",
+      "headshot": "avalanche2021spring/oal5us7fhf9fragy9osz",
+      "description": ""
+    }
+  },
+  {
+    "_id": "buFwn3SudyQQrozf5",
+    "createdAt": { "$date": "2021-01-14T08:28:15.607Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "bawea371@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Akshay",
+      "last_name": "Baweja",
+      "headshot": "avalanche2021spring/a6xsf4vtbb52tttmc3bq",
+      "description": "Hey there, I am a 2nd Year MFA DT student. I love exploring new technologies and integrate them into the products I create. 👨‍💻 https://akshaybaweja.com"
+    }
+  },
+  {
+    "_id": "dR2JywxdgfgDWizY9",
+    "createdAt": { "$date": "2021-02-06T12:23:32.861Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "chuj453@newschoool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Jiarui(Claire)",
+      "last_name": "Chu",
+      "description": ""
+    }
+  },
+  {
+    "_id": "hwqyBfcqFsxknxrBg",
+    "createdAt": { "$date": "2021-01-20T20:02:43.585Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "leeh779@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Maddie Hyunseung",
+      "last_name": "Lee",
+      "headshot": "avalanche2021spring/v7yvv7dtbu9xaygk1kmv",
+      "description": "Designer passionate about codes. Senior year in BFA Communication Design. Here are two links to my previous code works: https://bit.ly/3nZWvZn, https://bit.ly/2KBVvx4"
+    }
+  },
+  {
+    "_id": "ibNDBguYzXiEc3hxi",
+    "createdAt": { "$date": "2021-01-07T18:42:27.859Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "steig635@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "gretchen",
+      "last_name": "steinbrunner",
+      "headshot": "avalanche2021spring/r5wko0odrfsvjltojffh",
+      "description": ""
+    }
+  },
+  {
+    "_id": "jBhwiDcz7CGEopgc3",
+    "createdAt": { "$date": "2021-02-03T06:24:53.155Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "parkh820@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "hanul",
+      "last_name": "park",
+      "description": "",
+      "headshot": "avalanche2021spring/swsoa98vhtvaubovlea7"
+    }
+  },
+  {
+    "_id": "kRArBRbMwNPbRTayk",
+    "createdAt": { "$date": "2021-01-24T03:51:43.79Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "hank678@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Kebing",
+      "last_name": "Han",
+      "headshot": "avalanche2021spring/ljzmcb0hhzhiqgvvhwmh",
+      "description": ""
+    }
+  },
+  {
+    "_id": "oaZCXY5szqZffwTYE",
+    "createdAt": { "$date": "2021-01-06T19:26:28.136Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "baksej@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "Justin",
+      "last_name": "Bakse",
+      "description": "I'm Justin. I'm teaching this class.",
+      "headshot": "avalanche2021spring/hihvlxh3i6qjwc7jvezb"
+    },
+    "roles": { "__global_roles__": ["may_admin", "admin"] }
+  },
+  {
+    "_id": "rgD5NzYo53oxaZ6w3",
+    "createdAt": { "$date": "2021-01-14T02:48:52.693Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "konga581@newschool.edu", "verified": false }],
+    "profile": {
+      "first_name": "An",
+      "last_name": "Kong",
+      "headshot": "avalanche2021spring/ehnd4ilwcpjoacvsht8i",
+      "description": "You can call me An. I'm a MFA DT first-year student who hopes to have a cat after graduation. I fight for money, women's rights, and cats."
+    }
+  },
+  {
+    "_id": "tT74mJPKcd9eFRgXG",
+    "createdAt": { "$date": "2022-01-25T14:22:33.823Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "zhaoy021@newschool.edu", "verified": false }],
+    "profile": { "first_name": "Yang", "last_name": "Zhao" }
+  },
+  {
+    "_id": "tiJNc4GQre4Fhv9bs",
+    "createdAt": { "$date": "2021-01-22T17:39:46.882Z" },
+    "services": {
+      "password": {
+        "bcrypt": "***REMOVED***"
+      },
+      "resume": { "loginTokens": [] }
+    },
+    "emails": [{ "address": "liz540@newschool.edu", "verified": false }],
+    "profile": { "first_name": "Jackson", "last_name": "Li" }
+  }
+]

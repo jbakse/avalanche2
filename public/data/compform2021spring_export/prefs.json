@@ -1,1 +1,80 @@
-[{"_id":"GAEbmao8doGMMZtnT","avalanche_message":"Hello, Computational Form!","voting_enabled":true,"site_title":"Comp Form Spring 2021","weeks":[{"topic":"Introduction","start":{"$date":"2021-01-01T00:00:00Z"},"end":{"$date":"2021-01-29T00:00:00Z"}},{"topic":"Random","start":{"$date":"2021-01-29T00:00:00Z"},"end":{"$date":"2021-02-05T00:00:00Z"}},{"topic":"Noise","start":{"$date":"2021-02-05T00:00:00Z"},"end":{"$date":"2021-02-12T00:00:00Z"}},{"topic":"Parameters","start":{"$date":"2021-02-12T00:00:00Z"},"end":{"$date":"2021-02-19T00:00:00Z"}},{"topic":"Strategies","start":{"$date":"2021-02-19T00:00:00Z"},"end":{"$date":"2021-02-26T00:00:00Z"}},{"topic":"Pixels","start":{"$date":"2021-02-26T00:00:00Z"},"end":{"$date":"2021-03-05T00:00:00Z"}},{"topic":"Vectors","start":{"$date":"2021-03-05T00:00:00Z"},"end":{"$date":"2021-03-12T00:00:00Z"}},{"topic":"Turtles","start":{"$date":"2021-03-12T00:00:00Z"},"end":{"$date":"2021-03-26T00:00:00Z"}},{"topic":"Animation","start":{"$date":"2021-03-26T00:00:00Z"},"end":{"$date":"2021-04-02T00:00:00Z"}},{"topic":"Text","start":{"$date":"2021-04-02T00:00:00Z"},"end":{"$date":"2021-04-09T00:00:00Z"}},{"topic":"3D Forms","start":{"$date":"2021-04-09T00:00:00Z"},"end":{"$date":"2021-04-16T00:00:00Z"}},{"topic":"Sound","start":{"$date":"2021-04-16T00:00:00Z"},"end":{"$date":"2021-04-23T00:00:00Z"}},{"topic":"Music","start":{"$date":"2021-04-23T00:00:00Z"},"end":{"$date":"2021-04-30T00:00:00Z"}},{"topic":"Microgames","start":{"$date":"2021-04-30T00:00:00Z"},"end":{"$date":"2021-05-30T00:00:00Z"}}]}]
+[
+  {
+    "_id": "GAEbmao8doGMMZtnT",
+    "avalanche_message": "Hello, Computational Form!",
+    "voting_enabled": true,
+    "site_title": "Comp Form Spring 2021",
+    "weeks": [
+      {
+        "topic": "Introduction",
+        "start": { "$date": "2021-01-01T00:00:00Z" },
+        "end": { "$date": "2021-01-29T00:00:00Z" }
+      },
+      {
+        "topic": "Random",
+        "start": { "$date": "2021-01-29T00:00:00Z" },
+        "end": { "$date": "2021-02-05T00:00:00Z" }
+      },
+      {
+        "topic": "Noise",
+        "start": { "$date": "2021-02-05T00:00:00Z" },
+        "end": { "$date": "2021-02-12T00:00:00Z" }
+      },
+      {
+        "topic": "Parameters",
+        "start": { "$date": "2021-02-12T00:00:00Z" },
+        "end": { "$date": "2021-02-19T00:00:00Z" }
+      },
+      {
+        "topic": "Strategies",
+        "start": { "$date": "2021-02-19T00:00:00Z" },
+        "end": { "$date": "2021-02-26T00:00:00Z" }
+      },
+      {
+        "topic": "Pixels",
+        "start": { "$date": "2021-02-26T00:00:00Z" },
+        "end": { "$date": "2021-03-05T00:00:00Z" }
+      },
+      {
+        "topic": "Vectors",
+        "start": { "$date": "2021-03-05T00:00:00Z" },
+        "end": { "$date": "2021-03-12T00:00:00Z" }
+      },
+      {
+        "topic": "Turtles",
+        "start": { "$date": "2021-03-12T00:00:00Z" },
+        "end": { "$date": "2021-03-26T00:00:00Z" }
+      },
+      {
+        "topic": "Animation",
+        "start": { "$date": "2021-03-26T00:00:00Z" },
+        "end": { "$date": "2021-04-02T00:00:00Z" }
+      },
+      {
+        "topic": "Text",
+        "start": { "$date": "2021-04-02T00:00:00Z" },
+        "end": { "$date": "2021-04-09T00:00:00Z" }
+      },
+      {
+        "topic": "3D Forms",
+        "start": { "$date": "2021-04-09T00:00:00Z" },
+        "end": { "$date": "2021-04-16T00:00:00Z" }
+      },
+      {
+        "topic": "Sound",
+        "start": { "$date": "2021-04-16T00:00:00Z" },
+        "end": { "$date": "2021-04-23T00:00:00Z" }
+      },
+      {
+        "topic": "Music",
+        "start": { "$date": "2021-04-23T00:00:00Z" },
+        "end": { "$date": "2021-04-30T00:00:00Z" }
+      },
+      {
+        "topic": "Microgames",
+        "start": { "$date": "2021-04-30T00:00:00Z" },
+        "end": { "$date": "2021-05-30T00:00:00Z" }
+      }
+    ]
+  }
+]
