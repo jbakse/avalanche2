@@ -1,11 +1,11 @@
 // todo: is importing immutable global data bad practice (probably)
 
-import { posts } from "../../data/data";
+import { posts } from "../data/data";
 
 import classNames from "classnames";
 import "./tooltip.css";
 
-import { UserData, getHeadshotURL, filterPosts } from "../../data/data";
+import { UserData, getHeadshotURL, filterPosts } from "../data/data";
 
 interface UserBarProps {
   users: UserData[];

@@ -1,6 +1,6 @@
 import { marked } from "marked";
 
-import { UserData, getHeadshotURL } from "../../data/data";
+import { UserData, getHeadshotURL } from "../data/data";
 
 interface UserProfileProps {
   user: UserData;

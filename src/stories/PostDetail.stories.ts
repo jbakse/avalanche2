@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { PostDetail } from "./PostDetail";
-import { posts } from "../../data/data";
+import { posts } from "../data/data";
 
 const meta = {
   title: "Avalanche/PostDetail",

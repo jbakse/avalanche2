@@ -1,11 +1,11 @@
 import { marked } from "marked";
-import { PostData, UserData } from "../../data/data";
+import { PostData, UserData } from "../data/data";
 import {
   getHeadshotURL,
   getVideoThumbnailURL,
   getImageThumbnailURL,
   getAudioThumbnailURL,
-} from "../../data/data";
+} from "../data/data";
 
 interface PostProps extends PostData {
   onUserChange?: (newActiveUser: UserData | null) => void;

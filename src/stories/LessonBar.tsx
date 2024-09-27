@@ -1,8 +1,8 @@
 import "./tooltip.css";
 
-import { posts, filterPosts } from "../../data/data";
-import { UserData } from "../../data/data";
-import { Lesson } from "../../data/data";
+import { posts, filterPosts } from "../data/data";
+import { UserData } from "../data/data";
+import { Lesson } from "../data/data";
 
 interface LessonBarProps {
   activeLesson: string | null;

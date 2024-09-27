@@ -1,4 +1,4 @@
-import { users } from "../../data/data";
+import { users } from "../data/data";
 import type { Meta, StoryObj } from "@storybook/react";
 import { UserBar } from "./UserBar";
 

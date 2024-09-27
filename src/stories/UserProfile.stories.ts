@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { UserProfile } from "./UserProfile";
-import { users } from "../../data/data";
+import { users } from "../data/data";
 
 const meta = {
   title: "Avalanche/UserProfile",

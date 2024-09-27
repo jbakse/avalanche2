@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import { LessonBar } from "./LessonBar";
 
-import { config } from "../../data/data";
+import { config } from "../data/data";
 
 const meta = {
   title: "Avalanche/LessonBar",

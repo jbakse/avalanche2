@@ -3,7 +3,7 @@ import { useArgs } from "@storybook/preview-api";
 
 import { Page } from "./Page";
 
-import { UserData, PostData } from "../../data/data";
+import { UserData, PostData } from "../data/data";
 
 const meta = {
   title: "Avalanche/Page",

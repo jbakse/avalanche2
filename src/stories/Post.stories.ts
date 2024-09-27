@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { posts } from "../../data/data";
+import { posts } from "../data/data";
 
 import { Post } from "./Post";
 

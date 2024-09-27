@@ -2,12 +2,7 @@ import { marked } from "marked";
 
 import { Dateline, formatDate } from "./Post";
 
-import {
-  PostData,
-  getImageURL,
-  getVideoURL,
-  getAudioURL,
-} from "../../data/data";
+import { PostData, getImageURL, getVideoURL, getAudioURL } from "../data/data";
 
 interface PostDetailProps {
   postData: PostData;

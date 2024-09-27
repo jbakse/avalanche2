@@ -8,7 +8,7 @@ import {
   slugForUser,
   slugForLesson,
   posts,
-} from "../data/data";
+} from "./data/data";
 
 function App() {
   return (

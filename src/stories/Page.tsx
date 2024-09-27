@@ -1,5 +1,5 @@
-import { PostData } from "../../data/data";
-import { config, posts, users } from "../../data/data";
+import { PostData } from "../data/data";
+import { config, posts, users } from "../data/data";
 
 import { Header } from "./Header";
 import { UserBar } from "./UserBar";
@@ -8,7 +8,7 @@ import { Post } from "./Post";
 import { UserProfile } from "./UserProfile";
 import { PostDetail } from "./PostDetail";
 
-import { UserData } from "../../data/data";
+import { UserData } from "../data/data";
 
 type PageProps = {
   activeLesson: string | null;

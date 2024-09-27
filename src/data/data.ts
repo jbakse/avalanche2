@@ -1,14 +1,14 @@
-const dataDir = "compform2023spring_export";
+const dataDir = "../../data/compform2023spring_export";
 
 export type { UserData } from "./users";
 export type { PostData } from "./posts";
 export type { Config, Lesson } from "./config";
 
-const { cloudName } = await import(`./${dataDir}/settings.json`);
+const { cloudName } = await import(`${dataDir}/settings.json`);
 
-const { default: dirtyUsers } = await import(`./${dataDir}/users.json`);
-const { default: dirtyPosts } = await import(`./${dataDir}/posts.json`);
-const { default: dirtyPrefs } = await import(`./${dataDir}/prefs.json`);
+const { default: dirtyUsers } = await import(`${dataDir}/users.json`);
+const { default: dirtyPosts } = await import(`${dataDir}/posts.json`);
+const { default: dirtyPrefs } = await import(`${dataDir}/prefs.json`);
 
 import { cleanUsers, UserData } from "./users";
 import { cleanPosts, PostData } from "./posts";
