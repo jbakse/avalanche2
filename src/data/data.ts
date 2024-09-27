@@ -23,9 +23,14 @@ export const posts = cleanPosts(dirtyPosts, users).filter(
     post.isPosted,
 );
 
-export const validPosts = ProcessingInstruction;
-
 export const config = cleanConfig(dirtyPrefs);
+
+// write {users, posts, config} to ./out/data.json
+// import { writeFileSync } from "fs";
+// writeFileSync(
+//   "./out/data.json",
+//   JSON.stringify({ cloudName, users, posts, config }),
+// );
 
 export function filterPosts(
   posts: PostData[],
