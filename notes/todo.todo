@@ -24,22 +24,21 @@ Refactor:
     □ getVideoURL might return adaptive video format, so hardcoded mp4 type in post detail might be wrong depening on browser?
 
 
+Deploy:
+    □ exclude data from build
+    □ have it choose data based on subdomain
+    □ netlify?
 
-✓ 2024spring
-✓ 2023spring
-✓ 2022spring
-✓ 2022fall
-□ 2021spring
-    ✓ loads
-    □ missing assets!
-    □ i1flpjhqdj6cbozxqhvz mp3
-✓ 2020fall
-✓ 2020
-✓ 2019
-□ 2018
-    ✓ loads @done(24-09-26 15:35)
-    □ missing assets!
-    □ ercjngasz3kud27mu49y wav
-✓ 2017 @done(24-09-26 15:21)
+Test Database Exports:
+    ✓ 2024spring
+    ✓ 2023spring
+    ✓ 2022spring
+    ✓ 2022fall
+    ✓ 2021spring
+    ✓ 2020fall
+    ✓ 2020
+    ✓ 2019
+    ✓ 2018
+    ✓ 2017 
 
 

@@ -1,4 +1,4 @@
-const dataDir = "compform2018_export";
+const dataDir = "compform2023spring_export";
 
 export type { UserData } from "./users";
 export type { PostData } from "./posts";
