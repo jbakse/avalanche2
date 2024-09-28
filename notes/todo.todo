@@ -28,9 +28,8 @@ Deploy:
     x exclude data from build
     ✓ fetch() data from public
     ✓ have it choose data based on subdomain
-    □ bfg, scrub users.json bcrypts
-        □ back them up somewhere them in case i want to put these back read/write someday?
-        □ scrubbing just the hash should keep past commits working
+    ✓ bfg, scrub users.json bcrypts
+        ✓ scrubbing just the hash should keep past commits working
 
     □ netlify?
         build with `vite build` serve from dist 

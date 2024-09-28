@@ -4,21 +4,24 @@
 console.log("%ccomp form", "color: black; background: white;");
 
 // get the subdomain from the URL
-const subdomain = window.location.hostname.split(".")[0];
+const hostnameParts = window.location.hostname.split(".");
+const subdomain = hostnameParts.length > 1 ? hostnameParts[0] : "";
 console.log("subdomain:", subdomain);
 
 // archive folder from subdomain
-const archiveFolder = {
-  sketches: "compform2017spring_export",
-  sketches2018: "compform2018spring_export",
-  sketches2019: "compform2019spring_export",
-  sketches2020: "compform2020spring_export",
-  sketches2020fall: "compform2020fall_export",
-  sketches2021spring: "compform2021spring_export",
-  sketches2022spring: "compform2022spring_export",
-  sketches2022fall: "compform2022fall_export",
-  sketches2023spring: "compform2023spring_export",
-}[subdomain];
+const archiveFolder =
+  {
+    sketches: "compform2017spring_export",
+    sketches2018: "compform2018spring_export",
+    sketches2019: "compform2019spring_export",
+    sketches2020: "compform2020spring_export",
+    sketches2020fall: "compform2020fall_export",
+    sketches2021spring: "compform2021spring_export",
+    sketches2022spring: "compform2022spring_export",
+    sketches2022fall: "compform2022fall_export",
+    sketches2023spring: "compform2023spring_export",
+    "": "compform2023spring_export",
+  }[subdomain] ?? "compform2023spring_export";
 
 // const dataDir = "/public/data/compform2024spring_export";
 const dataDir = `/public/data/${archiveFolder}`;
