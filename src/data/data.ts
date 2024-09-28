@@ -24,7 +24,7 @@ const archiveFolder =
   }[subdomain] ?? "compform2023spring_export";
 
 // const dataDir = "/public/data/compform2024spring_export";
-const dataDir = `/public/data/${archiveFolder}`;
+const dataDir = `/data/${archiveFolder}`;
 
 const cloudName = await loadJson<{ cloudName: string }>(
   `${dataDir}/settings.json`,
