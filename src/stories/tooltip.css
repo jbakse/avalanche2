@@ -1,36 +1,10 @@
 .tooltip {
-  @apply absolute 
-    top-3/4
-    left-1/2
-    transform
-    -translate-x-1/2
-    bg-white
-    text-xs
-    rounded
-    py-2
-    px-4
-    mt-2
-    opacity-0
-    transition-opacity
-    duration-300
-    pointer-events-none
-    shadow-md
-    whitespace-nowrap
-    p-3
-    z-10;
+  @apply pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 transform whitespace-nowrap rounded bg-gray-200 p-3 px-4 py-2 text-xs opacity-0 shadow-md shadow-slate-300 transition-opacity duration-300;
 }
 
 .tooltip::before {
   content: "";
-  @apply absolute
-  top-0
-  left-1/2
-  transform
-  -translate-x-1/2
-  -translate-y-full
-  border-4
-  border-transparent
-border-b-white;
+  @apply absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full transform border-4 border-transparent border-t-gray-200;
 }
 
 .relative:hover .tooltip,

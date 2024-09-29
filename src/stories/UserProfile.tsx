@@ -1,14 +1,14 @@
 import { marked } from "marked";
 
-import { UserData, getHeadshotURL, config, posts, PostData } from "../data/data";
+import { UserData, getHeadshotURL } from "../data/data";
 import { UserCalendar } from "./UserCalendar";
 
 interface UserProfileProps {
   user: UserData;
-  onPostChange?: (newActivePost: PostData | null) => void;
+  onLessonChange?: (newActiveLesson: string | null) => void;
 }
 
-export const UserProfile = ({ user, onPostChange }: UserProfileProps) => {
+export const UserProfile = ({ user, onLessonChange }: UserProfileProps) => {
   return (
     <div className="my-8 flex flex-col items-center">
       {/* headshot */}
@@ -31,8 +31,7 @@ export const UserProfile = ({ user, onPostChange }: UserProfileProps) => {
 
       {/* UserCalendar */}
       <div className="mt-8">
-        <h3 className="mb-2 text-xl font-semibold">Posting Activity</h3>
-        <UserCalendar user={user} config={config} posts={posts} onPostChange={onPostChange} />
+        <UserCalendar user={user} onLessonChange={onLessonChange} />
       </div>
     </div>
   );
