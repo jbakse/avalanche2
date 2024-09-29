@@ -12,7 +12,7 @@ const getColorForPostCount = (count: number): string => {
   if (count === 1) return "bg-green-600";
   if (count === 2) return "bg-yellow-500";
   if (count === 3) return "bg-amber-600";
-  if (count > 4) return "bg-red-600";
+  if (count >= 4) return "bg-red-600";
   return "bg-gray-200";
 };
 
