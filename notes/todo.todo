@@ -31,19 +31,21 @@ Deploy:
     ✓ bfg, scrub users.json bcrypts
         ✓ scrubbing just the hash should keep past commits working
 
-    □ netlify?
-        build with `vite build` serve from dist 
+    □ netlify
+        x set up domains on hover (subdomains don't work the way i want on netlify without a custom domain)
+        x set up _redirects
 
 Test Database Exports:
-    ✓ 2024spring
-    ✓ 2023spring
-    ✓ 2022spring
-    ✓ 2022fall
-    ✓ 2021spring
-    ✓ 2020fall
-    ✓ 2020
-    ✓ 2019
-    ✓ 2018
-    ✓ 2017 
+    ✓ 2024spring   sketches2024fall.test.compform.net
+    ✓ 2023spring   sketches2024spring.test.compform.net
+    ✓ 2022spring   sketches2023spring.test.compform.net
+    ✓ 2022fall     sketches2022fall.test.compform.net
+    ✓ 2021spring   sketches2022spring.test.compform.net
+    ✓ 2020fall     sketches2020fall.test.compform.net
+    ✓ 2020         sketches2020.test.compform.net
+    ✓ 2019         sketches2019.test.compform.net
+    ✓ 2018         sketches2018.test.compform.net
+    ✓ 2017         sketches.test.compform.net
 
 
+  
