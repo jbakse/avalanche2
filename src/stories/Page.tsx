@@ -49,7 +49,7 @@ export const Page = ({
       />
 
       {/* user profile */}
-      {activeUser && <UserProfile user={activeUser} />}
+      {activeUser && <UserProfile user={activeUser} onPostChange={onPostChange} />}
 
       {/* lesson bar */}
       <LessonBar
