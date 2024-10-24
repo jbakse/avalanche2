@@ -4,6 +4,8 @@ Features:
     □ masonry w js? https://codepen.io/singhkunal2050/pen/vYbPVNd
     □ make post detail properly modal (block scrolling)
 
+Bugs:
+    □ escape / in student names. 
 UX/UI:
     □ how do i -want- the url to look?
     □ should clicking a lesson clear user, and vice versa?

@@ -20,6 +20,7 @@ const archiveFolder =
     sketches2022spring: "compform2022spring_export",
     sketches2022fall: "compform2022fall_export",
     sketches2023spring: "compform2023spring_export",
+    sketches2024spring: "compform2024spring_export",
     "": "compform2023spring_export",
   }[subdomain] ?? "compform2023spring_export";
 
